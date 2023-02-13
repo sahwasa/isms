@@ -111,56 +111,51 @@
 </div>
 
 
-  <div class="cont main">
-    <div id="content" class="content min_width">
-      <div class="content_tit blind">
-        <h1>메인</h1>
-      </div>
-      <div class="content_body">
-        <div class="section main_copy">
-          <h2>안전한 나, 사랑하는 가족과 이웃의 진정한 행복</h2>
-          <p>
-            국민의 눈으로 보고 국민의 입장에서 생각합니다.<br />
-            철저한 준비와 앞서가는 행정으로 국민의 안전과 행복을 책임지겠습니다.
-          </p>
-        </div>
-        <div class="section">
-          <ul class="main_card">
-            <li class="propagate">
-              <a href="">
-              <h2>대국민 상황전파 <em>훈련</em></h2>
-              <p>실제발송 불가</p>
-              </a>
-            </li>           
-            <li>
-              <ul class="quick_menu">
-                <li><a href="">재난문자 방송 송출기준</a> </li>
-                <li><a href="">지진재난 송출기준</a></li>
-                <li><a href="">상황실 모니터링</a></li>
-              </ul>
-            </li>
-            <li class="propagate">
-              <a href="">
-              <h2>대국민 상황전파 <em>실제</em></h2>
-              <p>상황전파 훈련 및 테스트 불가</p>
-              </a>
-            </li>
-            <li class="help_desk">
-              <h2><em>HELP</em> 데스크</h2>
-              <div class="section">
-                <h3>시스템 및 사용문의</h3>
-                <span>
-                  044-205-5279
-                </span>
-                <p>
-                  운영시간:평일 <span>24시간 운영</span>
-                  <em>(단, 주말&sol;공휴일 제외)</em>
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
+  <div class="cont">
+    <div class="location min_width">
+  <!-- <img src="../img/temp/temp_location.jpg" alt=""> -->
+  <ul class="location_list">
+    <li><a href="">HOME</a></li>
+    <li>대국민상황전파
+      <ul class="sub_loc">
+        <li><a href="">대국민상황전파</a></li>
+        <li><a href="">시스템소개</a></li>
+        <li><a href="">게시판</a></li>
+        <li><a href="">상황전파 현황</a></li>
+      </ul>
+    </li>
+    <li>대국민상황전파 현황
+      <ul class="sub_loc">
+        <li><a href="">대국민상황전파(실제)</a></li>
+        <li><a href="">대국민상황전파(훈련)</a></li>
+        <li><a href="">대국민상황전파 현황</a></li>
+        <li><a href="">연계현황</a></li>
+        <li><a href="">실시간 상황판</a></li>
+        <li><a href="">환경설정</a></li>
+        <li><a href="">시스템관리</a></li>
+      </ul>
+    </li>
+    <li>기관별 상황전파 현황
+      <ul class="sub_loc">
+        <li><a href="">기관별 상황전파 현황</a></li>
+        <li><a href="">지역별 상황전파 현황</a></li>
+        <li><a href="">재난유형별 상황전파 현황</a></li>
+        <li><a href="">이동통신사 발송 리스트</a></li>
+        <li><a href="">연도별 상황전파 현황</a></li>
+        <li><a href="">월별 상황전파 현황</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="dockArea" class="mdi min_width">
+  <ul class="mdi_list">
+    <li><input type="button" framectrl="1" value="대국민상황전파 등록화면"><button type="button" class="close" framectrl = "close">닫기</button></li>
+    <li><input type="button" framectrl="2" value="대국민상황전파 리스트"><button type="button" class="close" framectrl = "close">닫기</button></li>
+  </ul>
+</div>
+    <div id="bodycon">
+      <div id="tabarea1">
+        <iframe id="ContentUrl" name="ContentUrl" class="mdi_wrap" scrolling="no" src  ="http://localhost:3000/html/propagate01_cm.html" ></iframe>
       </div>
     </div>
     <div class="footer min_width"> 
@@ -176,7 +171,10 @@
     </p>
   </div>
 </div>
+    
+ 
   </div>
+  
 </div>
 </body>
 </html>
@@ -188,4 +186,62 @@
 <script src="../plugins/jquery.jplayer.min.js" type="text/javascript"></script>
 <script src="../js/ui_common.js"></script>
 <script>
+
+  var frame = $('.mdi_wrap');
+  var frameCtrl;
+
+  var data =[
+    {}
+  ]
+  $("[framectrl]").on('click',function frameCtrl(){
+
+    var thisType = $(this).attr('framectrl'),
+        thisTit = $(this).val(),
+        url = ''
+        h = 0;
+
+   
+    switch (thisType) {
+      case '1':
+        url = 'http://localhost:3000/html/propagate01_cm.html';
+        break;
+      case '2':
+        url = 'http://localhost:3000/html/propagate01_list.html';
+        break; 
+      case '3':
+        url = 'http://localhost:3000/html/propagate01_dtl.html';
+        break; 
+      case 'close':
+        if($('.mdi_list').find('li').length <= 1){          
+          alert('최소 한개의 화면은 있어야됩니다.');
+          return;
+        }  
+        $(this).parent('li').remove();
+        break; 
+      default:
+        break;
+    }
+
+    frame.prop('src', url).attr('title',thisTit);
+    $('.mdi_list').find('li').removeClass('on');
+    $(this).parent('li').addClass('on');
+
+    if($('.mdi_list').find('li').length <= 1){
+      $('.mdi_list').find('li').addClass('on');
+      frameCtrl($('.mdi_list').find('input'));
+    }
+    setTimeout(function(){
+      setFrameHeight();      
+      frame.css('height', h); 
+    }, 500);
+  }) 
+
+  function setFrameHeight(){
+    if (ContentUrl.document != null) {
+      h = ContentUrl.document.getElementById('mdiWrap').scrollHeight;
+      return h;
+    }
+}
+
+
 </script>
