@@ -1,0 +1,32 @@
+{
+  "name": "isms",
+  "version": "1.0.0",
+  "description": "행정안전부_지능형상황관리시스템_feat.ETRI",
+  "type": "module",
+  "main": "main.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahwasa/isms.git"
+  },
+  "author": "kitvalley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahwasa/isms/issues"
+  },
+  "homepage": "https://github.com/sahwasa/isms#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/register": "^7.18.9",
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0"
+  },
+  "dependencies": {
+    "fix-esm": "^1.0.1",
+    "node-fetch": "^2.6.9"
+  }
+}
