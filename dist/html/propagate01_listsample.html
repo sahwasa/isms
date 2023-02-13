@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="kr" dir="ltr">
   <head>
-    <title>대국민 상황전파 - 행정안전부</title>
+    <title>행정안전부 지능형 상황관리 시스템</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
     <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/style.css" />    
     <link rel="stylesheet" href="../css/pop.css" />
+    <link rel="stylesheet" href="../css/sun.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0">
   </head>
 <body>
 <div class="wrap">
@@ -21,96 +22,65 @@
 </div>
 <hr />
 <!-- 바로가기 메뉴__e -->
-<div class="header min_width">
-  <h1 class="logo"><a href="">대국민 상황전파</a></h1>
-  <div class="fr gnb">
-    <ul class="gnb_list">
-      <li><b>홍길동</b>님 반갑습니다.</li>
-      <li class="divide"><button type="button" class="btn btn_blueline">로그아웃</button></li>
-      <!-- <li><button type="button" class="btn btn_gray">내정보</button></li>     -->
-      <li class="divide">
-        <ul class="gnb_link">
-          <li><button type="button">공지사항</button></li></li>
-          <li><button type="button">FAQ</button></li>
-          <li><button type="button" class="axia axi_newWin">NDMS</button></li>
-          <li><a href="../img/User_Guide_1.0.pdf" target="_blank" class="axia axi_down">지침서</a></li>
-        </ul>
-    </ul>
+<div class="header_wrap min_width">
+  <div class="header default_width flex_wrap f_sb">
+    <h1 class="logo"><a href="#">행정안전부 지능형 상황관리 시스템</a></h1>
+    <div id="lnb" class="lnb">
+      <ul class="nav lnb_list" role="navigation">
+        <li><a href="#">데이터 수집 관제</a></li>
+        <li><a href="#">신고관리</a></li>
+        <li><a href="#">재난상황 조회</a>
+          <ul class="sub">
+            <li>
+              <a href="#">재난 조회</a>
+              <ul class="sub2">
+                <li><a href="#">위기단계 이력 열람</a></li>
+                <li><a href="#">중대본 정보 열람</a></li>
+                <li><a href="#">지대본 정보 열람</a></li>
+                <li><a href="#">이재민 정보 열람</a></li>
+                <li><a href="#">기관별 정보 열람</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">통계관리</a>
+        </li>
+        <li><a href="#">환경조회</a>
+          <ul class="sub">
+            <li><a href="#">업무별 연락처</a></li>
+            <li><a href="#">시나리오 정보조회</a></li>
+          </ul>
+        </li>
+        <li><a href="#">시스템관리</a>
+          <ul class="sub">
+            <li><a href="#">사용자 관리</a></li>
+            <li><a href="#">코드 관리</a>
+              <ul class="sub2">
+                <li><a href="#">재난코드 관리</a></li>
+                <li><a href="#">행정기관코드 관리</a></li>
+                <li><a href="#">상황단계코드 관리</a></li>
+                <li><a href="#">단위업무코드 관리</a></li>
+                <li><a href="#">공통코드 관리</a></li>
+                <li><a href="#">위기단계코드 관리</a></li>
+                <li><a href="#">행정구역코드 관리</a></li>
+                <li><a href="#">법정구역코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div id="lnb" class="lnb min_width">
-    <button type="button" class="btn_sitemap" toggle_sitemap>
-      <span>사이트맵</span>      
-    </button>
-    <ul class="nav lnb_list" role="navigation">
-      <li><a href="">대국민상황전파</a>
-        <ul class="sub">
-          <li><a href="">대국민상황전파(실제)</a></li>
-          <li><a href="">대국민상황전파(훈련)</a></li>
-          <li><a href="">대국민상황전파 현황</a>
-            <ul class="sub2">
-              <li><a href="">기관별 상황전파 현황</a></li>
-              <li><a href="">지역별 상황전파 현황</a></li>
-              <li><a href="">재난유형별 상황전파 현황</a></li>
-              <li><a href="">이동통신사 발송 리스트</a></li>
-              <li><a href="">연도별 상황전파 현황</a></li>
-              <li><a href="">월별 상황전파 현황</a></li>
-            </ul>
-          </li>
-          <li><a href="">연계현황</a>
-            <ul class="sub2">
-              <li><a href="">연계정보</a></li>
-              <li><a href="">기상특보</a></li>
-              <li><a href="">홍수예보</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="">시스템 소개</a>
-        <ul class="sub">
-          <li><a href="">시스템개요</a></li>
-          <li><a href="">CBS 소개</a></li>
-          <li><a href="">DMB 소개</a></li>
-          <li><a href="">DITS 소개</a></li>
-        </ul>
-      </li>
-      <li><a href="">게시판</a>
-        <ul class="sub">
-          <li><a href="">공지사항</a></li>
-          <li><a href="">Q&amp;A</a></li>
-        </ul>
-      </li>
-      <li><a href="">상황전파 현황</a>
-        <ul class="sub">
-          <li><a href="">실시간 상황판</a></li>
-          <li><a href="">시스템 현황</a></li>
-          <li><a href="">상황실 모니터링</a></li>
-          <li><a href="">재난 예경보 송출현황</a></li>
-        </ul>
-      </li>
-      <li><a href="">환경설정</a>
-        <ul class="sub">
-          <li><a href="">표준 문안관리</a></li>
-          <li><a href="">자동상황전파 규칙관리</a></li>
-          <li><a href="">지역그룹관리</a></li>
-          <li><a href="">사용자 접속이력</a></li>
-          <li><a href="">사용자 로그아웃이력</a></li>
-          <li><a href="">월별 &sol; 기관별 사용자</a></li>
-          <li><a href="">일별 &sol; 기관별 사용자</a></li>
-        </ul>
-      </li>
-      <li><a href="">시스템관리</a>
-        <ul class="sub">
-          <li><a href="">코드관리</a></li>
-          <li><a href="">기관관리</a></li>
-          <li><a href="">지역관리</a></li>
-          <li><a href="">기상특보예보구역관리</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div> 
+  <div class="gnb_wrap">
+    <div class="gnb default_width">
+      <ul class="gnb_list">
+        <li class="divide"><b>홍길동</b>님이 시스템 사용중입니다.</li>
+        <li class="util_my"><button type="button">내정보</button></li>
+        <li class="util_log"><button type="button">로그아웃</button></li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-
   <div class="cont">
     <div class="location min_width">
   <!-- <img src="../img/temp/temp_location.jpg" alt=""> -->
@@ -207,14 +177,8 @@
     </div>
     <div class="footer min_width"> 
   <div class="copy_wrap">
-    <h1>
-      <a href="http://www.mois.go.kr" target="_blank0">행정안전부</a>
-    </h1>
-    <p class="addr">
-      세종특별자치시 다솜2로 94 정부세종청사 <b>재난상황실 (044) 120</b>
-    </p>
     <p class="copyright">
-      Cppyright ⓒ 2020 행정안전부. All rights Reserved.
+      Cppyright &copy; 2023 행정안전부. All rights Reserved.
     </p>
   </div>
 </div> 
