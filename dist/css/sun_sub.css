@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* search bar */
+.search_wrap{padding:25px 30px;margin-bottom:10px;}
+.search_wrap .period_multi input{width:147px;}
+.search_wrap .period_multi{width:auto;}
+.search_wrap .period_multi img{top:6px;left:278px;}
+.search_wrap .period_multi img:first-of-type{left:115px;}
+.search_wrap .period_multi img:first-of-type{left:106px;}
+.search_wrap .period_multi::after{top:3px;left:50%;}
+.search_wrap .btn_wrap{align-self:flex-end;}
+.search_wrap .btn_wrap button{padding:;}
+.search_wrap .btn_wrap .btn_search{align-self:flex-end;}
+.dtable dl,
+.dtable dt,
+.dtable dd{display:inline-block;}
+.dtable dt{font-size:14px;color:#000;font-weight:bold;line-height:1.71;}
+.dtable div{display:flex;flex-wrap:wrap;width:100%;}
+.dtable dt{min-width:91px;height:100%;vertical-align:top;text-align:right;line-height:30px;padding:0 3px 0 0;}
+.dtable dt::before{display:inline-block;width:5px;height:5px;margin-right:5px;margin-bottom:1px;border-radius:6px;content:"";background-color:#c1c1c1;}
+.dtable>div>dl:first-child dt{text-align:left;}
+.dtable>div:first-child dd{padding-top:0;}
+.dtable>div:last-child dd{padding-bottom:0;}
+.dtable dd{padding:2px 10px 2px 5px;}
+.dtable> div dl textarea{height:80px;padding:5px 10px;line-height:22px;}
+.dtable> div dl input,
+.dtable> div dl textarea,
+.dtable> div dl select,
+.dtable>.line1 > dl{min-width:147px;}
+.dtable> div:nth-child(3) button{height:36px;vertical-align:top;}
+
+/* responsive */
+@media all and (min-width:1280px){
+  /* search bar */
+  /*.dtable>.line3 > dl {width: 33.3%;}
+  .dtable>.line2 > dl{width:49.9%;}
+  .dtable> div dl dd{width:calc(100% - 180px);}*/
+}
+@media all and (max-width:1279px){
+}
+  
+/* 노트북 & 테블릿 가로 (해상도 1024px ~ 1279px)*/ 
+@media all and (min-width:1024px) and (max-width:1279px) {
+  /* search bar */
+  .dtable>.line2 > dl{width:49.9%;}
+  .dtable>.line3 > dl{width:33.3%;}
+  .dtable> div dl dd{width:calc(100% - 180px);}
+}
+
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+  /* search bar */
+  .dtable>.line2 > dl{width:49.9%;}
+  .dtable>.line3 > dl{width:33.3%;}
+  .dtable> div dl dd{width:calc(100% - 180px);}
+} 
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media all and (min-width:480px) and (max-width:767px) {
+  /* search bar */
+  .dtable dt{width:135px;}
+  .dtable dd{width:calc(100% - 175px);margin:0;}
+  .dtable> div:nth-child(2)>dl:last-child dd,
+  .dtable> div:nth-child(3)>dl:last-child dd{padding:7px ​7px 0px 10px;}
+  .dtable> div>dl{width:100%;}
+} 
+
+/* 모바일 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:479px) {
+}
