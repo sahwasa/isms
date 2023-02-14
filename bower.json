@@ -1,0 +1,22 @@
+{
+  "name": "idsp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "KITValley"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist/plugins",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^1.11.0",
+    "jqGrid": "jqgrid#^5.4.0",
+    "jquery-ui": "^1.12.1"
+  }
+}
