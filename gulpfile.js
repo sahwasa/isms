@@ -1,10 +1,9 @@
-  import gulp from "gulp";
-  import gulpInc from "gulp-file-include";
-  import imgmin from "gulp-imagemin";
-  import bs from "browser-sync";
-  bs.create();
-  
-  const inc = gulp.task('inc', () => { 
+const gulp = require("gulp"),
+      gulpInc = require("gulp-file-include"),
+      imgmin = require("gulp-imagemin"),
+      bs = require("browser-sync").create();
+
+function inc(){
   return gulp.src('dev/**/*.html')
   .pipe(gulpInc({
     prefix : '@@',
@@ -12,28 +11,24 @@
   }))
   .pipe(gulp.dest('dist/'))
   .pipe(bs.stream());
-});
-
-const imgMin = gulp.task('imgMin', () => {
+}
+function imgMin(){
   return gulp.src('dev/img/**/*.*')
   .pipe(imgmin())
   .pipe(gulp.dest('dist/img/'))
   .pipe(bs.stream());
-});
-
-const css = gulp.task('css', () => {
+}
+function css(){
   return gulp.src('dev/css/**/*.css')
   .pipe(gulp.dest('dist/css'))
   .pipe(bs.stream());
-});
-
-const js = gulp.task('js', () => {
+}
+function js(){
   return gulp.src('dev/js/*.js')
   .pipe(gulp.dest('dist/js'))
   .pipe(bs.stream());
-});
-
-const watch = gulp.task('watch', () => {
+}
+function watch(){
   bs.init({
     server :{
       baseDir : 'dist/'
@@ -43,16 +38,10 @@ const watch = gulp.task('watch', () => {
   gulp.watch('dev/img/**/*.*', imgMin);
   gulp.watch('dev/js/*.js', js);
   gulp.watch('dev/css/**/*.css', css);
-});
-//
-// export default () => {
-//   bs.init({
-//     server :{
-//       baseDir : 'dist/'
-//     }
-//   });
-//   gulp.watch('dev/**/*.html', inc);
-//   gulp.watch('dev/img/**/*.*', imgMin);
-//   gulp.watch('dev/js/*.js', js);
-//   gulp.watch('dev/css/**/*.css', css);
-// }
+}
+
+exports.inc = inc;
+exports.js = js;
+exports.css = css;
+exports.imgMin = imgMin;
+exports.watch = watch;
