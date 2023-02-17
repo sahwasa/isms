@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
   <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css" />
   <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
-  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/common_work.css" />
   <link rel="stylesheet" href="../css/pop.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/sun_sub.css" />
+  <link rel="stylesheet" href="../css/style_work.css" />
+  <link rel="stylesheet" href="../css/sun_sub_work.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0">
 </head>
 
@@ -133,17 +133,17 @@
               <div class="line1">
                 <dl>
                   <dt>
-                    <label for="calamity_type">발생지 주소</label>
+                    <label for="origin_address">발생지 주소</label>
                   </dt>
                   <dd>
                     <span class="alignment">
-                      <select name="calamity_type" id="calamity_type">
+                      <select id="origin_address">
                         <option value="">전체</option>
                       </select>
-                      <select name="calamity_type" id="calamity_type">
+                      <select title="origin_address">
                         <option value="">전체</option>
                       </select>
-                      <input type="text" class="input_address">
+                      <input type="text" class="input_address" title="origin_address">
                     </span>
                   </dd>
                 </dl>
@@ -165,7 +165,7 @@
                     <label for="critical_stage">위기 단계</label>
                   </dt>
                   <dd>
-                    <select name="critical_stage" id="critical_stage">
+                    <select id="critical_stage">
                       <option value="">전체</option>
                     </select>
                   </dd>
@@ -177,75 +177,88 @@
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
-              <table>
-                <colgroup>
-                  <col style="width:54px">
-                  <col style="width:133px">
-                  <col style="width:171px">
-                  <col style="width:283px">
-                  <col style="width:247px">
-                  <col style="width:141px">
-                  <col style="width:105px">
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">재난구분</th>
-                    <th scope="col">재난명</th>
-                    <th scope="col">발생장소</th>
-                    <th scope="col">발생일시</th>
-                    <th scope="col">위기단계</th>
-                    <th scope="col">종료여부</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row" data-label="No">1</td>
-                    <td data-label="재난구분">도시산불</td>
-                    <td data-label="재난명">성산면 화재</td>
-                    <td data-label="발생장소">강원도 강릉시 성산면</td>
-                    <td data-label="발생일시">2021-07-01 11:00:15</td>
-                    <td data-label="위기단계"><span class="danger_color danger_color_green">정상</span></td>
-                    <td data-label="종료여부">진행중</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" data-label="No">2</td>
-                    <td data-label="재난구분">-</td>
-                    <td data-label="재난명">-</td>
-                    <td data-label="발생장소">-</td>
-                    <td data-label="발생일시">-</td>
-                    <td data-label="위기단계"><span class="danger_color danger_color_blue">관심</span></td>
-                    <td data-label="종료여부">진행중</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" data-label="No">3</td>
-                    <td data-label="재난구분">-</td>
-                    <td data-label="재난명">-</td>
-                    <td data-label="발생장소">-</td>
-                    <td data-label="발생일시">-</td>
-                    <td data-label="위기단계"><span class="danger_color danger_color_yellow">주의</span></td>
-                    <td data-label="종료여부">진행중</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" data-label="No">4</td>
-                    <td data-label="재난구분">-</td>
-                    <td data-label="재난명">-</td>
-                    <td data-label="발생장소">-</td>
-                    <td data-label="발생일시">-</td>
-                    <td data-label="위기단계"><span class="danger_color danger_color_orange">경계</span></td>
-                    <td data-label="종료여부">진행중</td>
-                  </tr>
-                  <tr>
-                    <td scope="row" data-label="No">5</td>
-                    <td data-label="재난구분">-</td>
-                    <td data-label="재난명">-</td>
-                    <td data-label="발생장소">-</td>
-                    <td data-label="발생일시">-</td>
-                    <td data-label="위기단계"><span class="danger_color danger_color_red">심각</span></td>
-                    <td data-label="종료여부">진행중</td>
-                  </tr>
-                </tbody>
-              </table>
+            <table>
+              <caption>재난조회 리스트</caption>
+              <colgroup>
+                <col style="width:54px">
+                <col style="width:133px">
+                <col style="width:171px">
+                <col style="width:283px">
+                <col style="width:247px">
+                <col style="width:141px">
+                <col style="width:105px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">재난구분</th>
+                  <th scope="col">재난명</th>
+                  <th scope="col">발생장소</th>
+                  <th scope="col">발생일시</th>
+                  <th scope="col">위기단계</th>
+                  <th scope="col">종료여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" data-label="No">1</td>
+                  <td data-label="재난구분">
+                    <div class="text-ellipsis">
+                      <span title="도시산불">도시산불</span>
+                    </div>
+                  </td>
+                  <td data-label="재난명">
+                    <div class="text-ellipsis">
+                      <span title="성산면 화재">성산면 화재</span>
+                    </div>
+                  </td>
+                  <td data-label="발생장소">
+                    <div class="text-ellipsis">
+                      <span title="강원도 강릉시 성산면">강원도 강릉시 성산면</span>
+                    </div>
+                  </td>
+                  <td data-label="발생일시">2021-07-01 11:00:15</td>
+                  <td data-label="위기단계"><span class="danger_color danger_color_green">정상</span></td>
+                  <td data-label="종료여부">진행중</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="No">2</td>
+                  <td data-label="재난구분">-</td>
+                  <td data-label="재난명">-</td>
+                  <td data-label="발생장소">-</td>
+                  <td data-label="발생일시">-</td>
+                  <td data-label="위기단계"><span class="danger_color danger_color_blue">관심</span></td>
+                  <td data-label="종료여부">진행중</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="No">3</td>
+                  <td data-label="재난구분">-</td>
+                  <td data-label="재난명">-</td>
+                  <td data-label="발생장소">-</td>
+                  <td data-label="발생일시">-</td>
+                  <td data-label="위기단계"><span class="danger_color danger_color_yellow">주의</span></td>
+                  <td data-label="종료여부">진행중</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="No">4</td>
+                  <td data-label="재난구분">-</td>
+                  <td data-label="재난명">-</td>
+                  <td data-label="발생장소">-</td>
+                  <td data-label="발생일시">-</td>
+                  <td data-label="위기단계"><span class="danger_color danger_color_orange">경계</span></td>
+                  <td data-label="종료여부">진행중</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="No">5</td>
+                  <td data-label="재난구분">-</td>
+                  <td data-label="재난명">-</td>
+                  <td data-label="발생장소">-</td>
+                  <td data-label="발생일시">-</td>
+                  <td data-label="위기단계"><span class="danger_color danger_color_red">심각</span></td>
+                  <td data-label="종료여부">진행중</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="paginate">
               <a href="#" class="first" title="처음">〈〈</a>
               <a href="#" class="pre" title="이전">〈</a>
@@ -265,12 +278,6 @@
               <a href="#" class="last" title="마지막">〉〉</a>
             </div>
           </div>
-
-
-
-
-
-          
         </div>
       </div>
       <div class="footer min_width">

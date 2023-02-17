@@ -33,7 +33,7 @@ const js = gulp.task('js', () => {
   .pipe(bs.stream());
 });
 
-export default () => {
+const watch = gulp.task('watch', () => {
   bs.init({
     server :{
       baseDir : 'dist/'
@@ -43,4 +43,16 @@ export default () => {
   gulp.watch('dev/img/**/*.*', imgMin);
   gulp.watch('dev/js/*.js', js);
   gulp.watch('dev/css/**/*.css', css);
-}
+});
+//
+// export default () => {
+//   bs.init({
+//     server :{
+//       baseDir : 'dist/'
+//     }
+//   });
+//   gulp.watch('dev/**/*.html', inc);
+//   gulp.watch('dev/img/**/*.*', imgMin);
+//   gulp.watch('dev/js/*.js', js);
+//   gulp.watch('dev/css/**/*.css', css);
+// }

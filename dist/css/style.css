@@ -4,14 +4,13 @@
 @charset "utf-8";
 .flex_wrap{display:flex;}
 .f_sb{justify-content:space-between;}
-.min_width{min-width:1200px;box-sizing:border-box;}
 .wrap{height:100%;text-align:left;}
 .default_width{width:1200px;margin:0 auto;}
 .header{height:100px;padding:0;}
-.cont{display:table;width:100%;min-height:calc(100% - 110px);background-color:#e9ecef;}
+.cont{display:table;width:100%;height:calc(100% - 155px);background-color:#e9ecef;}
 .content{min-height:474px;margin-bottom:30px;}
 .content_body{overflow:hidden;}
-.footer{display:table-row;width:100%;height:55px;background-color:#fff;}
+.footer{display:table-row;width:100%;height:55px;margin-top:50px;background-color:#fff;}
 .footer p{font-size:14px;color:#727272;letter-spacing:-0.7px;text-align:center;}
 .copy_wrap{padding:19px 0 18px;}
 
@@ -213,7 +212,7 @@ table .th_2deps,
 
 /* sub common */
 .box{padding:30px;background-color:#fff;box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.08);}
-.con_tit{background-color:#fff;margin-bottom:10px;}
+.con_tit{background-color:#fff;margin-bottom:10px;box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.08);}
 .tit_h2{position:relative;margin:27px 0;padding-left:55px;font-size:20px;font-weight:bold;color:#222;}
 .tit_h2::before,
 .tit_h2::after{position:absolute;left:29px;display:inline-block;content:'';width:15px;height:7px;border-radius:5px;background-color:#34d0c580;}
