@@ -301,7 +301,7 @@
         </div>
         <div class="stat_wrap flex_wrap f_sb">
           <div class="chart_wrap box">
-            <div style="width:910px;height:270px;">
+            <div style="width:840px;height:270px;">
               <canvas id="chart1_1" style="width:100%;height:270px;"></canvas>
             </div>
           </div>
@@ -348,62 +348,49 @@
   new Chart(ctx1_1, {
     type: 'line',
     data: {
-      labels: ["2010", "2011", "2012", "2013"],
+      labels: ["2010","2011","2012","2013"],
       datasets: [{
         label: '도시산불',
-        lineTension: 0,
-        fill: false,
+        pointBackgroundColor: '#de4848',
         borderColor: '#de4848',
-        data: [50, 5, 10, 5]
+        borderSkipped: false,
+        data: [160, 1767, 360, 1767, 160, 240, 160, 1767]
       },
       {
         label: '도시침수',
-        lineTension: 0,
-        fill: false,
+        pointBackgroundColor: '#4172ff',
         borderColor: '#4172ff',
         borderSkipped: false,
-        data: [8, 10, 18, 5]
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
       },
       {
         label: '유해화학',
-        lineTension: 0,
-        fill: false,
+        pointBackgroundColor: '#0c7e76',
         borderColor: '#0c7e76',
         borderSkipped: false,
-        data: [6, 9, 7, 5]
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
       },
       {
         label: '감염병',
-        lineTension: 0,
-        fill: false,
+        pointBackgroundColor: '#8831ff',
         borderColor: '#8831ff',
         borderSkipped: false,
-        data: [8, 4, 5, 5]
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
       },
       {
         label: '다중화재',
-        lineTension: 0,
-        fill: false,
+        pointBackgroundColor: '#de49af',
         borderColor: '#de49af',
         borderSkipped: false,
-        data: [0, 8, 0, 5]
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
       }
       ]
     },
     options: {
-      legendCallback: function(chart) {
-            // 여기서 HTML 문자열이 반환됩니다.
-            
-        },
       responsive: true,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            padding: 16
-          }
-        }]
+      plugins: {
+        legend: false
       }
-    },
+    }
   });
 </script>
