@@ -1,18 +1,14 @@
 {
-  "name": "idsp",
+  "name": "isms",
   "version": "1.0.0",
   "main": "index.js",
-<<<<<<< HEAD
-  "type" : "module",
-=======
   "type": "commonjs",
->>>>>>> 49d764cd8116fa1f27f5de0140041bc14e87b47e
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "KITValley",
   "license": "ISC",
-  "description": "행안부_대국민상황전파",
+  "description": "행안부 지능형 상황관리 시스템",
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.8",
@@ -23,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sahwasa/mois_idsp.git"
+    "url": "git+https://github.com/sahwasa/isms.git"
   },
   "bugs": {
-    "url": "https://github.com/sahwasa/mois_idsp/issues"
+    "url": "https://github.com/sahwasa/isms/issues"
   },
-  "homepage": "https://github.com/sahwasa/mois_idsp#readme"
+  "homepage": "https://github.com/sahwasa/isms#readme"
 }
