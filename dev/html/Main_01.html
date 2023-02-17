@@ -1,0 +1,122 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content main default_width">
+        <div class="box">
+          <div class="tit_main flex_wrap f_sb">
+            <h2>재난발생 현황</h2>
+            <span>2023-02-07기준</span>
+          </div>
+          <ul class="currentlist_wrap flex_wrap">
+            <li class="list_navy">
+              <h3>총 건수</h3>
+              <p><b>30</b>건</p>
+            </li>
+            <li class="list_red">
+              <h3>도시산불</h3>
+              <p><b>2</b>건</p>
+            </li>
+            <li class="list_blue">
+              <h3>도시침수</h3>
+              <p><b>2</b>건</p>
+            </li>
+            <li class="list_green">
+              <h3>유해화학</h3>
+              <p><b>0</b>건</p>
+            </li>
+            <li class="list_purple">
+              <h3>감염병</h3>
+              <p><b>8</b>건</p>
+            </li>
+            <li class="list_pink">
+              <h3>다중화재</h3>
+              <p><b>18</b>건</p>
+            </li>
+          </ul>
+        </div>
+        <div class="stat_wrap flex_wrap f_sb">
+          <div class="chart_wrap box">
+            <div style="width:840px;height:270px;">
+              <canvas id="chart1_1" style="width:100%;height:270px;"></canvas>
+            </div>
+          </div>
+          <ul class="short_wrap">
+            <li>
+              <a href="#" class="box">
+                <h4>신고입력</h4>
+                <span>바로가기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="box">
+                <h4>업무별 연락처 조회</h4>
+                <span>바로가기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../html/inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')
+
+<script>
+  // chart1-1
+  var ctx1_1 = document.getElementById('chart1_1').getContext('2d');
+  new Chart(ctx1_1, {
+    type: 'line',
+    data: {
+      labels: ["2010","2011","2012","2013"],
+      datasets: [{
+        label: '도시산불',
+        pointBackgroundColor: '#de4848',
+        borderColor: '#de4848',
+        borderSkipped: false,
+        data: [160, 1767, 360, 1767, 160, 240, 160, 1767]
+      },
+      {
+        label: '도시침수',
+        pointBackgroundColor: '#4172ff',
+        borderColor: '#4172ff',
+        borderSkipped: false,
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+      },
+      {
+        label: '유해화학',
+        pointBackgroundColor: '#0c7e76',
+        borderColor: '#0c7e76',
+        borderSkipped: false,
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+      },
+      {
+        label: '감염병',
+        pointBackgroundColor: '#8831ff',
+        borderColor: '#8831ff',
+        borderSkipped: false,
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+      },
+      {
+        label: '다중화재',
+        pointBackgroundColor: '#de49af',
+        borderColor: '#de49af',
+        borderSkipped: false,
+        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+      }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: false
+      }
+    }
+  });
+</script>
