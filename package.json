@@ -9,9 +9,7 @@
   "author": "KITValley",
   "license": "ISC",
   "description": "행안부 지능형 상황관리 시스템",
-  "dependencies": {},
   "devDependencies": {
-    "bower": "^1.8.8",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.1.1",
