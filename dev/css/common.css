@@ -88,7 +88,7 @@ hr,
 .btn_more::before{content:"\f0fe";font-family:'axicon';margin-right:3px;}
 .btn_ico,
 .btn,
-.axib{border:1px solid transparent;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:3px;padding:5px 13px;background-color:#fff;}
+.axib{border:1px solid transparent;color:#fff;text-align:center;text-indent:0;line-height:18px;border-radius:3px;padding:5px 13px;background-color:#fff;vertical-align:middle;}
 .btn_ico:hover,
 .axib:hover,
 .btn:hover{box-shadow:1px 1px 3px rgba(0,0,0,.2) inset;}
@@ -258,6 +258,7 @@ label input{margin-top:-3px;}
 .ui_checkbox label{display:inline-block;height:22px;padding:0 10px;border-radius:3px;vertical-align:middle;}
 
 /* paginate */
+.paginate span{vertical-align:top;}
 .paginate{margin-top:32px;text-align:center}
 .paginate a,.paginate .on{display:inline-block;position:relative;_width /**/:14px;min-width:30px;padding:5px 5px 5px 4px;color:#333;font-size:15px;line-height:normal;box-sizing:border-box;font-weight:normal;margin:0 2px 0 1px;font-family:"Malgun Gothic","맑은고딕","AppleSDGothic","Nanum Barun Gothic","NanumGothic","AppleGothic","Dotum","Arial",sans-serif;}
 .paginate a:hover, .paginate .on{border-radius: 2px;color:#fff;background-color:#32beb4;}

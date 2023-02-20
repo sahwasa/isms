@@ -1,5 +1,5 @@
     <div class="pop_overlay">
-      <div class="pop_wrap p_join">
+      <div class="pop_wrap p_info">
         <div class="pop_tit">
           <h1>내 정보 수정</h1>
           <button type="button" class="btn_pop_close" closePop></button>
@@ -8,10 +8,10 @@
           <div class="pop_cont">
             <p class="validity alignR">*는 필수값 입니다.</p>
             <table class="tbl_info">
-              <caption>회원가입</caption>
+              <caption>내 정보 수정</caption>
               <colgroup>
-                <col style="width:30%;">
-                <col style="width:70%;">
+                <col style="width:150px;">
+                <col style="width:260px;">
               </colgroup>
               <tr>
                 <th scope="row"><label for="id" class="required">ID</label></th>
@@ -37,12 +37,14 @@
               <tr>
                 <th><label for="division" class="required">소속기관</label></th>
                 <td>
-                  <select name="division" title="division" style="width:48.5%;">
-                    <option value="시도">시도</option>
-                  </select>
-                  <select name="division" title="division" style="width:49%;">
-                    <option value="시군구">시군구</option>
-                  </select>
+                  <span class="flex_wrap f_sb input_50">
+                    <select name="division" title="division" style="width:48.5%;">
+                      <option value="시도">시도</option>
+                    </select>
+                    <select name="division" title="division" style="width:49%;">
+                      <option value="시군구">시군구</option>
+                    </select>
+                  </span>
                 </td>
               </tr>
               <tr>

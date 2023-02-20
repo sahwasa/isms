@@ -5,10 +5,16 @@
 @charset "utf-8";
 
 /* pop common */
+.pop_body input[type="text"],
+.pop_body input[type="number"],
+.pop_body input[type="password"],
+.pop_body textarea,
+.pop_body select{min-width:auto;padding:0 5px;}
+.padding_5{padding:0 5px !important;}
 .pop_blur{margin:0;}
-.pop_overlay{display:none;position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
-.pop_wrap{width:auto;position:fixed;top:50%;left:50%;border:3px solid #2a3652;border-top-width:0;background-color:#fff;transform:translateX(-50%) translateY(-50%);}
-.pop_body{max-height:calc(100vh - 40px);margin:1px;padding:27px 25px;overflow-y:auto;}
+.pop_overlay{display: none; position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
+.pop_wrap{width:auto;position:fixed;top:50%;left:50%;border:3px solid #2a3652;border-top-width:0;transform:translateX(-50%) translateY(-50%);}
+.pop_body{min-width:450px;max-height:calc(100vh - 40px);padding:27px 25px 26px;background:#fff;overflow-y:auto;}
 .pop_tit{display:flex;justify-content:space-between;padding:9px 17px 10px;background-color:#2a3652;}
 .pop_tit h1{font-size:16px;color:#fff;letter-spacing:-1.6px;}
 .btn_pop_close{position:relative;top:3px;width:17px;height:17px;}
@@ -19,7 +25,7 @@
 .pop_wrap .tbl_row td{height:45px;padding:5px 10px;border:1px solid #d7d7d7;font-size:14px;}
 .pop_wrap table textarea{line-height:22px;}
 .tbl_info label{font-weight:600;}
-.tbl_info th,.tbl_info td{padding:3px;background-color:transparent;border:1px solid transparent;text-align:left;}
+.tbl_info th,.tbl_info td{background-color:transparent;border:1px solid transparent;text-align:left;}
 .pop_cont .tbl_default td{padding:7px 5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
@@ -41,9 +47,9 @@
 .tbl_row input[type=color],
 .tbl_row input[type=number]{width:100%;height:30px;font-size:14px;}
 .tbl_info label{font-weight:600;line-height:35px;font-size:15px;}
-.tbl_info th,.tbl_info td{height:30px;padding:5px 3px;background-color:transparent;border:1px solid transparent;text-align:left;font-size: 16px;vertical-align:baseline;}
+.tbl_info th,.tbl_info td{height:30px;padding-top:5px;padding-bottom:5px;background-color:transparent;border:1px solid transparent;text-align:left;font-size:13px;vertical-align:baseline;}
 .tbl_info input,
-.tbl_info select{width:100%;height:35px;padding:0 13px;font-size:13px;color:#333;}
+.tbl_info select{width:100%;height:34px;font-size:13px;color:#333;}
 .tbl_info input:disabled,
 .tbl_info select:disabled{border-color:transparent;}
 .request_wrap{font-size:14px;text-align:right;margin:-10px 0 10px;}
@@ -52,17 +58,22 @@
 .tbl_info label{white-space:pre;}
 
 /* 20230216 */
+.pop_body .tbl_info button{margin-left:5px;padding:7px 13px;}
+.pop_body .search_wrap button{padding:7px 13px;}
+.pop_body .search_wrap{padding:0;}
 .pop_body .btn_search{vertical-align:sub;}
 .pop_body .dtable{margin-bottom:30px;}
+.pop_body .dtable dd{text-align:left;}
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
 @media all and (max-width:767px) {
-  .pop_wrap {position: absolute;min-width: 100%;height: 100%;}
+  .pop_wrap {position: absolute;width:100%;}
   .btn_search{width:100%;}
   .pop_body{padding:15px;}
-  .pop_body .period_multi input:last-of-type {margin:4px 0;}
+  .pop_body .period_multi input:last-of-type{margin:4px 0;}
+  .pop_body .period_multi input:first-of-type {margin-bottom:0 !important;}
   .period_multi img{top:44px;left:inherit !important;right:7px;margin-right:0 !important;}
-  .period_multi input:first-of-type{margin-bottom:4px;}
+  .period_multi input:first-of-type{margin-bottom:0;}
   .period_multi img:first-of-type{top:6px;}
   .period_multi::after{display:none;}
 }
@@ -72,5 +83,5 @@
   .pop_body .dtable>div>dl dt{text-align: left;}
   .pop_body .dtable dl{align-self:center;}
   .pop_body .dtable dt{min-width:auto}
-  .p_receipt_details{min-width:693px;}
+  .p_receipt_details{min-width:710px;}
 }

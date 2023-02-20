@@ -34,7 +34,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -46,7 +46,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -58,7 +58,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -70,7 +70,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -82,7 +82,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -94,7 +94,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -106,7 +106,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
               <li>
                 <div class="datalist_top flex_wrap f_sb">
@@ -118,7 +118,7 @@
                   <h5>최종수신시각</h5>
                   <p>2023-01-10 11:21:30</p>
                 </div>
-                <button type="button" class="btn btn_grayline">수신이력</button>
+                <button type="button" onclick="btnReceivelist()" class="btn btn_grayline">수신이력</button>
               </li>
             </ul>
           </div>
@@ -132,3 +132,12 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 데이터 수신이력 -->
+@@include('../inc/pop/Data_Sts_02.html')
+<script>
+  function btnReceivelist() {
+    $('.p_receivelist').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 데이터 수신이력 -->

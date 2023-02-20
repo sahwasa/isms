@@ -18,78 +18,126 @@
 <body>
   <div class="wrap">
     <!-- 바로가기 메뉴 -->
-    <div id="accessibility">
-      <a href="#content">본문 바로가기</a>
-      <a href="#lnb">주메뉴 바로가기</a>
-    </div>
-    <hr />
-    <!--// 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#lnb">주메뉴 바로가기</a>
+</div>
+<hr />
+<!--// 바로가기 메뉴 -->
 
-    <!-- header -->
-    <div class="header_wrap min_width">
-      <div class="header default_width flex_wrap f_sb">
-        <h1 class="logo"><a href="Main_01.html">행정안전부 지능형 상황관리 시스템</a></h1>
-        <div id="lnb" class="lnb">
-          <ul class="nav lnb_list" role="navigation">
-            <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
-            <li><a href="Call_ser_01.html">신고관리</a></li>
-            <li><a href="Dist_list_01.html">재난상황 조회</a>
-              <ul class="sub">
-                <li>
-                  <a href="Dist_list_01.html">재난 조회</a>
-                  <ul class="sub2">
-                    <li><a href="#">위기단계 이력 열람</a></li>
-                    <li><a href="#">중대본 정보 열람</a></li>
-                    <li><a href="#">지대본 정보 열람</a></li>
-                    <li><a href="#">이재민 정보 열람</a></li>
-                    <li><a href="#">기관별 정보 열람</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">통계관리</a>
-            </li>
-            <li><a href="#">환경조회</a>
-              <ul class="sub">
-                <li><a href="#">업무별 연락처</a></li>
-                <li><a href="#">시나리오 정보조회</a></li>
-              </ul>
-            </li>
-            <li><a href="#">시스템관리</a>
-              <ul class="sub">
-                <li><a href="#">사용자 관리</a></li>
-                <li><a href="#">코드 관리</a>
-                  <ul class="sub2">
-                    <li><a href="#">재난코드 관리</a></li>
-                    <li><a href="#">행정기관코드 관리</a></li>
-                    <li><a href="#">상황단계코드 관리</a></li>
-                    <li><a href="#">단위업무코드 관리</a></li>
-                    <li><a href="#">공통코드 관리</a></li>
-                    <li><a href="#">위기단계코드 관리</a></li>
-                    <li><a href="#">행정구역코드 관리</a></li>
-                    <li><a href="#">법정구역코드 관리</a></li>
-                  </ul>
-                </li>
+<!-- header -->
+<div class="header_wrap min_width">
+  <div class="header default_width flex_wrap f_sb">
+    <h1 class="logo"><a href="Main_01.html">행정안전부 지능형 상황관리 시스템</a></h1>
+    <div id="lnb" class="lnb pc_con">
+      <ul class=" nav lnb_list" role="navigation">
+        <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+        <li><a href="Call_ser_01.html">신고관리</a></li>
+        <li><a href="Dist_list_01.html">재난상황 조회</a>
+          <ul class="sub">
+            <li>
+              <a href="Dist_list_01.html">재난 조회</a>
+              <ul class="sub2">
+                <li><a href="#">위기단계 이력 열람</a></li>
+                <li><a href="#">중대본 정보 열람</a></li>
+                <li><a href="#">지대본 정보 열람</a></li>
+                <li><a href="#">이재민 정보 열람</a></li>
+                <li><a href="#">기관별 정보 열람</a></li>
               </ul>
             </li>
           </ul>
-        </div>
-      </div>
-      <div class="gnb_wrap">
-        <div class="gnb default_width">
-          <ul class="gnb_list">
-            <li class="divide"><b>홍길동</b>님이 시스템 사용중입니다.</li>
-            <li class="util_my"><button type="button" onclick="btnJoin()">내정보</button></li>
-            <li class="util_log"><button type="button">로그아웃</button></li>
+        </li>
+        <li><a href="#">통계관리</a>
+        </li>
+        <li><a href="#">환경조회</a>
+          <ul class="sub">
+            <li><a href="#">업무별 연락처</a></li>
+            <li><a href="#">시나리오 정보조회</a></li>
           </ul>
-        </div>
+        </li>
+        <li><a href="#">시스템관리</a>
+          <ul class="sub">
+            <li><a href="#">사용자 관리</a></li>
+            <li><a href="#">코드 관리</a>
+              <ul class="sub2">
+                <li><a href="#">재난코드 관리</a></li>
+                <li><a href="#">행정기관코드 관리</a></li>
+                <li><a href="#">상황단계코드 관리</a></li>
+                <li><a href="#">단위업무코드 관리</a></li>
+                <li><a href="#">공통코드 관리</a></li>
+                <li><a href="#">위기단계코드 관리</a></li>
+                <li><a href="#">행정구역코드 관리</a></li>
+                <li><a href="#">법정구역코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="m_con">
+      <a href="#" class="m_con allMenuOpen">전체메뉴 열기</a>
+      <div id="allMenuBox" tabindex="-1" class="ins_allMenuBox">
+        <ul class="gnb m_con" role="navigation">
+          <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+        <li><a href="Call_ser_01.html">신고관리</a></li>
+        <li><a href="Dist_list_01.html">재난상황 조회</a>
+          <ul class="sub">
+            <li>
+              <a href="Dist_list_01.html">재난 조회</a>
+              <ul class="sub2">
+                <li><a href="#">위기단계 이력 열람</a></li>
+                <li><a href="#">중대본 정보 열람</a></li>
+                <li><a href="#">지대본 정보 열람</a></li>
+                <li><a href="#">이재민 정보 열람</a></li>
+                <li><a href="#">기관별 정보 열람</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">통계관리</a>
+        </li>
+        <li><a href="#">환경조회</a>
+          <ul class="sub">
+            <li><a href="#">업무별 연락처</a></li>
+            <li><a href="#">시나리오 정보조회</a></li>
+          </ul>
+        </li>
+        <li><a href="#">시스템관리</a>
+          <ul class="sub">
+            <li><a href="#">사용자 관리</a></li>
+            <li><a href="#">코드 관리</a>
+              <ul class="sub2">
+                <li><a href="#">재난코드 관리</a></li>
+                <li><a href="#">행정기관코드 관리</a></li>
+                <li><a href="#">상황단계코드 관리</a></li>
+                <li><a href="#">단위업무코드 관리</a></li>
+                <li><a href="#">공통코드 관리</a></li>
+                <li><a href="#">위기단계코드 관리</a></li>
+                <li><a href="#">행정구역코드 관리</a></li>
+                <li><a href="#">법정구역코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        </ul>
       </div>
     </div>
-    <!-- header -->
+  </div>
+  <div class="gnb_wrap">
+    <div class="gnb default_width">
+      <ul class="gnb_list">
+        <li class="divide"><b>홍길동</b>님이 시스템 사용중입니다.</li>
+        <li class="util_my"><button type="button" onclick="btninfo()">내정보</button></li>
+        <li class="util_log"><button type="button">로그아웃</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- header -->
 
-    <!-- 내 정보 수정 -->
+<!-- 내 정보 수정 -->
     <div class="pop_overlay">
-      <div class="pop_wrap p_join">
+      <div class="pop_wrap p_info">
         <div class="pop_tit">
           <h1>내 정보 수정</h1>
           <button type="button" class="btn_pop_close" closePop></button>
@@ -98,10 +146,10 @@
           <div class="pop_cont">
             <p class="validity alignR">*는 필수값 입니다.</p>
             <table class="tbl_info">
-              <caption>회원가입</caption>
+              <caption>내 정보 수정</caption>
               <colgroup>
-                <col style="width:30%;">
-                <col style="width:70%;">
+                <col style="width:150px;">
+                <col style="width:260px;">
               </colgroup>
               <tr>
                 <th scope="row"><label for="id" class="required">ID</label></th>
@@ -127,12 +175,14 @@
               <tr>
                 <th><label for="division" class="required">소속기관</label></th>
                 <td>
-                  <select name="division" title="division" style="width:48.5%;">
-                    <option value="시도">시도</option>
-                  </select>
-                  <select name="division" title="division" style="width:49%;">
-                    <option value="시군구">시군구</option>
-                  </select>
+                  <span class="flex_wrap f_sb input_50">
+                    <select name="division" title="division" style="width:48.5%;">
+                      <option value="시도">시도</option>
+                    </select>
+                    <select name="division" title="division" style="width:49%;">
+                      <option value="시군구">시군구</option>
+                    </select>
+                  </span>
                 </td>
               </tr>
               <tr>
@@ -182,10 +232,10 @@
         </div>
       </div>
     </div>
-    <!--// 내 정보 수정-->
-    <!-- 내 정보 -->
+<!--// 내 정보 수정-->
+<!-- 내 정보 -->
     <div class="pop_overlay">
-      <div class="pop_wrap p_join">
+      <div class="pop_wrap p_info">
         <div class="pop_tit">
           <h1>내정보</h1>
           <button type="button" class="btn_pop_close" closePop></button>
@@ -195,9 +245,9 @@
             <table class="tbl_info">
               <caption>내정보</caption>
               <colgroup>
-                  <col style="width:30%;">
-                  <col style="width:55%;">
-                  <col style="width:15%;">
+                <col style="width:150px;">
+                <col style="width:200px;">
+                <col style="width:60px;">
               </colgroup>
               <tr>
                 <th><label for="id">ID</label></th>
@@ -206,7 +256,7 @@
               <tr>
                 <th scope="row"><label for="pw">비밀번호</label></th>
                 <td><input type="password" id="pw" class="border_none" value="************" disabled></td>
-                <td><button type="button" class="btn_s btn_gray">변경</button></td>
+                <td><button type="button" class="btn btn_gray">변경</button></td>
               </tr>
               <tr>
                 <th><label for="name">이름</label></th>
@@ -258,13 +308,12 @@
         </div>
       </div>
     </div>
-    <script>
-      function btnJoin() {
-        $('.p_join').parent('.pop_overlay').toggle();
-      }
-    </script>
-    <!--// 내 정보 -->
-
+<script>
+  function btninfo() {
+    $('.p_info').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 내 정보 -->
     <div class="cont min_width">
       <div id="content" class="content default_width">
         <div class="breadcrumb">

@@ -39,8 +39,13 @@
         </div>
         <div class="stat_wrap flex_wrap f_sb">
           <div class="chart_wrap box">
-            <div style="width:840px;height:270px;">
-              <canvas id="chart1_1" style="width:100%;height:270px;"></canvas>
+            <div class="tit_main flex_wrap f_sb">
+              <h2>연간 재난발생추이</h2>
+            </div>
+            <div class="chart-box">
+              <div class="chart-container">
+                <canvas id="chart1_1"></canvas>
+              </div>
             </div>
           </div>
           <ul class="short_wrap">
@@ -74,49 +79,63 @@
   new Chart(ctx1_1, {
     type: 'line',
     data: {
-      labels: ["2010","2011","2012","2013"],
+      labels: ["2010", "2011", "2012", "2013"],
       datasets: [{
         label: '도시산불',
-        pointBackgroundColor: '#de4848',
+        fill: false,
         borderColor: '#de4848',
         borderSkipped: false,
-        data: [160, 1767, 360, 1767, 160, 240, 160, 1767]
+        data: [50, 5, 10, 5]
       },
       {
         label: '도시침수',
-        pointBackgroundColor: '#4172ff',
+        fill: false,
         borderColor: '#4172ff',
         borderSkipped: false,
-        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+        data: [8, 10, 18, 5]
       },
       {
         label: '유해화학',
-        pointBackgroundColor: '#0c7e76',
+        fill: false,
         borderColor: '#0c7e76',
         borderSkipped: false,
-        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+        data: [6, 9, 7, 5]
       },
       {
         label: '감염병',
-        pointBackgroundColor: '#8831ff',
+        fill: false,
         borderColor: '#8831ff',
         borderSkipped: false,
-        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+        data: [8, 4, 5, 5]
       },
       {
         label: '다중화재',
-        pointBackgroundColor: '#de49af',
+        fill: false,
         borderColor: '#de49af',
         borderSkipped: false,
-        data: [514, 177, 566, 54, 160, 240, 160, 1540]
+        data: [0, 8, 0, 5]
       }
       ]
     },
     options: {
-      responsive: true,
-      plugins: {
-        legend: false
+      legend: {
+        position: 'bottom',
+        align: 'end'
+      },
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          stacked: true,
+          gridLines: {
+            display: true,
+          }
+        }], xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
       }
+
     }
   });
 </script>
