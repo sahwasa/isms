@@ -47,6 +47,7 @@
 .sub > li > a:hover,
 .sub > li:hover > a{color:#00b0a4;}
 .sub > li > a::before{display:inline-block;width:6px;height:6px;margin-right:10px;margin-bottom:3px;border-radius:6px;content:"";background-color:#c1c1c1;}
+.sub > li.on > a::before,
 .sub > li:hover > a::before{background-color:#00b0a4;}
 .sub2{background-color:#f1f1f1;padding-bottom:15px;}
 .sub2 a{position:relative;padding:11px 0 12px 55px;font-size:14px;color:#424242;line-height:22px;letter-spacing:-1.05px;}
