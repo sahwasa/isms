@@ -53,20 +53,20 @@ table td{padding: 0 !important;}
 .dtable> div:nth-child(3) button{height:36px;vertical-align:top;}
 
 /* main */
-.main{padding-top:30px;}
-.tit_main{margin:3px 0 27px;}
+.tit_main{margin:3px 0 27px;align-items:center;}
 .tit_main >*{font-weight:bold;}
 .tit_main h2{font-size:18px;color:#222;}
 .tit_main span{font-size:14px;color:#727272;}
 .currentlist_wrap{display:flex;flex-wrap:wrap;}
-.currentlist_wrap h3{margin:23px 0;font-size:20px;font-weight:bold;letter-spacing:-1.5px;}
+.currentlist_wrap li{display:flex;align-items:center;flex-direction:column;justify-content:space-between;padding:30px 0;}
+.currentlist_wrap h3{align-items:center;font-size:20px;font-weight:bold;letter-spacing:-1.5px;}
 .currentlist_wrap>li:nth-child(n+2){background-color:#f5f7fb;}
 .currentlist_wrap>li:nth-child(n+2) h3{color:#000;}
 .currentlist_wrap>li:nth-child(n+2) p{color:#1f1f1f;}
 .currentlist_wrap>li{width:180px;height:160px;margin-right:12px;border-width:2px;border-style:solid;border-radius:6px;overflow:hidden;text-align:center;}
 .currentlist_wrap>li:last-child{margin-right:0;}
-.currentlist_wrap p{margin-top:-30px;margin-right:-20px;font-size:16px;color:#fff;font-weight:bold;text-align:center;}
-.currentlist_wrap p b{margin-right:10px;font-size:75px;color:#67fdff;letter-spacing:-7.5px;}
+.currentlist_wrap p{position:relative;left:6px;line-height:75px;font-size:16px;color:#fff;font-weight:bold;}
+.currentlist_wrap p b{font-size:75px;color:#67fdff;letter-spacing:-7.5px;margin-right:6px;}
 .list_navy{background-color:#2d3f6a;border:none;}
 .list_navy h3{color:#fff;}
 .list_red{border-color:#de4848;}
@@ -161,7 +161,7 @@ table td{padding: 0 !important;}
 
 /* 저해상도 pc 테블릿 공통 */
 @media all and (min-width:768px) and (max-width:1200px) {
-  .header{height:70px;padding:0 15px;}
+  .header{height:60px;padding:0 16px;}
   .header .logo a{width:230px;}
   .breadcrumb{margin-top:20px;}
   .tit_h2{margin:20px 0;}
@@ -196,10 +196,10 @@ table td{padding: 0 !important;}
   .tbl_res table tbody>tr:last-child>td{border-bottom:1px solid #8b95a3;}
   /* main */
   .currentlist_wrap{justify-content:space-evenly;}
-  .currentlist_wrap>li{width:31%;height:auto;margin:0;padding:10px 0;}
+  .currentlist_wrap>li{width:31%;height:auto;margin:0;padding:15px 0;}
   .currentlist_wrap>li:nth-child(-n+3){margin-bottom:2%;}
-  .currentlist_wrap h3{margin:8px 0 25px;font-size:15px;}
-  .currentlist_wrap p{margin-right:-8px;font-size:13px;}
+  .currentlist_wrap h3{margin-bottom:25px;font-size:15px;}
+  .currentlist_wrap p{line-height:50px;font-size:13px;}
   .currentlist_wrap p b{margin-right:3px;font-size:50px;letter-spacing:-3.5px;}
   .stat_wrap{display:block;}
   .chart_wrap{width:100%;}
@@ -235,18 +235,21 @@ table td{padding: 0 !important;}
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
 @media all and (max-width:767px) {
+  .header_wrap{margin-bottom:10px;}
   .header{height:65px;padding:0 20px;}
-  .header .logo a{width:210px;}
-  .gnb_list{height:45px;padding:0 10px;}
+  .header .logo a{width:168px;}
+  .gnb_wrap{margin-bottom:10px;}
+  .gnb_list{height:35px;padding:0 10px;}
   .box{padding:15px;box-shadow:none;}
-  .tit_h2{display:block;margin:15px 0 10px;padding:15px 0;padding-left:40px;font-size:16px;}
-  .tit_h2::before, .tit_h2::after{left:18px;}
+  .con_tit{height:50px;padding:0 15px;}
+  .tit_h2{padding:15px 0;padding-left:22px;font-size:16px;}
   .tit_h2::before{top:19px;}
   .tit_h2::after{top:25px;}
   .t_ellipsis{text-align:left;}
   .t_ellipsis.center{text-align:center;}
   .t_ellipsis > *{padding:0 !important;}
   .content{margin-bottom:20px;}
+<<<<<<< HEAD
   .footer{margin-top:20px;}
   .btn_circle{width:auto;margin:2px 0;padding:0 10px 0 25px;height:24px;border-radius:3px;background-color:#8b95a3;background-size:contain;font-size:14px;color:#fff;font-weight:bold;}
   .btn_setup{background-position-y:0;}
@@ -258,6 +261,11 @@ table td{padding: 0 !important;}
 
 
 
+=======
+  .footer{height:auto;margin-top:0;}
+  .copy_wrap{padding:12px 0;}
+  .footer p{font-size:11px;}
+>>>>>>> c9bf2a5b7625c172553c6a2ea2f8c39381c37534
   /* login */
   .tit_login{height:100px;margin-bottom:50px;}
   .tit_login img{height:100%;}
@@ -274,7 +282,7 @@ table td{padding: 0 !important;}
   .paginate .first,
   .paginate .last{width:20px;height:20px;margin:0;vertical-align:bottom;}
   /* search bar */
-  .search_wrap{display:block;padding:20px;}
+  .search_wrap{display:block;padding:15px;}
   .search_wrap .period_multi img{top:44px;left:inherit !important;right:7px;margin-right:0;}
   .search_wrap .period_multi input:first-of-type{margin-bottom:4px;}
   .search_wrap .period_multi img:first-of-type{top:6px;}
@@ -303,17 +311,19 @@ table td{padding: 0 !important;}
   .tbl_res table tbody tr td:first-child, 
   .tbl_res table tbody tr th:first-child {margin-top:15px;border-top:none;box-shadow:0px -1px 0px #ced6e4;}
   /* main */
+  .tit_main{margin-bottom:20px;}
+  .tit_main h2{font-size:16px;}
   .currentlist_wrap{justify-content:space-evenly;}
-  .currentlist_wrap>li{width:31%;height:auto;margin:0;padding:10px 0;}
+  .currentlist_wrap>li{width:31%;height:auto;margin:0;padding:10px 0 0;}
   .currentlist_wrap>li:nth-child(-n+3){margin-bottom:2%;}
-  .currentlist_wrap h3{margin:8px 0 25px;font-size:15px;}
-  .currentlist_wrap p{margin-right:-8px;font-size:13px;}
-  .currentlist_wrap p b{margin-right:3px;font-size:50px;letter-spacing:-3.5px;}
-  .stat_wrap{display:block;}
+  .currentlist_wrap h3{font-size:13px;}
+  .currentlist_wrap p{line-height:37px;font-size:13px;}
+  .currentlist_wrap p b{margin-right:3px;font-size:37px;letter-spacing:-3.5px;}
+  .stat_wrap{display:block;margin-top:10px;}
   .chart_wrap{width:100%;}
   .chart_wrap>div{width:100% !important;}
   .short_wrap{display:flex;justify-content:space-evenly;}
-  .short_wrap h4{font-size:15px;}
+  .short_wrap h4{font-size:14px;}
   .short_wrap>li{width:44%;margin:5% 0 0;}
   .short_wrap>li:first-child{margin-bottom:0;}
   .short_wrap>li:nth-child(1) a,
@@ -340,7 +350,7 @@ table td{padding: 0 !important;}
   .dtable dd{width:calc(100% - 145px);margin:0;}
   .dtable> div:nth-child(2)>dl:last-child dd,
   .dtable> div:nth-child(3)>dl:last-child dd{padding:7px ​7px 0px 10px;}
-  .dtable> div>dl{width:100%;}
+  .dtable> div>dl{display:flex;justify-content:space-between; width:100%;}
 } 
 
 /* 모바일 세로 (해상도 ~ 479px) ------------------------------------------------- */ 
