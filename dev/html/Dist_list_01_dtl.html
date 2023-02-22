@@ -9,76 +9,44 @@
           <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">재난상황조회</a></li>
-            <li>재난조회</li>
+            <li>재난상황 상세보기</li>
           </ul>
         </div>
         <div>
           <div class="con_tit flex_wrap f_sb">
-            <h2 class="tit_h2">신고관리</h2>
+            <h2 class="tit_h2">재난상황 상세보기</h2>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_gray">목록</button>
+            </div>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
-            <div class="dtable">
-              <div class="line1">
-                <dl>
-                  <dt>
-                    <label for="calamity_type">재난 구분</label>
-                  </dt>
-                  <dd>
-                    <select name="calamity_type" id="calamity_type">
-                      <option value="">전체</option>
-                    </select>
-                  </dd>
-                </dl>
-              </div>
-              <div class="line1">
-                <dl>
-                  <dt>
-                    <label for="origin_address">발생지 주소</label>
-                  </dt>
-                  <dd>
-                    <span class="alignment">
-                      <select id="origin_address">
-                        <option value="">전체</option>
-                      </select>
-                      <select title="origin_address">
-                        <option value="">전체</option>
-                      </select>
-                      <input type="text" class="input_address" title="origin_address">
-                    </span>
-                  </dd>
-                </dl>
-              </div>
-              <div class="line2">
-                <dl>
-                  <dt>
-                    <label for="critical_stage">접수 기관</label>
-                  </dt>
-                  <dd>
-                    <input type="text" title="origin_address">
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>
-                    <label for="start_date">발생 일시</label>
-                  </dt>
-                  <dd>
-                    <span class="period period_multi">
-                      <input type="text" class="from date" name="date1" role="from">
-                      <input type="text" class="to date" name="date1" role="to">
-                    </span>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-            <div class="btn_wrap">
-              <button type="button" class="btn_search btn_mint">조회</button>
+            <div class="tbl_wrap">
+              <table class="tbl_rowHead">
+                <caption>선택한 재난정보</caption>
+                <tr>
+                  <th scope="row">재난 일련번호</th>
+                  <td>111111</td>
+                  <th scope="row">재난구분</th>
+                  <td>도시산불</td>
+                  <th scope="row">재난명</th>
+                  <td>A산 도시산불</td>
+                </tr>
+                <tr>
+                  <th scope="row">재난 발생일시</th>
+                  <td>2023-01-01 00:00:00</td>
+                  <th scope="row">사건 발생일시</th>
+                  <td colspan="3">2023-01-01 00:00:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">발생지 행정구역</th>
+                  <td>강원도 강릉시</td>
+                  <th scope="row">발생지 상세주소</th>
+                  <td colspan="3">성산명 가나다길 58</td>
+                </tr>
+              </table>
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
-            <div class="btn_wrap">
-              <button type="button" class="btn btn_blue">입력</button>
-              <button type="button" class="btn btn_red">삭제(임시크기, 임시색상)</button>
-            </div>
             <table>
               <caption>재난조회 리스트</caption>
               <colgroup>
@@ -184,8 +152,11 @@
       </div>
       @@include('../inc/footer.html')
     </div>
-  </div>
-  <!-- @@include('../inc/loading.html')  -->
+  </div><!-- @@include('../html/inc/loading.html')  -->
+
+<!-- 내 정보 수정 -->
+  @@include('../inc/pop/Data_Sts_02.html')
+<!--// 내 정보 수정-->
 </body>
 
 </html>
