@@ -1,0 +1,218 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">코드관리</a></li>
+            <li>공통코드 관리</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit">
+            <h2 class="tit_h2">공통코드 관리</h2>
+          </div>
+          <div class="code_wrap flex_wrap f_sb">
+            <div>
+              <h3 class="tit_h3">공통 코드 그룹</h3>
+              <div class="box">
+                <div class="search_wrap flex_wrap f_sb">
+                  <div class="dtable">
+                    <div class="line1">
+                      <dl>
+                        <dt>
+                          <label for="disaster_type">재난구분</label>
+                        </dt>
+                        <dd>
+                          <select name="disaster_type" id="disaster_type">
+                            <option value="">전체</option>
+                          </select>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn_search btn_mint">입력</button>
+                  </div>
+                </div>
+                <div class="tbl_wrap tbl_res">
+                  <table>
+                    <caption>재난코드관리 리스트</caption>
+                    <colgroup>
+                      <col style="width:80px">
+                      <col style="width:133px">
+                      <col style="width:171px">
+                      <col style="width:283px">
+                      <col style="width:171px">
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">재난코드</th>
+                        <th scope="col">재난명(한글)</th>
+                        <th scope="col">재난명(영문)</th>
+                        <th scope="col">약어</th>
+                        <th scope="col">사용여부</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row" data-label="순번">
+                          <div class="t_ellipsis">
+                            <span>1</span>
+                          </div>
+                        </td>
+                        <td data-label="재난코드">
+                          <div class="t_ellipsis">
+                            <span title="A0001">A0001</span>
+                          </div>
+                        </td>
+                        <td data-label="재난명(한글)">
+                          <div class="t_ellipsis">
+                            <span title="도시산불">도시산불</span>
+                          </div>
+                        </td>
+                        <td data-label="재난명(영문)">
+                          <div class="t_ellipsis">
+                            <span title="City wildfire">City wildfire</span>
+                          </div>
+                        </td>
+                        <td data-label="약어">
+                          <div class="t_ellipsis">
+                            <span title="CWF">CWF</span>
+                          </div>
+                        </td>
+                        <td data-label="승인여부">Y</td>
+                    </tbody>
+                  </table>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#" class="on">5</a>
+                      <a href="#">6</a>
+                      <a href="#">7</a>
+                      <a href="#">8</a>
+                      <a href="#">9</a>
+                      <a href="#">10</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="tit_h3">공통 코드 그룹</h3>
+              <div class="box">
+                <div class="search_wrap flex_wrap f_sb">
+                  <div class="dtable">
+                    <div class="line1">
+                      <dl>
+                        <dt>
+                          <label for="disaster_type">재난구분</label>
+                        </dt>
+                        <dd>
+                          <select name="disaster_type" id="disaster_type">
+                            <option value="">전체</option>
+                          </select>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn_search btn_mint">입력</button>
+                  </div>
+                </div>
+                <div class="tbl_wrap tbl_res">
+                  <table>
+                    <caption>재난코드관리 리스트</caption>
+                    <colgroup>
+                      <col style="width:80px">
+                      <col style="width:133px">
+                      <col style="width:171px">
+                      <col style="width:283px">
+                      <col style="width:171px">
+                      <col style="width:80px">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">재난코드</th>
+                        <th scope="col">재난명(한글)</th>
+                        <th scope="col">재난명(영문)</th>
+                        <th scope="col">약어</th>
+                        <th scope="col">사용여부</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row" data-label="순번">
+                          <div class="t_ellipsis">
+                            <span>1</span>
+                          </div>
+                        </td>
+                        <td data-label="재난코드">
+                          <div class="t_ellipsis">
+                            <span title="A0001">A0001</span>
+                          </div>
+                        </td>
+                        <td data-label="재난명(한글)">
+                          <div class="t_ellipsis">
+                            <span title="도시산불">도시산불</span>
+                          </div>
+                        </td>
+                        <td data-label="재난명(영문)">
+                          <div class="t_ellipsis">
+                            <span title="City wildfire">City wildfire</span>
+                          </div>
+                        </td>
+                        <td data-label="약어">
+                          <div class="t_ellipsis">
+                            <span title="CWF">CWF</span>
+                          </div>
+                        </td>
+                        <td data-label="승인여부">Y</td>
+                    </tbody>
+                  </table>
+                  <div class="paginate">
+                    <a href="#" class="first" title="처음">〈〈</a>
+                    <a href="#" class="pre" title="이전">〈</a>
+                    <span>
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#" class="on">5</a>
+                      <a href="#">6</a>
+                      <a href="#">7</a>
+                      <a href="#">8</a>
+                      <a href="#">9</a>
+                      <a href="#">10</a>
+                    </span>
+                    <a href="#" class="next" title="다음">〉</a>
+                    <a href="#" class="last" title="마지막">〉〉</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')

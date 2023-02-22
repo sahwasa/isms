@@ -145,22 +145,19 @@ hr,
 .axi_bellOff::before{content:"\e96c";color:#385d9e;}
 .axi_dir_r::before{content:"\e850";color:#333;}
 .axi_attach::before{content:"\e001";}
-
 .axi_newWin::after{content:"\e6d5";}
 .axi_down::after{content:"\e832";}
 
-.btn_toggle{position:relative;width:60px;height:20px;background-color:#2e66aa;border-radius:10px;vertical-align:middle;padding:0 5px;box-sizing:border-box;font-size:0;border:1px solid;}
+.btn_toggle{display:inline-block;position:relative;width:62px;height:28px;background-color:#999;border-radius:28px;vertical-align:middle;padding:0 5px;box-sizing:border-box;font-size:0;border:1px solid;overflow:hidden;outline:none;border-color: #999;text-align:left;line-height:34px;}
 .btn_toggle[disabled]{cursor:default;}
-.btn_toggle::before{position:absolute;top:1px;display:inline-block;content:"";width:16px;height:16px;background-color:#fff;border-radius:50%;}
-.btn_toggle::after{font-size:12px;line-height:17px;color:#fff;letter-spacing:0;}
-.btn_toggle[datavalue="on"]{background-color:#2e66aa;border-color:#2e66aa;}
-.btn_toggle[datavalue="on"]::before{left:1px;}
-.btn_toggle[datavalue="on"]::after{content:"ON";float:right;}
-.btn_toggle[datavalue="off"]{background-color:#7e7e7e;border-color:transparent;}
-.btn_toggle[datavalue="off"]::before{left:inherit;right:1px;}
-.btn_toggle[datavalue="off"]::after{content:"OFF";float:left;}
-.btn_toggle.pdf_psd[datavalue="on"]::after{content:"PDF";}
-.btn_toggle.pdf_psd[datavalue="off"]::after{content:"PSD";}
+.btn_toggle::before{position:absolute;top:5px;right:5px;display:inline-block;content:"";width:16px;height:16px;background-color:#fff;border-radius:50%;transition:0.5s;}
+.btn_toggle::after{position:relative;content:"OFF";top:-4px; left:0;font-size:12px;color:#fff;}
+.btn_toggle[datavalue="on"]{background-color:#094fa3;border-color:#094fa3;}
+.btn_toggle[datavalue="on"]::before{right:38px;}
+.btn_toggle[datavalue="on"]::after{content:"ON";padding-right:6px;float:right;}
+.btn_toggle[datavalue="off"]{background-color:#999;border-color:transparent;}
+.btn_toggle[datavalue="off"]::before{right:1px;}
+.btn_toggle[datavalue="off"]::after{content:"OFF";left:0;}
 
 .btn_tgl{color:#6f778b;border-color:#6f778b;}
 .btn_tgl[datavalue="on"]{color:#fff;background-color:#6f778b;}

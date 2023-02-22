@@ -98,7 +98,9 @@
                     </div>
                   </td>
                   <td data-label="승인여부">Y</td>
-                  <td data-label="No">1</td>
+                  <td data-label="관리">
+                    <button type="button" class="btn_circle btn_setup" onclick="btnAdmin()">관리</button>
+                  </td>
               </tbody>
             </table>
             <div class="paginate">
@@ -130,3 +132,21 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 사용자 관리 -->
+@@include('../inc/pop/SYS_MGN_02_01.html')
+<script>
+  function btnAdmin() {
+    $('.p_admin').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 사용자 관리 -->
+
+<!-- 사용자 관리 -->
+@@include('../inc/pop/SYS_MGN_02_02.html')
+<script>
+  function btnConfirmed() {
+    $('.p_confirmed').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 사용자 관리 -->

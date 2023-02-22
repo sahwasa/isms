@@ -55,7 +55,7 @@ $(function () {
   // mobile gnb
   $(".allMenuOpen").on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass('close');
+    $(this).toggleClass("close");
     $("#allMenuBox").toggle(0).attr("tabindex", 0);
     $("#allMenuBox").toggleClass("active");
   });
@@ -101,5 +101,17 @@ $(function () {
       $(this).addClass("empty");
       console.log("3");
     }
-  })
+  });
+  
+  // toggle button
+  $(".btn_toggle").on("click", function (e) {
+    e.preventDefault();
+    var cur = $(this).attr("datavalue");
+    if ($(this).attr("disabled") == "disabled") return false;
+    if (cur == "on") {
+      $(this).attr("datavalue", "off");
+    } else {
+      $(this).attr("datavalue", "on");
+    }
+  });
 });
