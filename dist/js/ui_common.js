@@ -83,7 +83,6 @@ $(function () {
   $("#allMenuBox > ul > li > a").each(function () {
     if (!$(this).next().length) {
       $(this).addClass("empty");
-      console.log("1");
     }
   });
   $(".m_con > li").each(function () {
@@ -99,7 +98,6 @@ $(function () {
   $(".m_con > li > a").each(function () {
     if (!$(this).next().length) {
       $(this).addClass("empty");
-      console.log("3");
     }
   });
   
@@ -114,4 +112,24 @@ $(function () {
       $(this).attr("datavalue", "on");
     }
   });
+
+  //tab
+$('.xl_tab li').first().addClass("on");
+  $(".tab_contents").not(':first').hide();  
+    $('.xl_tab li').on('click',function(){
+      $(this).addClass("on").siblings().removeClass("on");
+      var link = $(this).find("a").attr("href");
+      var link_num = link.substr(link.length-1);
+      $(".m_tab option").eq(link_num-1).prop("selected", "selected");
+      $(".tab_contents").hide();
+      $(link).show().focus();
+    });    
+    $(".tab_select").on("change",function(){
+      var select_link = $(".tab_select").val();
+      var select_num = $(this).prop('selectedIndex');
+      $('.xl_tab li').eq(select_num).addClass("on").siblings().removeClass('on');
+      $(".tab_contents").hide();
+      $("#"+select_link).show().focus();
+      console.log(select_link);
+    });
 });
