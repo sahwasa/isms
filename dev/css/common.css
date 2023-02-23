@@ -75,8 +75,8 @@ hr,
 .divideR::before{left:auto;right:5px;}
 
 /* accessibility */
-#accessibility{position:relative;display:block;z-index:999;}
-#accessibility a{display:block;width:1px;height:1px;margin-bottom:-1px;overflow:hidden;text-align:center;color:#fff;}
+#accessibility{position:relative;z-index:999;}
+#accessibility a{display:block;width:1px;height:0;margin-bottom:-1px;overflow:hidden;text-align:center;color:#fff;}
 #accessibility a:focus,#accessibility a:active{width:100%;height:auto;padding:5px 0;background:#09f;}
 
 /* bullet */
