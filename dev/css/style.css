@@ -175,9 +175,8 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .tbl_layout th,
 .tbl_layout td{padding:11px 5px 10px;color:#2a3652;}
 .tbl_default{border:1px solid #8b95a3;border-width:1px 0;}
-.tbl_default th{background-color:#efeff1;border-left:1px solid #d9dfe9;border-bottom: 1px solid #c5c9d0;font-size:14px;font-weight:600;}
-.tbl_default tr>th:last-child{border-right:none;}
-.tbl_default td{border:1px solid #ecf0f7;background:#fff;font-size:15px;}
+.tbl_default th{background-color:#efeff1;border:1px solid #c5c9d0;border-left-color:#d5dae1;border-width:0 0 1px 1px;font-size:14px;font-weight:600;}
+.tbl_default td{border:1px solid #ecf0f7;border-width:1px 0 0 1px;font-size:15px;}
 .tbl_default tbody tr:first-child td{border-top-width:0;}
 .tbl_default thead tr:first-child th:first-child,
 .tbl_default tbody td:first-child{border-left-width:0;}
@@ -199,10 +198,7 @@ table .th_1deps,
 .th_1deps th{background-color:#e0e6ec!important;}
 table .th_2deps,
 .th_2deps th{background-color:#dce6f1!important;}
-.tbl_scroll{overflow-y:scroll;border-bottom:1px solid #ebebeb;background-color:#fbfbfb;}
-.tbl_body_wrap{background-color:#fbfbfb;}
-.tbl_scroll tr:first-child td{border-top:none;}
-.tbl_scroll td:last-child{border-right:none;}
+
 .t_error{background:#fff0f1;}
 .t_error td{color:#d02a3d;}
 
@@ -263,7 +259,7 @@ table .th_2deps,
 
 /* sub common */
 .box{padding:30px;background-color:#fff;box-shadow:0px 2px 2px 0 rgba(0, 0, 0, 0.08);}
-.con_tit{align-items:center; height:77px;background-color:#fff;margin-bottom:10px;box-shadow:0px 2px 2px 0 rgba(0, 0, 0, 0.08);padding:0 30px;}
+.con_tit{display:flex;justify-content:space-between;align-items:center; height:77px;background-color:#fff;margin-bottom:10px;box-shadow:0px 2px 2px 0 rgba(0, 0, 0, 0.08);padding:0 30px;}
 .tit_h2{position:relative;padding-left:25px;font-size:20px;font-weight:bold;color:#222;}
 .tit_h2::before,
 .tit_h2::after{position:absolute;left:0;display:inline-block;content:'';width:15px;height:7px;border-radius:5px;background-color:#34d0c580;}
