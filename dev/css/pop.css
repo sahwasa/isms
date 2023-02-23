@@ -66,14 +66,14 @@
 .pop_body .dtable dd{text-align:left;}
 .warning_wrap{display:flex;padding:20px 10px;}
 .warning_wrap img{width:40px;height:34px;margin-right:18px;}
-.warning_wrap p{font-size:14px;align-self:center;}
+.warning_wrap p{font-size:14px;align-self:center;letter-spacing:-0.35px;}
 .warning_wrap p span{font-weight:bold;}
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
 @media all and (max-width:767px) {
   .pop_wrap {position: absolute;width:100%;}
   .btn_search{width:100%;}
-  .pop_body{padding:15px;}
+  .pop_body{min-width:auto;padding:15px;}
   .pop_body .period_multi input:last-of-type{margin:4px 0;}
   .pop_body .period_multi input:first-of-type {margin-bottom:0 !important;}
   .period_multi img{top:44px;left:inherit !important;right:7px;margin-right:0 !important;}
