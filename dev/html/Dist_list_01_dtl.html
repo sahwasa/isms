@@ -20,8 +20,8 @@
             </div>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
-            <div class="tbl_wrap">
-              <table class="tbl_rowHead">
+            <div class="tbl_wrap tbl_selInfo_wrap">
+              <table class="tbl_selInfo">
                 <caption>선택한 재난정보</caption>
                 <tr>
                   <th scope="row">재난 일련번호</th>
@@ -46,108 +46,36 @@
               </table>
             </div>
           </div>
-          <div class="box tbl_wrap tbl_res">
-            <table>
-              <caption>재난조회 리스트</caption>
-              <colgroup>
-                <col style="width:54px">
-                <col style="width:133px">
-                <col style="width:171px">
-                <col style="width:283px">
-                <col style="width:247px">
-                <col style="width:141px">
-                <col style="width:105px">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">No</th>
-                  <th scope="col">재난구분</th>
-                  <th scope="col">재난명</th>
-                  <th scope="col">발생장소</th>
-                  <th scope="col">발생일시</th>
-                  <th scope="col">위기단계</th>
-                  <th scope="col">종료여부</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row" data-label="No">1</td>
-                  <td data-label="재난구분">
-                    <div class="t_ellipsis">
-                      <span title="도시산불">도시산불</span>
-                    </div>
-                  </td>
-                  <td data-label="재난명">
-                    <div class="t_ellipsis">
-                      <span title="성산면 화재">성산면 화재</span>
-                    </div>
-                  </td>
-                  <td data-label="발생장소">
-                    <div class="t_ellipsis">
-                      <span title="강원도 강릉시 성산면">강원도 강릉시 성산면</span>
-                    </div>
-                  </td>
-                  <td data-label="발생일시">2021-07-01 11:00:15</td>
-                  <td data-label="위기단계"><span class="danger_color danger_color_green">정상</span></td>
-                  <td data-label="종료여부">진행중</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="No">2</td>
-                  <td data-label="재난구분">-</td>
-                  <td data-label="재난명">-</td>
-                  <td data-label="발생장소">-</td>
-                  <td data-label="발생일시">-</td>
-                  <td data-label="위기단계"><span class="danger_color danger_color_blue">관심</span></td>
-                  <td data-label="종료여부">진행중</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="No">3</td>
-                  <td data-label="재난구분">-</td>
-                  <td data-label="재난명">-</td>
-                  <td data-label="발생장소">-</td>
-                  <td data-label="발생일시">-</td>
-                  <td data-label="위기단계"><span class="danger_color danger_color_yellow">주의</span></td>
-                  <td data-label="종료여부">진행중</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="No">4</td>
-                  <td data-label="재난구분">-</td>
-                  <td data-label="재난명">-</td>
-                  <td data-label="발생장소">-</td>
-                  <td data-label="발생일시">-</td>
-                  <td data-label="위기단계"><span class="danger_color danger_color_orange">경계</span></td>
-                  <td data-label="종료여부">진행중</td>
-                </tr>
-                <tr>
-                  <td scope="row" data-label="No">5</td>
-                  <td data-label="재난구분">-</td>
-                  <td data-label="재난명">-</td>
-                  <td data-label="발생장소">-</td>
-                  <td data-label="발생일시">-</td>
-                  <td data-label="위기단계"><span class="danger_color danger_color_red">심각</span></td>
-                  <td data-label="종료여부">진행중</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="paginate">
-              <a href="#" class="first" title="처음">〈〈</a>
-              <a href="#" class="pre" title="이전">〈</a>
-              <span>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#" class="on">5</a>
-                <a href="#">6</a>
-                <a href="#">7</a>
-                <a href="#">8</a>
-                <a href="#">9</a>
-                <a href="#">10</a>
-              </span>
-              <a href="#" class="next" title="다음">〉</a>
-              <a href="#" class="last" title="마지막">〉〉</a>
+          <div class="box">
+            <div class="tab">
+              <ul class="tabs xl_tab">
+                <li><a href="#tab01">상세보기</a></li>
+                <li><a href="#tab02">재난관리 참여기관</a></li>
+                <li><a href="#tab03">위기단계 이력</a></li>
+                <li><a href="#tab04">중대본 운영활동</a></li>
+                <li><a href="#tab05">지대본 운영활동</a></li>
+                <li><a href="#tab06">이재민 발생현황</a></li>
+              </ul>
+              <div class="m_tab">
+                <select name="" id="" class="tab_select">
+                  <option value="tab01">상세보기</option>
+                  <option value="tab02">재난관리 참여기관</option>
+                  <option value="tab03">위기단계 이력</option>
+                  <option value="tab04">중대본 운영활동</option>
+                  <option value="tab05">지대본 운영활동</option>
+                  <option value="tab06">이재민 발생현황</option>
+                </select>
+              </div>
             </div>
-          </div>
+            <div class="tab_cont">
+              @@include('Dist_list_01_dtl_tab01.html')
+              @@include('Dist_list_01_dtl_tab02.html')
+              @@include('Dist_list_01_dtl_tab03.html')
+              @@include('Dist_list_01_dtl_tab04.html')
+              @@include('Dist_list_01_dtl_tab05.html')
+              @@include('Dist_list_01_dtl_tab06.html')
+            </div>
+          </div>`
         </div>
       </div>
       @@include('../inc/footer.html')
