@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="btn_wrap">
-              <button type="button" class="btn_search btn_mint">입력</button>
+              <button type="button" class="btn btn_blue" onclick="btnCodeWrite()">입력</button>
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
@@ -47,7 +47,7 @@
                 <col style="width:80px">
               </colgroup>
               <thead>
-                <tr>
+                <tr onclick="">
                   <th scope="col">순번</th>
                   <th scope="col">재난코드</th>
                   <th scope="col">재난명(한글)</th>
@@ -57,7 +57,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr onclick="btnCodeEdit()">
                   <td scope="row" data-label="순번">
                     <div class="t_ellipsis">
                       <span>1</span>
@@ -115,3 +115,21 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 재난코드 수정 -->
+@@include('../inc/pop/Cal_Code_02_01.html')
+<script>
+  function btnCodeEdit() {
+    $('.p_codeedit').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 재난코드 수정 -->
+
+<!-- 재난코드 입력 -->
+@@include('../inc/pop/Cal_Code_02_02.html')
+<script>
+  function btnCodeWrite() {
+    $('.p_codewrite').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 재난코드 입력 -->

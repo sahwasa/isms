@@ -9,9 +9,9 @@
 
 /* table inner button */
 table td{padding:0 !important;}
-.btn_circle{width:28px;height:28px;border-radius:28px;background:#8b95a3 url(../img/btn_setup.png) no-repeat;font-size:0;vertical-align:middle;}
-.btn_setup{background-position-y:0;}
-.btn_download{background-position-y:100%;}
+.btn_circle{width:28px;height:28px;border-radius:28px;font-size:0;vertical-align:middle;}
+.btn_setup{background:#8b95a3 url(../img/btn_setup.png) no-repeat;}
+.btn_download{background:#8b95a3 url(../img/btn_download.png) no-repeat;}
 .t_ellipsis {display:table;table-layout:fixed;width:100%;white-space:nowrap;}
 .t_ellipsis > * {display:table-cell;overflow:hidden;text-overflow:ellipsis;padding:0 10px;}
 .tbl_res table thead tr th{border-top:1px solid #8b95a3;border-bottom:1px solid #c5c9d0;border-left:1px solid #d9dfe9;}
@@ -248,8 +248,6 @@ table td{padding:0 !important;}
   .copy_wrap{padding:12px 0;}
   .footer p{font-size:11px;}
   .btn_circle{width:auto;margin:2px 0;padding:0 10px 0 25px;height:24px;border-radius:3px;background-color:#8b95a3;background-size:contain;font-size:14px;color:#fff;font-weight:bold;}
-  .btn_setup{background-position-y:0;}
-  .btn_download{background-position-y:100%;}
 
   /* login */
   .tit_login{height:100px;margin-bottom:50px;}

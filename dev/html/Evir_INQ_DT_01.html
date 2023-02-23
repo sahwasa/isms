@@ -8,45 +8,53 @@
         <div class="breadcrumb">
           <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">코드관리</a></li>
-            <li>행정동 관리</li>
+            <li><a href="#">환경조회</a></li>
+            <li>기관별 연락처</li>
           </ul>
         </div>
         <div>
-          <div class="con_tit">
-            <h2 class="tit_h2">행정동 관리</h2>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">기관별 연락처</h2>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
             <div class="dtable">
               <div class="line2">
                 <dl>
                   <dt>
-                    <label for="administ_num">차수</label>
+                    <label for="user_approval">재난구분</label>
                   </dt>
                   <dd>
-                    <select name="administ_num" id="administ_num">
+                    <select name="user_approval" id="user_approval">
                       <option value="">전체</option>
                     </select>
                   </dd>
                 </dl>
                 <dl>
                   <dt>
-                    <label for="usage_status">사용 여부</label>
+                    <label for="user_name">담당자명</label>
                   </dt>
                   <dd>
-                    <select name="usage_status" id="usage_status">
-                      <option value="">전체</option>
-                    </select>
+                    <input type="text" id="user_name">
                   </dd>
                 </dl>
               </div>
-              <div class="line1">
+              <div class="line2">
                 <dl>
                   <dt>
-                    <label for="administ_name">행정동 명</label>
+                    <label for="user_approval">업무 구분</label>
                   </dt>
                   <dd>
-                    <input type="text" id="administ_name">
+                    <select name="user_approval" id="user_approval">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="institution">담당기관</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="institution">
                   </dd>
                 </dl>
               </div>
@@ -56,51 +64,45 @@
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
-            <div class="btn_wrap">
-              <button type="button" class="btn btn_blueline">행정동 정보 갱신</button>
-            </div>
             <table>
-              <caption>행정동 관리 리스트</caption>
+              <caption>사용자관리 리스트</caption>
               <colgroup>
-                <col style="width:80px">
                 <col style="width:133px">
                 <col style="width:171px">
-                <col style="width:171px">
+                <col style="width:283px">
+                <col style="width:80px">
                 <col style="width:80px">
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">순번</th>
-                  <th scope="col">행정동 코드</th>
-                  <th scope="col">행정동 명</th>
-                  <th scope="col">상위 행정동 명</th>
-                  <th scope="col">사용 여부</th>
+                  <th scope="col">사용자ID</th>
+                  <th scope="col">사용자명</th>
+                  <th scope="col">소속기관</th>
+                  <th scope="col">승인여부</th>
+                  <th scope="col">관리</th>
                 </tr>
               </thead>
               <tbody>
-                <tr onclick="btnAdministZone()">
-                  <td scope="row" data-label="순번">
+                <tr>
+                  <td scope="row" data-label="사용자ID">
                     <div class="t_ellipsis">
-                      <span>1</span>
+                      <span title="etri">etri</span>
                     </div>
                   </td>
-                  <td data-label="행정동 코드">
+                  <td data-label="사용자명">
                     <div class="t_ellipsis">
-                      <span title="1100000000">1100000000</span>
+                      <span title="홍길동">홍길동</span>
                     </div>
                   </td>
-                  <td data-label="행정동 명">
+                  <td data-label="소속기관">
                     <div class="t_ellipsis">
-                      <span title="서울특별시">서울특별시</span>
+                      <span title="행정안전부">행정안전부</span>
                     </div>
                   </td>
-                  <td data-label="상위 행정동 명">
-                    <div class="t_ellipsis">
-                      <span title="-">-</span>
-                    </div>
+                  <td data-label="승인여부">Y</td>
+                  <td data-label="관리">
+                    <button type="button" class="btn_circle btn_download" onclick="btnAdmin()">상세보기</button>
                   </td>
-                  <td data-label="사용 여부">Y</td>
-                </tr>
               </tbody>
             </table>
             <div class="paginate">
@@ -133,11 +135,11 @@
 </html>
 @@include('../inc/script.html')
 
-<!-- 재난코드 수정 -->
-@@include('../inc/pop/Administzone_02.html')
+<!-- 상세보기-->
+@@include('../inc/pop/SYS_MGN_02_01.html')
 <script>
-  function btnAdministZone() {
-    $('.p_administzone').parent('.pop_overlay').toggle();
+  function btnAdmin() {
+    $('.p_admin').parent('.pop_overlay').toggle();
   }
 </script>
-<!--// 재난코드 수정 -->
+<!--// 상세보기-->

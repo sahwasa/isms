@@ -37,10 +37,10 @@
           </div>
           <div class="box tbl_wrap tbl_res">
             <div class="btn_wrap">
-              <button type="button" class="btn btn_blue">추가</button>
+              <button type="button" class="btn btn_blue" onclick="btnSituationStepAdd()">추가</button>
             </div>
             <table>
-              <caption>위기단계 코드 관리 리스트</caption>
+              <caption>상황단계코드 관리 리스트</caption>
               <colgroup>
                 <col style="width:80px">
                 <col style="width:133px">
@@ -62,7 +62,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr onclick="btnSituationStep()">
                   <td scope="row" data-label="순번">
                     <div class="t_ellipsis">
                       <span>1</span>
@@ -126,3 +126,21 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 상황 단계 코드 추가 -->
+@@include('../inc/pop/Situation_step_02.html')
+<script>
+  function btnSituationStepAdd() {
+    $('.p_situationstep_add').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 상황 단계 코드 추가 -->
+
+<!-- 상황 단계 코드 -->
+@@include('../inc/pop/Situation_step_03.html')
+<script>
+  function btnSituationStep() {
+    $('.p_situationstep').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 상황 단계 코드 -->
