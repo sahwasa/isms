@@ -79,7 +79,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr onclick="btnAgencyDetail()">
                   <td scope="row" data-label="순번">
                     <div class="t_ellipsis">
                       <span>1</span>
@@ -141,3 +141,12 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 행정기관 상세 -->
+@@include('../inc/pop/Agency_cd_MNG_02.html')
+<script>
+  function btnAgencyDetail() {
+    $('.p_agencydetail').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 행정기관 상세 -->

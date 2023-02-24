@@ -21,7 +21,7 @@
 .fix_scroll{width:17px !important;margin:0 !important;padding:0 !important;border:0;}
 .tbl_scroll{overflow-y:scroll;border-bottom:1px solid #ebebeb;background-color:#fbfbfb;}
 .tbl_body_wrap{background-color:#fbfbfb;}
-.tbl_wrap table{table-layout:fixed;width:100%;}
+.code_wrap .tbl_wrap table{table-layout:fixed;width:100%;}
 .tbl_scroll tr:first-child td{border-top:none;}
 .tbl_scroll td:last-child{border-right:none;}
 
@@ -29,9 +29,9 @@
 .search_wrap{padding:25px 30px;margin-bottom:10px;}
 .search_wrap .period_multi input{width:147px;}
 .search_wrap .period_multi{width:auto;}
-.search_wrap .period_multi img{top:6px;left:278px;}
+.search_wrap .period_multi img{top:6px;left:293px;}
 .search_wrap .period_multi img:first-of-type{left:115px;}
-.search_wrap .period_multi img:first-of-type{left:106px;}
+.search_wrap .period_multi img:first-of-type{left:120px;}
 .search_wrap .period_multi::after{top:3px;left:50%;}
 .search_wrap .btn_wrap{align-self:flex-end;}
 .search_wrap .btn_wrap button{height:34px;padding:7px 20px;border-radius:3px;font-size:14px;font-weight:bold;}
@@ -177,8 +177,8 @@
   .dtable> div dl input,
   .dtable> div dl textarea,
   .dtable> div dl select{width:180px !important;}
-  .search_wrap .period_multi img{left:350px;}
-  .search_wrap .period_multi img:first-of-type{left:145px;}
+  .search_wrap .period_multi img{left:355px;}
+  .search_wrap .period_multi img:first-of-type{left:150px;}
   .alignment>select{margin-right:5px;}
   .dtable dt{width:135px;text-align:left;}
   .dtable dd{width:calc(100% - 175px);margin:0;}

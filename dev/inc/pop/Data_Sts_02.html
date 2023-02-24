@@ -24,16 +24,18 @@
               </dt>
               <dd>
                 <span class="period period_multi">
-                  <input type="text" class="from date" name="date1" role="from">
-                  <input type="text" class="to date" name="date1" role="to">
+                  <input id="date_timepicker_start" type="text" role="from">
+                  <img src="../img/btn_calendar.png" alt="달력 이미지">
+                  <input id="date_timepicker_end" type="text" role="to">
+                  <img src="../img/btn_calendar.png" alt="달력 이미지">
                 </span>
                 <button type="button" class="btn btn_search btn_mint">조회</button>
               </dd>
             </dl>
           </div>
         </div>
-        <div class="tbl_wrap tbl_res">
-          <table>
+        <div class="tbl_wrap">
+          <table class="tbl_default">
             <caption>수신이력조회 리스트</caption>
             <colgroup>
               <col style="width:225px">
