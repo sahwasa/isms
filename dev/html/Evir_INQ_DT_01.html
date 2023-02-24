@@ -67,41 +67,38 @@
             <table>
               <caption>사용자관리 리스트</caption>
               <colgroup>
-                <col style="width:133px">
-                <col style="width:171px">
-                <col style="width:283px">
                 <col style="width:80px">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
+                <col style="width:130px">
                 <col style="width:80px">
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">사용자ID</th>
-                  <th scope="col">사용자명</th>
+                  <th scope="col">순번</th>
+                  <th scope="col">재난구분</th>
+                  <th scope="col">업무구분</th>
                   <th scope="col">소속기관</th>
-                  <th scope="col">승인여부</th>
-                  <th scope="col">관리</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">연락처</th>
+                  <th scope="col">FAX</th>
+                  <th scope="col">상세보기</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row" data-label="사용자ID">
-                    <div class="t_ellipsis">
-                      <span title="etri">etri</span>
-                    </div>
-                  </td>
-                  <td data-label="사용자명">
-                    <div class="t_ellipsis">
-                      <span title="홍길동">홍길동</span>
-                    </div>
-                  </td>
-                  <td data-label="소속기관">
-                    <div class="t_ellipsis">
-                      <span title="행정안전부">행정안전부</span>
-                    </div>
-                  </td>
-                  <td data-label="승인여부">Y</td>
-                  <td data-label="관리">
-                    <button type="button" class="btn_circle btn_download" onclick="btnAdmin()">상세보기</button>
+                  <td scope="row" data-label="순번">1</td>
+                  <td data-label="재난구분">감염병</td>
+                  <td data-label="업무구분">감영병 업무총괄</td>
+                  <td data-label="소속기관">질병관리청</td>
+                  <td data-label="담당자명">홍길동/정책국장</td>
+                  <td data-label="연락처">1234-5678</td>
+                  <td data-label="FAX">1234-5678</td>
+                  <td data-label="상세보기">
+                    <button type="button" class="btn_circle btn_detail" onclick="btnDetail()">상세보기</button>
                   </td>
               </tbody>
             </table>
@@ -136,10 +133,10 @@
 @@include('../inc/script.html')
 
 <!-- 상세보기-->
-@@include('../inc/pop/SYS_MGN_02_01.html')
+@@include('../inc/pop/Evir_INQ_DT_02.html')
 <script>
-  function btnAdmin() {
-    $('.p_admin').parent('.pop_overlay').toggle();
+  function btnDetail() {
+    $('.p_detail').parent('.pop_overlay').toggle();
   }
 </script>
 <!--// 상세보기-->

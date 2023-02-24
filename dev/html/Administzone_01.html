@@ -57,7 +57,7 @@
           </div>
           <div class="box tbl_wrap tbl_res">
             <div class="btn_wrap">
-              <button type="button" class="btn btn_blueline">행정동 정보 갱신</button>
+              <button type="button" class="btn btn_blueline" onclick="btnAdministZone01()">행정동 정보 갱신</button>
             </div>
             <table>
               <caption>행정동 관리 리스트</caption>
@@ -78,7 +78,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr onclick="btnAdministZone()">
+                <tr onclick="btnAdministZoneInfo()">
                   <td scope="row" data-label="순번">
                     <div class="t_ellipsis">
                       <span>1</span>
@@ -133,11 +133,28 @@
 </html>
 @@include('../inc/script.html')
 
-<!-- 재난코드 수정 -->
+<!-- 행정동 구역 코드 상세 -->
 @@include('../inc/pop/Administzone_02.html')
 <script>
-  function btnAdministZone() {
-    $('.p_administzone').parent('.pop_overlay').toggle();
+  function btnAdministZoneInfo() {
+    $('.p_administzoneinfo').parent('.pop_overlay').toggle();
   }
 </script>
-<!--// 재난코드 수정 -->
+<!--// 행정동 구역 코드 상세 -->
+
+<!-- 행정동 정보 갱신 실행 -->
+@@include('../inc/pop/Administzone_03_01.html')
+@@include('../inc/pop/Administzone_03_02.html')
+@@include('../inc/pop/Administzone_03_03.html')
+<script>
+  function btnAdministZone01() {
+    $('.p_administzone_01').parent('.pop_overlay').toggle();
+  }
+  function btnAdministZone02() {
+    $('.p_administzone_02').parent('.pop_overlay').toggle();
+  }
+  function btnAdministZone03() {
+    $('.p_administzone_03').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 행정동 정보 갱신 실행 -->

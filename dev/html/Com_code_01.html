@@ -14,7 +14,7 @@
         </div>
         <div>
           <div class="con_tit">
-            <h2 class="tit_h2">공통코드 관리(table scroll 되게 수정중입니다!)</h2>
+            <h2 class="tit_h2">공통코드 관리</h2>
           </div>
           <div class="code_wrap flex_wrap f_sb">
             <div>
@@ -25,182 +25,121 @@
                     <div class="line1">
                       <dl>
                         <dt>
-                          <label for="disaster_type">재난구분</label>
+                          <label for="group_name">그룹명</label>
                         </dt>
-                        <dd>
-                          <select name="disaster_type" id="disaster_type">
-                            <option value="">전체</option>
-                          </select>
-                        </dd>
+                        <dd><input type="text" id="group_name"></dd>
                       </dl>
                     </div>
                   </div>
                   <div class="btn_wrap">
-                    <button type="button" class="btn_search btn_mint">입력</button>
+                    <button type="button" class="btn_search btn_mint">조회</button>
                   </div>
                 </div>
-                <div class="tbl_wrap tbl_res">
-                  <table>
-                    <caption>재난코드관리 리스트</caption>
+                <div class="tbl_wrap">
+                  <div class="btn_wrap">
+                    <button type="button" class="btn btn_blue" onclick="btnGroupCodeSet()">입력</button>
+                    <button type="button" class="btn btn_red">삭제</button>
+                  </div>
+                  <table class="tbl_default">
+                    <caption>공통 코드 그룹 제목</caption>
                     <colgroup>
+                      <col style="width:40px">
+                      <col style="width:50%">
+                      <col style="width:50%">
                       <col style="width:80px">
-                      <col style="width:133px">
-                      <col style="width:171px">
-                      <col style="width:283px">
-                      <col style="width:171px">
-                      <col style="width:80px">
+                      <col class="fix_scroll">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">순번</th>
-                        <th scope="col">재난코드</th>
-                        <th scope="col">재난명(한글)</th>
-                        <th scope="col">재난명(영문)</th>
-                        <th scope="col">약어</th>
-                        <th scope="col">사용여부</th>
-                      </tr>
+                        <th scope="col">그룹 코드</th>
+                        <th scope="col">그룹명</th>
+                        <th scope="col" class="dsc">사용여부</th>
+                        <th></th>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row" data-label="순번">
-                          <div class="t_ellipsis">
-                            <span>1</span>
-                          </div>
-                        </td>
-                        <td data-label="재난코드">
-                          <div class="t_ellipsis">
-                            <span title="A0001">A0001</span>
-                          </div>
-                        </td>
-                        <td data-label="재난명(한글)">
-                          <div class="t_ellipsis">
-                            <span title="도시산불">도시산불</span>
-                          </div>
-                        </td>
-                        <td data-label="재난명(영문)">
-                          <div class="t_ellipsis">
-                            <span title="City wildfire">City wildfire</span>
-                          </div>
-                        </td>
-                        <td data-label="약어">
-                          <div class="t_ellipsis">
-                            <span title="CWF">CWF</span>
-                          </div>
-                        </td>
-                        <td data-label="승인여부">Y</td>
-                    </tbody>
                   </table>
-                  <div class="paginate">
-                    <a href="#" class="first" title="처음">〈〈</a>
-                    <a href="#" class="pre" title="이전">〈</a>
-                    <span>
-                      <a href="#">1</a>
-                      <a href="#">2</a>
-                      <a href="#">3</a>
-                      <a href="#">4</a>
-                      <a href="#" class="on">5</a>
-                      <a href="#">6</a>
-                      <a href="#">7</a>
-                      <a href="#">8</a>
-                      <a href="#">9</a>
-                      <a href="#">10</a>
-                    </span>
-                    <a href="#" class="next" title="다음">〉</a>
-                    <a href="#" class="last" title="마지막">〉〉</a>
+                  <div class="tbl_body_wrap tbl_scroll" style="height:300px;">
+                    <table class="tbl_default" style="border-top:none;">
+                      <caption>공통 코드 그룹 내용</caption>
+                      <colgroup>
+                        <col style="width:40px">
+                        <col style="width:50%">
+                        <col style="width:50%">
+                        <col style="width:80px">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>G00001</td>
+                          <td>시설구분</td>
+                          <td class="dsc">Y</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <h3 class="tit_h3">공통 코드 그룹</h3>
+              <h3 class="tit_h3">공통 코드</h3>
               <div class="box">
                 <div class="search_wrap flex_wrap f_sb">
                   <div class="dtable">
                     <div class="line1">
                       <dl>
                         <dt>
-                          <label for="disaster_type">재난구분</label>
+                          <label for="code_name">코드명</label>
                         </dt>
-                        <dd>
-                          <select name="disaster_type" id="disaster_type">
-                            <option value="">전체</option>
-                          </select>
-                        </dd>
+                        <dd><input type="text" id="code_name"></dd>
                       </dl>
                     </div>
                   </div>
                   <div class="btn_wrap">
-                    <button type="button" class="btn_search btn_mint">입력</button>
+                    <button type="button" class="btn_search btn_mint">조회</button>
                   </div>
                 </div>
-                <div class="tbl_wrap tbl_res">
-                  <table>
-                    <caption>재난코드관리 리스트</caption>
+                <div class="tbl_wrap">
+                  <div class="btn_wrap">
+                    <button type="button" class="btn btn_blue" onclick="btnCodeSet()">입력</button>
+                    <button type="button" class="btn btn_red">삭제</button>
+                  </div>
+                  <table class="tbl_default">
+                    <caption>공통 코드 그룹 제목</caption>
                     <colgroup>
+                      <col style="width:40px">
+                      <col style="width:50%">
+                      <col style="width:50%">
                       <col style="width:80px">
-                      <col style="width:133px">
-                      <col style="width:171px">
-                      <col style="width:283px">
-                      <col style="width:171px">
-                      <col style="width:80px">
+                      <col class="fix_scroll">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">순번</th>
-                        <th scope="col">재난코드</th>
-                        <th scope="col">재난명(한글)</th>
-                        <th scope="col">재난명(영문)</th>
-                        <th scope="col">약어</th>
+                        <th scope="col">그룹 코드</th>
+                        <th scope="col">그룹명</th>
                         <th scope="col">사용여부</th>
+                        <th></th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td scope="row" data-label="순번">
-                          <div class="t_ellipsis">
-                            <span>1</span>
-                          </div>
-                        </td>
-                        <td data-label="재난코드">
-                          <div class="t_ellipsis">
-                            <span title="A0001">A0001</span>
-                          </div>
-                        </td>
-                        <td data-label="재난명(한글)">
-                          <div class="t_ellipsis">
-                            <span title="도시산불">도시산불</span>
-                          </div>
-                        </td>
-                        <td data-label="재난명(영문)">
-                          <div class="t_ellipsis">
-                            <span title="City wildfire">City wildfire</span>
-                          </div>
-                        </td>
-                        <td data-label="약어">
-                          <div class="t_ellipsis">
-                            <span title="CWF">CWF</span>
-                          </div>
-                        </td>
-                        <td data-label="승인여부">Y</td>
-                    </tbody>
                   </table>
-                  <div class="paginate">
-                    <a href="#" class="first" title="처음">〈〈</a>
-                    <a href="#" class="pre" title="이전">〈</a>
-                    <span>
-                      <a href="#">1</a>
-                      <a href="#">2</a>
-                      <a href="#">3</a>
-                      <a href="#">4</a>
-                      <a href="#" class="on">5</a>
-                      <a href="#">6</a>
-                      <a href="#">7</a>
-                      <a href="#">8</a>
-                      <a href="#">9</a>
-                      <a href="#">10</a>
-                    </span>
-                    <a href="#" class="next" title="다음">〉</a>
-                    <a href="#" class="last" title="마지막">〉〉</a>
+                  <div class="tbl_body_wrap tbl_scroll" style="height:300px;">
+                    <table class="tbl_default" style="border-top:none;">
+                      <caption>공통 코드 그룹 내용</caption>
+                      <colgroup>
+                        <col style="width:40px">
+                        <col style="width:50%">
+                        <col style="width:50%">
+                        <col style="width:80px">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>G00001</td>
+                          <td>시설구분</td>
+                          <td>Y</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -216,3 +155,21 @@
 
 </html>
 @@include('../inc/script.html')
+
+<!-- 그룹코드 입력 -->
+@@include('../inc/pop/Com_code_02_01.html')
+<script>
+  function btnCodeSet() {
+    $('.p_codeset').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 그룹코드 입력 -->
+
+<!-- 공통코드 입력 -->
+@@include('../inc/pop/Com_code_02_02.html')
+<script>
+  function btnGroupCodeSet() {
+    $('.p_groupcodeset').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 공통코드 입력 -->

@@ -58,7 +58,7 @@
 .request_wrap i{margin-right:2px;}
 .alert_wrap{text-align:center;font-size:16px;color:#000;margin:20px 0;}
 .tbl_info label{white-space:pre;}
-.tbl_info td>span{padding: 0 5px;color:#333;}
+.tbl_info td>span{color:#333;}
 /* 20230216 */
 .tbl_transverse th{width:20%;}
 .tbl_transverse td{width:30%;}
