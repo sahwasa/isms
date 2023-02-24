@@ -10,7 +10,6 @@
 .pop_body input[type="password"],
 .pop_body textarea,
 .pop_body select{min-width:auto;padding:0 5px;}
-.padding_5{padding:0 5px !important;}
 .pop_blur{margin:0;}
 .pop_overlay{display:none;position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.3);}
 .pop_wrap{width:auto;position:fixed;top:50%;left:50%;border:3px solid #2a3652;border-top-width:0;transform:translateX(-50%) translateY(-50%);}
@@ -20,12 +19,15 @@
 .btn_pop_close{position:relative;top:3px;width:17px;height:17px;}
 .btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../img/btn_pop_close.png);}
 .pop_wrap .search.f_sb{justify-content:space-between;}
+.pop_body .search_wrap button{padding:7px 13px;}
+.pop_body .search_wrap{padding:0;}
+.pop_body .btn_search{vertical-align:sub;}
+.pop_body .dtable{margin-bottom:30px;}
+.pop_body .dtable dd{text-align:left;}
 .pop_wrap .btn_wrap{padding:20px 0 0;}
 .pop_wrap .tbl_row th,
-.pop_wrap .tbl_row td{height:34px;line-height:34px;font-size:14px;}
+.pop_wrap .tbl_row td{height:34px;line-height:34px;font-size:13px;}
 .pop_wrap table textarea{line-height:22px;}
-.tbl_info label{font-weight:600;}
-.tbl_info th,.tbl_info td{background-color:transparent;border:1px solid transparent;text-align:left;}
 .pop_cont .tbl_default td{padding:7px 5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
@@ -37,22 +39,13 @@
 .request_wrap{font-size:14px;text-align:right;margin:-10px 0 10px;}
 .request_wrap i{margin-right:2px;}
 .alert_wrap{text-align:center;font-size:16px;color:#000;margin:20px 0;}
-.tbl_info label{white-space:pre;}
-.tbl_info td>span{color:#333;}
-/* 20230216 */
+.tbl_transverse{min-width:700px;}
 .tbl_transverse th{width:20%;}
 .tbl_transverse td{width:30%;}
-.pop_body .tbl_info button{margin-left:5px;padding:7px 13px;}
-.pop_body .search_wrap button{padding:7px 13px;}
-.pop_body .search_wrap{padding:0;}
-.pop_body .btn_search{vertical-align:sub;}
-.pop_body .dtable{margin-bottom:30px;}
-.pop_body .dtable dd{text-align:left;}
 .warning_wrap{display:flex;padding:20px 0 0;}
 .warning_wrap img{width:40px;height:34px;margin-right:20px;}
 .warning_wrap p{width:315px;font-size:14px;letter-spacing:-0.35px;word-break:keep-all;text-align:left;line-height:22px;}
 .warning_wrap p span{font-weight:bold;}
-.tbl_transverse{min-width:700px;}
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
 @media all and (max-width:767px) {

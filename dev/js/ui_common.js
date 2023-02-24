@@ -1,39 +1,48 @@
 $(function () {
-  /*calendar*/
-  $.datepicker.setDefaults({
-    buttonImageOnly: true,
-    showOn: "both",
-    buttonImage: "../img/calendar.png",
-    changeMonth: true,
-    changeYear: true,
-    numberOfMonths: 1,
-    regional: ["ko"],
-    dateFormat: "yy-mm-dd",
-  });
-  $("[role='datepic']").datepicker({
-    buttonText: "날짜를 선택해주세요.",
-  });
-  var from = $("[role='from']").datepicker({
-    buttonText: "시작날짜를 선택해주세요.",
-    onClose: function (selectedDate) {
-      var getName = $(this).attr("name");
-      $("input[name='" + getName + "'].to").datepicker(
-        "option",
-        "minDate",
-        selectedDate
-      );
+  $.datetimepicker.setLocale("kr");
+  jQuery("#date_timepicker_start").datetimepicker({
+    format: "Y/m/d H:i",
+    onShow: function (ct) {
+      this.setOptions({
+        maxDate: jQuery("#date_timepicker_end").val()
+          ? jQuery("#date_timepicker_end").val()
+          : false,
+      });
     },
+    timepicker: true,
   });
-  var to = $("[role='to']").datepicker({
-    buttonText: "종료날짜를 선택해주세요.",
-    onClose: function (selectedDate) {
-      var getName = $(this).attr("name");
-      $("input[name='" + getName + "'].from").datepicker(
-        "option",
-        "maxDate",
-        selectedDate
-      );
+  jQuery("#date_timepicker_end").datetimepicker({
+    format: "Y/m/d H:i",
+    onShow: function (ct) {
+      this.setOptions({
+        minDate: jQuery("#date_timepicker_start").val()
+          ? jQuery("#date_timepicker_start").val()
+          : false,
+      });
     },
+    timepicker: true,
+  });
+  jQuery("#date_picker_start").datetimepicker({
+    format: "Y/m/d",
+    onShow: function (ct) {
+      this.setOptions({
+        maxDate: jQuery("#date_timepicker_end").val()
+          ? jQuery("#date_picker_end").val()
+          : false,
+      });
+    },
+    timepicker: false,
+  });
+  jQuery("#date_picker_end").datetimepicker({
+    format: "Y/m/d",
+    onShow: function (ct) {
+      this.setOptions({
+        minDate: jQuery("#date_timepicker_start").val()
+          ? jQuery("#date_picker_start").val()
+          : false,
+      });
+    },
+    timepicker: false,
   });
 
   // pop
@@ -100,7 +109,7 @@ $(function () {
       $(this).addClass("empty");
     }
   });
-  
+
   // toggle button
   $(".btn_toggle").on("click", function (e) {
     e.preventDefault();
@@ -114,22 +123,26 @@ $(function () {
   });
 
   //tab
-$('.xl_tab li').first().addClass("on");
-  $(".tab_contents").not(':first').hide();  
-    $('.xl_tab li').on('click',function(){
-      $(this).addClass("on").siblings().removeClass("on");
-      var link = $(this).find("a").attr("href");
-      var link_num = link.substr(link.length-1);
-      $(".m_tab option").eq(link_num-1).prop("selected", "selected");
-      $(".tab_contents").hide();
-      $(link).show().focus();
-    });    
-    $(".tab_select").on("change",function(){
-      var select_link = $(".tab_select").val();
-      var select_num = $(this).prop('selectedIndex');
-      $('.xl_tab li').eq(select_num).addClass("on").siblings().removeClass('on');
-      $(".tab_contents").hide();
-      $("#"+select_link).show().focus();
-      console.log(select_link);
-    });
+  $(".xl_tab li").first().addClass("on");
+  $(".tab_contents").not(":first").hide();
+  $(".xl_tab li").on("click", function () {
+    $(this).addClass("on").siblings().removeClass("on");
+    var link = $(this).find("a").attr("href");
+    var link_num = link.substr(link.length - 1);
+    $(".m_tab option")
+      .eq(link_num - 1)
+      .prop("selected", "selected");
+    $(".tab_contents").hide();
+    $(link).show().focus();
+  });
+  $(".tab_select").on("change", function () {
+    var select_link = $(".tab_select").val();
+    var select_num = $(this).prop("selectedIndex");
+    $(".xl_tab li").eq(select_num).addClass("on").siblings().removeClass("on");
+    $(".tab_contents").hide();
+    $("#" + select_link)
+      .show()
+      .focus();
+    console.log(select_link);
+  });
 });

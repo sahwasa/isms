@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
-    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
     <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/pop.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/sun_sub.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pop.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sun_sub.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
   </head>
 
@@ -33,20 +35,7 @@
       <ul class=" nav lnb_list" role="navigation">
         <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
         <li><a href="Call_ser_01.html">신고관리</a></li>
-        <li><a href="Dist_list_01.html">재난상황 조회</a>
-          <ul class="sub">
-            <li>
-              <a href="Dist_list_01.html">재난 조회</a>
-              <ul class="sub2">
-                <li><a href="#">위기단계 이력 열람</a></li>
-                <li><a href="#">중대본 정보 열람</a></li>
-                <li><a href="#">지대본 정보 열람</a></li>
-                <li><a href="#">이재민 정보 열람</a></li>
-                <li><a href="#">기관별 정보 열람</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+        <li><a href="Dist_list_01.html">재난상황 조회</a></li>
         <li><a href="#">통계관리</a>
         </li>
         <li><a href="Evir_INQ_DT_01.html">환경조회</a>
@@ -79,20 +68,7 @@
         <ul class="gnb m_con" role="navigation">
           <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
           <li><a href="Call_ser_01.html">신고관리</a></li>
-          <li><a href="Dist_list_01.html">재난상황 조회</a>
-            <ul class="sub">
-              <li>
-                <a href="Dist_list_01.html">재난 조회</a>
-                <ul class="sub2">
-                  <li><a href="#">위기단계 이력 열람</a></li>
-                  <li><a href="#">중대본 정보 열람</a></li>
-                  <li><a href="#">지대본 정보 열람</a></li>
-                  <li><a href="#">이재민 정보 열람</a></li>
-                  <li><a href="#">기관별 정보 열람</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <li><a href="Dist_list_01.html">재난상황 조회</a></li>
           <li><a href="#">통계관리</a>
           </li>
           <li><a href="#">환경조회</a>
@@ -143,7 +119,7 @@
     <div class="pop_body">
       <div class="pop_cont">
         <p class="validity alignR">*는 필수값 입니다.</p>
-        <table class="tbl_info">
+        <table class="tbl_row">
           <caption>내 정보 수정</caption>
           <colgroup>
             <col style="width:150px;">
@@ -240,12 +216,12 @@
     </div>
     <div class="pop_body">
       <div class="pop_cont">
-        <table class="tbl_info">
+        <table class="tbl_row">
           <caption>내정보</caption>
           <colgroup>
-            <col style="width:150px;">
+            <col style="width:120px;">
             <col style="width:200px;">
-            <col style="width:60px;">
+            <col style="width:75px;">
           </colgroup>
           <tr>
             <th><label for="id">ID</label></th>
@@ -375,8 +351,10 @@
                   </dt>
                   <dd>
                     <span class="period period_multi">
-                      <input type="text" class="from date" name="date1" role="from">
-                      <input type="text" class="to date" name="date1" role="to">
+                      <input id="date_timepicker_start" type="text" role="from">
+                      <img src="../img/btn_calendar.png" alt="달력 이미지">
+                      <input id="date_timepicker_end" type="text" role="to">
+                      <img src="../img/btn_calendar.png" alt="달력 이미지">
                     </span>
                   </dd>
                 </dl>
@@ -510,6 +488,9 @@
 <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js" type="text/javascript"></script>
 <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
 <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
 <script src="../plugins/chartjs/Chart.bundle.js"></script>
