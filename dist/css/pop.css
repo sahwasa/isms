@@ -81,6 +81,7 @@
   .tbl_transverse{min-width:100%;}
   .tbl_transverse th,
   .tbl_transverse td{width: 100%;display: block;}
+  .warning_wrap p{width:calc(100% - 50px);}
 }
 
 /* pc pop size */

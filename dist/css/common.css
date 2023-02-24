@@ -209,6 +209,8 @@ label input{margin-top:-3px;}
 .period{line-height:24px;}
 .period label,
 .period input{vertical-align:top;}
+.period_single{position:relative;width:100%;}
+.period_single img{position:absolute;top:45%;right:7px;transform:translateY(-50%);}
 .period_multi{position:relative;width:320px;}
 .period_multi::after{content:"~";position:absolute;left:50%;top:3px;margin:0 0 0 -5px;}
 .period_multi input{width:147px;}
