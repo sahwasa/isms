@@ -31,6 +31,26 @@
 .pop_cont .tbl_default td{padding:7px 5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
+.tbl_row{border:1px solid #8c96a4;border-width:1px 0;}
+.tbl_row th,
+.tbl_row td span{padding:0 10px;}
+.tbl_row th,
+.tbl_row td{border:1px solid #e9ecef;text-align:left;}
+.tbl_row th{background-color:#f0f3f6;font-weight:600;color:#23304e;font-size:16px;}
+.tbl_row td{text-align:left;color:#333;}
+.tbl_row th:first-child{border-left-width:0;}
+.tbl_row td:last-child{border-right-width:0;}
+.tbl_row tr:first-child th,
+.tbl_row tr:first-child td{border-top-color:#e9ecef;}
+.tbl_row tr:last-child th,
+.tbl_row tr:last-child td{border-bottom-color:#e9ecef;}
+.tbl_row + .gis_wrap{margin-top:6px;}
+.tbl_row select,
+.tbl_row input[type=text],
+.tbl_row input[type=file],
+.tbl_row input[type=color],
+.tbl_row input[type=number]{width:100%;height:30px;font-size:14px;}
+.tbl_info label{font-weight:600;line-height:35px;font-size:15px;}
 .tbl_info th,.tbl_info td{height:30px;padding-top:5px;padding-bottom:5px;background-color:transparent;border:1px solid transparent;text-align:left;font-size:13px;vertical-align:baseline;}
 .tbl_info input,
 .tbl_info select{width:100%;height:34px;font-size:13px;color:#333;}
