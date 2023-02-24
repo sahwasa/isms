@@ -47,11 +47,22 @@
             <th><label for="fax_num">팩스번호</label></th>
             <td><input type="text" id="fax_num"></td>
           </tr>
+
           <tr>
             <th><label for="create_date">생성일자</label></th>
-            <td><input type="text" id="create_date"></td>
+            <td>
+              <span class="period_single">
+                <input id="date_timepicker_start" type="text" role="from">
+                <img src="../img/btn_calendar.png" alt="달력 이미지">
+              </span>
+            </td>
             <th><label for="close_date">폐지일자</label></th>
-            <td><input type="text" id="close_date"></td>
+            <td>
+              <span class="period_single">
+                <input id="date_timepicker_end" type="text" role="to">
+                <img src="../img/btn_calendar.png" alt="달력 이미지">
+              </span>
+            </td>
           </tr>
           <tr>
             <th><label for="usage">사용여부</label></th>
