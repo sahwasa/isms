@@ -213,6 +213,8 @@ table .th_2deps,
 
 .t_error{background:#fff0f1;}
 .t_error td{color:#d02a3d;}
+.tbl_row .tbl_res2 span{padding:0;}
+.tbl_nohover tr:hover{background:none;cursor:default;}
 
 /* error */
 .error{width:800px;background:url(../img/bg_error.png) 50% 50px no-repeat;padding-top:400px;margin:0 auto;}
