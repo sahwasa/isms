@@ -285,8 +285,6 @@ label input{margin-top:-3px;}
 .danger_bg_red{background-color:#c00000;}
 
 /* ico_fileName Extention */
-.file_download{color:#1271e7;font-size:12px;}
-.file_download:hover{text-decoration:underline;}
 .ico_ext{display:inline-block;width:17px;height:17px;background:url(../img/ico_fileExt.png) -223px -82px no-repeat;margin:-4px 7px 0 0px;vertical-align:middle;}
 .ext_bmp{background-position:-3px -2px;}
 .ext_jpg{background-position:-23px -2px;}
