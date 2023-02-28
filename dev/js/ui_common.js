@@ -1,5 +1,6 @@
 $(function () {
   $.datetimepicker.setLocale("kr");
+  jQuery("#date_timepicker").datetimepicker();
   jQuery("#date_timepicker_start").datetimepicker({
     format: "Y/m/d H:i",
     onShow: function (ct) {

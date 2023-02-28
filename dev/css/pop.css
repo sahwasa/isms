@@ -59,10 +59,29 @@
 .tbl_transverse{min-width:700px;}
 .tbl_transverse th{width:20%;}
 .tbl_transverse td{width:30%;}
+/* system */
 .warning_wrap{display:flex;padding:20px 0 0;}
 .warning_wrap img{width:40px;height:34px;margin-right:20px;}
 .warning_wrap p{width:315px;font-size:14px;letter-spacing:-0.35px;}
 .warning_wrap p span{font-weight:bold;}
+/* dist */
+.tit_report{margin:21px auto 50px;font-size:24px;text-align: center;}
+.tit_report h3{padding:15px 30px; border: 1px solid #333333;border-width:2px 0;font-size:24px;font-weight:bold;}
+.tbl_report{border: 1px solid #333333;border-width:1px 0;}
+.tbl_report thead th{border-top:1px solid #333333;border-bottom:1px solid #333333;}
+.tbl_report th,
+.tbl_report td{min-height:50px;height:50px;padding:16px 20px;border:1px solid #d0d4d7; background-color:#fff;text-align:left;font-size:14px;}
+.tbl_report th{font-weight:bold;color:#000;text-align:center;}
+.tbl_report td{color:#666666;}
+.tbl_report tr>th:first-child,
+.tbl_report tr>td:first-child{border-left:0;}
+.tbl_report tr>th:last-child,
+.tbl_report tr>td:last-child{border-right:0;}
+.tbl_report tbody tr:last-child>th,
+.tbl_report tr:last-child>td{border-bottom:1px solid #333;}
+
+
+
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
 @media all and (max-width:767px) {
@@ -79,6 +98,9 @@
   .tbl_transverse th,
   .tbl_transverse td{width: 100%;display: block;}
   .warning_wrap p{width:calc(100% - 50px);}
+  /* dist */
+  .tbl_report th,
+  .tbl_report td{min-height:40px;height:40px;padding:10px;}
 }
 
 /* pc pop size */

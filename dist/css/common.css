@@ -109,6 +109,8 @@ hr,
 .btn_mint:hover, .btn_mint:active{background-color:#007d84;border-color:#007d84;color:#fff;}
 .btn_red{border:1px solid #eb5f5f;background-color:#eb5f5f;color:#fff;}
 .btn_red:hover, .btn_red:active{background-color:#973434;border-color:#973434; color:#fff;}
+.btn_deepgrayline{border:1px solid #8b95a3;background-color:#dae2ed;color:#333333;}
+.btn_deepgrayline:hover{background-color:#8b95a3;color:#fff;}
 
 .btn_ico{background:url(../img/btn_ico.png) 14px 0 no-repeat;padding:2px 18px 4px 30px;}
 .btn_ico.btn_excel{background-position-y:5px;}
@@ -152,7 +154,7 @@ hr,
 .btn_toggle[disabled]{cursor:default;}
 .btn_toggle::before{position:absolute;top:5px;right:5px;display:inline-block;content:"";width:16px;height:16px;background-color:#fff;border-radius:50%;transition:0.5s;}
 .btn_toggle::after{position:relative;content:"OFF";top:-4px; left:0;font-size:12px;color:#fff;}
-.btn_toggle[datavalue="on"]{background-color:#094fa3;border-color:#094fa3;}
+.btn_toggle[datavalue="on"]{background-color:#00b0a4;border-color:#00b0a4;}
 .btn_toggle[datavalue="on"]::before{right:38px;}
 .btn_toggle[datavalue="on"]::after{content:"ON";padding-right:6px;float:right;}
 .btn_toggle[datavalue="off"]{background-color:#999;border-color:transparent;}
@@ -181,7 +183,7 @@ label{vertical-align:middle;}
 .validity{font-size:12px;color: #f35857;letter-spacing:-1.6px;line-height:17px;}
 input,
 select{padding:3px 5px 4px;box-sizing:border-box;border:1px solid #b7b7b7;}
-select{padding:2px 5px 3px;}
+select{padding:2px 10px 3px;}
 select[multiple]{height:auto;}
 input[type="radio"],
 input[type="checkbox"]{border:none;margin-right:3px;}
@@ -191,7 +193,7 @@ option:hover{background:#e3f4fb;}
 textarea{resize:none;padding:5px;box-sizing:border-box;border:1px solid #b7b7b7;}
 input[disabled],
 select[disabled],
-textarea[disabled]{border:1px solid #f5f5f5; color:#999;background-color:#fefefe;}
+textarea[disabled]{border:1px solid #c5c9d0; color:#333;background-color:#e2e2e2;}
 input[readonly],
 select[readonly],
 textarea[readonly]{background-color:#eee;}
@@ -224,17 +226,11 @@ label input{margin-top:-3px;}
 .info_l{color:#666;float:left;}
 
 /*jquery-ui-fix*/
-.ui-datepicker{z-index:2000;}
-.ui-datepicker-title{display:block;width:auto;margin:0 2em;}
-.ui-datepicker-title select{min-width:auto;height:auto;}
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year{width:40%;margin-bottom:3px;padding:0;}
-.ui-datepicker select.ui-datepicker-year{width:42%;}
-.ui-datepicker select.ui-datepicker-month{margin-left:8px;}
-.ui-datepicker-trigger,
-.ui-monthpicker-trigger{cursor:pointer;margin-left:9px;}
-.ui-monthpicker select.ui-datepicker-year{width:75px;}
-
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current{background:#00b0a4;box-shadow:#00b0a4 0 1px 3px 0 inset;}
+.xdsoft_datetimepicker .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover{background:#848988 !important;}
 .ui-datepicker{display:none;}
 .ui-widget .ui-icon{width:16px;}
 .ui-widget-content a{box-sizing:content-box;}
@@ -287,3 +283,70 @@ label input{margin-top:-3px;}
 .danger_bg_yellow{background-color:#ffc000;}
 .danger_bg_orange{background-color:#f6751d;}
 .danger_bg_red{background-color:#c00000;}
+
+/* ico_fileName Extention */
+.file_download{color:#1271e7;font-size:12px;}
+.file_download:hover{text-decoration:underline;}
+.ico_ext{display:inline-block;width:17px;height:17px;background:url(../img/ico_fileExt.png) -223px -82px no-repeat;margin:-4px 7px 0 0px;vertical-align:middle;}
+.ext_bmp{background-position:-3px -2px;}
+.ext_jpg{background-position:-23px -2px;}
+.ext_gif{background-position:-43px -2px;}
+.ext_png{background-position:-63px -2px;}
+.ext_tif{background-position:-83px -2px;}
+.ext_pdf{background-position:-103px -2px;}
+.ext_ppt{background-position:-123px -2px;}
+.ext_ai {background-position:-143px -2px;}
+.ext_xls{background-position:-163px -2px;}
+.ext_psd{background-position:-183px -2px;}
+.ext_doc{background-position:-3px -22px;}
+.ext_hwp{background-position:-23px -22px;}
+.ext_txt{background-position:-43px -22px;}
+.ext_c  {background-position:-63px -22px;}
+.ext_cpp{background-position:-83px -22px;}
+.ext_jav{background-position:-103px -22px;}
+.ext_htm{background-position:-123px -22px;}
+.ext_css{background-position:-143px -22px;}
+.ext_js {background-position:-163px -22px;}
+.ext_log{background-position:-183px -22px;}
+.ext_m4a{background-position:-203px -22px;}
+.ext_swf{background-position:-223px -22px;}
+.ext_au {background-position:-3px -42px;}
+.ext_mid{background-position:-23px -42px;}
+.ext_mod{background-position:-43px -42px;}
+.ext_mp2{background-position:-63px -42px;}
+.ext_mp3{background-position:-83px -42px;}
+.ext_ogg{background-position:-103px -42px;}
+.ext_ra {background-position:-123px -42px;}
+.ext_rm {background-position:-143px -42px;}
+.ext_snd{background-position:-163px -42px;}
+.ext_voc{background-position:-183px -42px;}
+.ext_wav{background-position:-203px -42px;}
+.ext_wma{background-position:-223px -42px;}
+.ext_avi{background-position:-3px -62px;}
+.ext_mov{background-position:-23px -62px;}
+.ext_mpg{background-position:-43px -62px;}
+.ext_mv {background-position:-63px -62px;}
+.ext_asf{background-position:-83px -62px;}
+.ext_asx{background-position:-103px -62px;}
+.ext_qt {background-position:-123px -62px;}
+.ext_rv {background-position:-143px -62px;}
+.ext_wmx{background-position:-163px -62px;}
+.ext_mp4{background-position:-183px -62px;}
+.ext_fla{background-position:-203px -62px;}
+.ext_flv{background-position:-223px -62px;}
+.ext_alz{background-position:-3px -82px;}
+.ext_arj{background-position:-23px -82px;}
+.ext_bzz{background-position:-43px -82px;}
+.ext_egg{background-position:-63px -82px;}
+.ext_gz {background-position:-83px -82px;}
+.ext_jar{background-position:-103px -82px;}
+.ext_rar{background-position:-123px -82px;}
+.ext_tar{background-position:-143px -82px;}
+.ext_tgz{background-position:-163px -82px;}
+.ext_zip{background-position:-183px -82px;}
+.ext_7z {background-position:-203px -82px;}
+.ext_etc{background-position:-223px -82px;}
+.ext_html{background-position:-3px -102px;}
+.ext_wmv {background-position:-23px -102px;}
+.ext_wvz {background-position:-43px -102px;}
+.ext_bzs {background-position:-63px -102px;}

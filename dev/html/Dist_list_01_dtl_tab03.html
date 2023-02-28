@@ -1,3 +1,116 @@
 <div id="tab03" class="tab_contents">
-tab03
+  <div class="tbl_wrap tbl_criticalstage">
+    <table class="tbl_default">
+      <caption>위기단계이력 제목</caption>
+      <colgroup>
+        <col style="width:40px">
+        <col style="width:100px">
+        <col style="width:170px">
+        <col style="width:130px">
+        <col style="width:170px">
+        <col style="width:130px">
+        <col style="width:180px">
+        <col style="width:130px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">위기단계</th>
+          <th scope="col">단계 변경 일시</th>
+          <th scope="col">발생원인</th>
+          <th scope="col">물적피해</th>
+          <th scope="col">인적피해</th>
+          <th scope="col">현장 조치사항</th>
+          <th scope="col">피해발생가능성</th>
+          <th scope="col">종료여부</th>
+        </tr>
+      </thead>
+    </table>
+    <div class="tbl_body_wrap tbl_res" style="height:200px;">
+      <table class="tbl_default" style="border-top:none;">
+        <caption>위기단계이력 내용</caption>
+        <colgroup>
+          <col style="width:40px">
+          <col style="width:100px">
+          <col style="width:170px">
+          <col style="width:130px">
+          <col style="width:170px">
+          <col style="width:130px">
+          <col style="width:180px">
+          <col style="width:130px">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td scope="row" data-label="No">1</td>
+            <td data-label="위기단계">관심</td>
+            <td data-label="단계 변경 일시">2023-01-01 23:59:59</td>
+            <td data-label="발생원인">쓰레기 소각</td>
+            <td data-label="물적피해">1만4140ha 산림 소실</td>
+            <td data-label="인적피해">20가구 대피</td>
+            <td data-label="현장 조치사항">119,112 긴급 구호요청</td>
+            <td data-label="피해발생가능성">심각</td>
+            <td data-label="종료여부">종료</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+  <div class="ico_arrow horizontal"></div>
+  </div>
+  <div class="tbl_wrap tbl_res">
+    <div class="btn_wrap">
+      <button type="button" class="btn btn_deepgrayline" onclick="btnCrisisStageReport()">위기단계 승격보고서</button>
+    </div>
+    <table>
+      <caption>위기단계이력 상세</caption>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">회의 일시</th>
+          <th scope="col">참석자</th>
+          <th scope="col">회의내용</th>
+          <th scope="col">첨부파일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" data-label="No">1</td>
+          <td data-label="회의 일시">2023-02-03 17:45</td>
+          <td data-label="참석자">기획관 주제 비상 기획관실, 재난 대책 위원 등 15인</td>
+          <td data-label="회의내용">현재 위기단계 심각 격상이 필요함</td>
+          <td data-label="관리">
+            <button type="button" class="btn_circle btn_download">첨부파일</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="paginate">
+      <a href="#" class="first" title="처음">〈〈</a>
+      <a href="#" class="pre" title="이전">〈</a>
+      <span>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#" class="on">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+      </span>
+      <a href="#" class="next" title="다음">〉</a>
+      <a href="#" class="last" title="마지막">〉〉</a>
+    </div>
+  </div>
 </div>
+
+<!-- 행정동 구역 코드 상세 -->
+@@include('../inc/pop/Dist_list_08.html')
+<script>
+  function btnCrisisStageReport() {
+    $('.p_crisisstagereport').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 행정동 구역 코드 상세 -->
