@@ -155,12 +155,18 @@
 .distlist_dtl_tab02 .tbl_res2 td{word-break:keep-all;}
 .distlist_dtl_tab02 .tbl_res2 th{width:140px;}
 .distlist_dtl_tab02 .tbl_res2 td{min-width:150px;}
-.attach_list li{display:inline-block;padding-right:28px;box-sizing:border-box;}
+.attach_list li{display:inline-block;padding-right:28px;box-sizing:border-box;line-height:20px;}
 .attach_list button{color:#1271e7;font-size:12px;}
 .attach_list button:hover{text-decoration:underline;}
 .tbl_res2 td{padding:10px 10px 11px;}
 .tbl_criticalstage{overflow-x:auto;}
 .tbl_criticalstage .tbl_default{table-layout:fixed;}
+.loc_ReliefCenter{width:800px;}
+.linked_r{position:relative;margin-right:60px;}
+.linked_r::before{content:"";display:inline-block;position:absolute;top:175px;right:-50px;width:40px;height:40px;background:url(../img/ico_arrow.png) 0 0 no-repeat;transform:rotate(-90deg);}
+.loc_ReliefCenter_dtl .attach_list li{min-width:calc(50% - 28px);}
+.victim{width:565px;}
+.victim .flex_wrap{margin-bottom:10px;}
 
 /* system */
 .code_wrap>div{width:49.5%;}
@@ -206,9 +212,17 @@
   /* data */
   .danger_legend{position:absolute;left:50%;top:87px;margin-right:20px;transform:translateX(-50%);margin-top:30px;}
   /* dist_list */
-  .distlist_dtl_tab01 > .flex_wrap{flex-direction:column;align-items:center;}
+  .distlist_dtl_tab01 > .flex_wrap,
+  .distlist_dtl_tab05 > .flex_wrap,
+  .distlist_dtl_tab06 > .flex_wrap{flex-direction:column;}
+  .distlist_dtl_tab01 > .flex_wrap{align-items:center;}
   .distlist_dtl_tab01 .loc_area{width:100%;margin:0 0 10px 0;}
   .distlist_dtl_tab01 .map{width:100%;background:red;}
+  .victim,
+  .loc_ReliefCenter{width:100%;}
+  .linked_r{margin:10px 0 60px 0;}
+  .linked_r::before{left:50%;top:auto;bottom:-50px;transform:rotate(0);}
+  .attach_list li{min-width:calc(50% - 28px);}
   /* system */
   .code_wrap{display:block;}
   .code_wrap>div{width:100%;}
@@ -296,7 +310,6 @@
   .call_wrap .dtable> div dl input,
   .call_wrap .dtable> div dl textarea,
   .call_wrap .dtable> div dl select{width:100% !important;}
-
 }
 
 /* 저해상도 PC & 테블릿 가로 (해상도 1024px ~ 1279px) ------------------------- */ 
@@ -428,7 +441,7 @@
   .call_wrap{display: block;}
   .call_wrap .search_wrap{padding:10px;}
   .call_wrap .btn_wrap{justify-content:flex-end;padding:10px 0;}
-  .attach_list li{min-width:calc(50% - 28px);}
+ 
 }
 
 /* 모바일 & 테블릿 세로 (해상도 480px ~ 767px) ---------------------------------- */ 
