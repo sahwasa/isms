@@ -186,7 +186,7 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .tbl_selInfo th{width:130px;text-align:center;background-color:#f0f3f6;font-weight:600;border-radius:3px;}
 .tbl_row{border:1px solid #8c96a4;border-width:1px 0;}
 .tbl_row th,
-.tbl_row td span{padding:0 10px;}
+.tbl_row td{padding:0 10px;}
 .tbl_row th,
 .tbl_row td{border:1px solid #e9ecef;text-align:left;}
 .tbl_row th{background-color:#f0f3f6;font-weight:600;color:#23304e;font-size:16px;}

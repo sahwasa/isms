@@ -34,6 +34,11 @@
 .search_wrap .btn_wrap button{height:34px;padding:7px 20px;border-radius:3px;font-size:14px;font-weight:bold;}
 .search_wrap .btn_wrap .btn_search{position:relative;align-self:flex-end;padding-left:42px;color:#fff;}
 .search_wrap .btn_wrap .btn_search::before{position:absolute;top:50%;left:15px;display:inline-block;content:'';width:19px;height:19px;background:url(../img/ico_search.png);transform:translateY(-50%);}
+.search_wrap .btn_wrap .btn_editwrap{position:relative;align-self:flex-end;padding-left:40px;color:#fff;}
+.search_wrap .btn_wrap .btn_editwrap::before{position:absolute;top:50%;left:10px;display:inline-block;content:'';width:19px;height:19px;background:url(../img/ico_editwrap.png);transform:translateY(-50%);}
+.search_wrap .btn_wrap .btn_save::before{background-position-y:0;}
+.search_wrap .btn_wrap .btn_edit::before{background-position-y:50%;}
+.search_wrap .btn_wrap .btn_cancel::before{background-position-y:100%;}
 .dtable dl,
 .dtable dt,
 .dtable dd{display:inline-block;}
@@ -95,6 +100,8 @@
 .call_wrap>div{min-width:49.5%;background-color:#fff;box-shadow: 0px 2px 2px 0 rgb(0 0 0 / 8%);}
 .call_wrap .dtable dt{min-width:140px;}
 .call_wrap .dtable dd>span{width:100%;}
+.call_wrap .btn_wrap{justify-content:flex-end;padding:18px;}
+.call_wrap .btn_wrap button{margin-left:5px;}
 .dtable> div dl input,
 .dtable> div dl textarea,
 .dtable> div dl select{width:180px;}
@@ -153,6 +160,7 @@
 .attach_list li{display:inline-block;padding-right:28px;box-sizing:border-box;}
 .attach_list button{color:#1271e7;font-size:12px;}
 .attach_list button:hover{text-decoration:underline;}
+.tbl_res2 td{padding:10px 10px 11px;}
 
 
 /* system */
@@ -178,6 +186,7 @@
   .tbl_res table tbody>tr:last-child>td{border-bottom:1px solid #8b95a3;}
   .pc_con{display:block;}
   .m_con{display:none;}
+  .datalist_wrap{padding-top:15px;}
   /* call */
   .call_wrap>div:first-child{margin-right:0.5%;}
 }
@@ -436,6 +445,7 @@
   /* call */
   .call_wrap{display: block;}
   .call_wrap .search_wrap{padding:10px;}
+  .call_wrap .btn_wrap{justify-content:flex-end;padding:10px 0;}
   .attach_list li{min-width:calc(50% - 28px);}
 }
 
