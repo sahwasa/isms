@@ -170,6 +170,7 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .tbl_areaB{margin-top:22px;text-align:center;overflow:hidden;}
 .tbl_default{width:100%;border-collapse:separate;background-color:#fff;}
 .tbl_default tr{cursor:pointer;}
+tr.selected,
 .tbl_default tr:hover{background-color:#edfdfc;}
 .tbl_default th,
 .tbl_default td{padding:11px 5px 10px;color:#2a3652;}
