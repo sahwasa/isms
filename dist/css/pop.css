@@ -31,6 +31,11 @@
 .pop_cont .tbl_default td{padding:7px 5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
+.tbl_info th,.tbl_info td{height:30px;padding-top:5px;padding-bottom:5px;background-color:transparent;border:1px solid transparent;text-align:left;font-size:13px;vertical-align:baseline;}
+.tbl_info input,
+.tbl_info select{width:100%;height:34px;font-size:13px;color:#333;}
+.tbl_info input:disabled,
+.tbl_info select:disabled{border-color:transparent;color:#333;}
 .tbl_row{border:1px solid #8c96a4;border-width:1px 0;}
 .tbl_row th,
 .tbl_row td{padding:0 10px;vertical-align:middle;}
@@ -62,7 +67,7 @@
 /* system */
 .warning_wrap{display:flex;padding:20px 0 0;}
 .warning_wrap img{width:40px;height:34px;margin-right:20px;}
-.warning_wrap p{width:315px;font-size:14px;letter-spacing:-0.35px;}
+.warning_wrap p{width:315px;font-size:14px;letter-spacing:-0.35px;word-break:keep-all;text-align:left;line-height:22px;}
 .warning_wrap p span{font-weight:bold;}
 /* dist */
 .tit_report{margin:21px auto 50px;font-size:24px;text-align: center;}
