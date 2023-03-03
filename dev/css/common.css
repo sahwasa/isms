@@ -160,9 +160,14 @@ hr,
 .btn_toggle[datavalue="off"]{background-color:#999;border-color:transparent;}
 .btn_toggle[datavalue="off"]::before{right:1px;}
 .btn_toggle[datavalue="off"]::after{content:"OFF";left:0;}
-
 .btn_tgl{color:#6f778b;border-color:#6f778b;}
 .btn_tgl[datavalue="on"]{color:#fff;background-color:#6f778b;}
+
+/* table inner button */
+.btn_circle{width:28px;height:28px;border-radius:28px;font-size:0;vertical-align:middle;}
+.btn_setup{background:#8b95a3 url(../img/btn_setup.png) no-repeat;}
+.btn_download{background:#8b95a3 url(../img/btn_download.png) no-repeat;}
+.btn_detail{background:#8b95a3 url(../img/btn_detail.png) no-repeat;}
 
 .file_text{width:380px;background-color:#fff!important;border:none;}
 .file_wrap{display:inline-block;position:relative;width:70px;height:25px;cursor:pointer;line-height:22px;padding:0!important;vertical-align:middle;}

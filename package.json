@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/sahwasa/isms/issues"
   },
-  "homepage": "https://github.com/sahwasa/isms#readme"
+  "homepage": "https://github.com/sahwasa/isms#readme",
+  "dependencies": {
+    "chartjs-plugin-datalabels": "^2.2.0"
+  }
 }
