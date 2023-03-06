@@ -189,7 +189,7 @@
   .short_wrap a:hover>span::before{left:80%;}
   .short_wrap a>span::after{width:25px;height:20px;right:5px;background-size:contain;}
   /* data */
-  .danger_legend{position:absolute;left:50%;top:87px;margin-right:20px;transform:translateX(-50%);margin-top:30px;}
+  .danger_legend{position:absolute;left:50%;top:67px;margin-right:20px;transform:translateX(-50%);}
   .datalist_wrap>li{width:30%;margin-top:30px;margin-right:5%;}
   .datalist_wrap>li:nth-child(-n+4){margin-top:30px;}
   .datalist_wrap>li:nth-child(4n){margin-right:5%;}

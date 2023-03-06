@@ -413,8 +413,8 @@ table .th_2deps,
   .box{padding:15px;box-shadow:none;}
   .con_tit{height:50px;padding:0 15px;}
   .tit_h2{padding-left:22px;font-size:16px;}
-  .tit_h2::before{top:5px;}
-  .tit_h2::after{top:11px;}
+  .tit_h2::before{top:4px;}
+  .tit_h2::after{top:10px;}
   .content{margin-bottom:10px;}
   .footer{height:auto;margin-top:0;}
   .copy_wrap{padding:12px 0;}
