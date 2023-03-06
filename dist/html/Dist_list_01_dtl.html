@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>행정안전부 지능형 상황관리 시스템</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../plugins/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pop.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
+  </head>
+
+<body>
+  <div class="wrap">
+    <!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#lnb">주메뉴 바로가기</a>
+</div>
+<hr />
+<!--// 바로가기 메뉴 -->
+
+<!-- header -->
+<div class="header_wrap min_width">
+  <div class="header default_width flex_wrap f_sb">
+    <h1 class="logo"><a href="Main_01.html">행정안전부 지능형 상황관리 시스템</a></h1>
+    <div id="lnb" class="lnb pc_con">
+      <ul class=" nav lnb_list" role="navigation">
+        <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+        <li><a href="Call_ser_01.html">신고관리</a></li>
+        <li><a href="Dist_list_01.html">재난상황 조회</a></li>
+        <li><a href="#">통계관리</a>
+        </li>
+        <li><a href="Evir_INQ_DT_01.html">환경조회</a>
+          <ul class="sub">
+            <li><a href="Evir_INQ_DT_01.html">기관별 연락처</a></li>
+          </ul>
+        </li>
+        <li><a href="#">시스템관리</a>
+          <ul class="sub">
+            <li><a href="SYS_MGN_01.html">사용자 관리</a></li>
+            <li><a href="Cal_Code_01.html">코드 관리</a>
+              <ul class="sub2">
+                <li><a href="Cal_Code_01.html">재난코드 관리</a></li>
+                <li><a href="Agency_cd_MNG_01.html">행정기관코드 관리</a></li>
+                <li><a href="Situation_step_01.html">상황단계코드 관리</a></li>
+                <li><a href="STTY_CD_01.html">단위업무코드 관리</a></li>
+                <li><a href="Com_code_01.html">공통코드 관리</a></li>
+                <li><a href="Crisis_step_01.html">위기단계코드 관리</a></li>
+                <li><a href="Administzone_01.html">행정구역코드 관리</a></li>
+                <li><a href="Legaldong_zone_01.html">법정구역코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="m_con">
+      <a href="#" class="m_con allMenuOpen">전체메뉴 열기</a>
+      <div id="allMenuBox" tabindex="-1" class="ins_allMenuBox">
+        <ul class="gnb m_con" role="navigation">
+          <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+          <li><a href="Call_ser_01.html">신고관리</a></li>
+          <li><a href="Dist_list_01.html">재난상황 조회</a></li>
+          <li><a href="#">통계관리</a>
+          </li>
+          <li><a href="#">환경조회</a>
+            <ul class="sub">
+              <li><a href="Evir_INQ_DT_01.html">업무별 연락처</a></li>
+            </ul>
+          </li>
+          <li><a href="#">시스템관리</a>
+            <ul class="sub">
+              <li><a href="SYS_MGN_01.html">사용자 관리</a></li>
+              <li><a href="#">코드 관리</a>
+                <ul class="sub2">
+                  <li><a href="Cal_Code_01.html">재난코드 관리</a></li>
+                  <li><a href="Agency_cd_MNG_01.html">행정기관코드 관리</a></li>
+                  <li><a href="Situation_step_01.html">상황단계코드 관리</a></li>
+                  <li><a href="STTY_CD_01.html">단위업무코드 관리</a></li>
+                  <li><a href="Com_code_01.html">공통코드 관리</a></li>
+                  <li><a href="Crisis_step_01.html">위기단계코드 관리</a></li>
+                  <li><a href="Administzone_01.html">행정구역코드 관리</a></li>
+                  <li><a href="Legaldong_zone_01.html">법정구역코드 관리</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="gnb_wrap">
+    <div class="gnb default_width">
+      <ul class="gnb_list">
+        <li class="divide"><b>홍길동</b>님이 시스템 사용중입니다.</li>
+        <li class="util_my"><button type="button" onclick="btninfo()">내정보</button></li>
+        <li class="util_log"><button type="button">로그아웃</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- header -->
+
+<!-- 내 정보 수정 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_info">
+    <div class="pop_tit">
+      <h1>내 정보 수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <p class="validity alignR">*는 필수값 입니다.</p>
+        <table class="tbl_row">
+          <caption>내 정보 수정</caption>
+          <colgroup>
+            <col style="width:150px;">
+            <col style="width:260px;">
+          </colgroup>
+          <tr>
+            <th scope="row"><label for="id" class="required">ID</label></th>
+            <td>etri01</td>
+          </tr>
+          <tr>
+            <th><label for="name" class="required">이름</label></th>
+            <td><input type="text" id="name"></td>
+          </tr>
+          <tr>
+            <th><label for="pw" class="required">비밀번호</label></th>
+            <td><input type="password" id="pw"></td>
+          </tr>
+          <tr>
+            <th><label for="pwcheck" class="required">비밀번호 확인</label></th>
+            <td>
+              <input type="password" id="pwcheck">
+              <p class="validity font_pink">비밀번호가 일치하지 않습니다.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="division" class="required">소속기관</label></th>
+            <td>
+              <span class="flex_wrap f_sb input_50">
+                <select name="division" title="division" style="width:48.5%;">
+                  <option value="시도">시도</option>
+                </select>
+                <select name="division" title="division" style="width:49%;">
+                  <option value="시군구">시군구</option>
+                </select>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="department" class="required">부서</label></th>
+            <td>
+              <input type="text" id="department">
+              <p class="validity font_pink">올바른 부서를 입력하세요.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="position">직급</label></th>
+            <td>
+              <input type="text" id="position">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="number">연락처</label></th>
+            <td>
+              <input type="text" id="number">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="phonenumber" class="required">휴대폰</label></th>
+            <td>
+              <input type="text" id="phonenumber">
+              <p class="validity font_pink">올바른 휴대폰 번호를 입력하세요.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="email" class="required">이메일</label></th>
+            <td>
+              <input type="text" id="email">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fax" class="required">FAX</label></th>
+            <td>
+              <input type="text" id="fax">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_red">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--// 내 정보 수정-->
+<!-- 내 정보 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_info">
+    <div class="pop_tit">
+      <h1>내정보</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row">
+          <caption>내정보</caption>
+          <colgroup>
+            <col style="width:120px;">
+            <col style="width:200px;">
+            <col style="width:80px;">
+          </colgroup>
+          <tr>
+            <th><label for="id">ID</label></th>
+            <td colspan="2">etri01</td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="pw">비밀번호</label></th>
+            <td><input type="password" id="pw" value="************" disabled></td>
+            <td><button type="button" class="btn btn_gray" style="vertical-align:baseline;">변경</button></td>
+          </tr>
+          <tr>
+            <th><label for="name">이름</label></th>
+            <td colspan="2">홍길동</td>
+          </tr>
+          <tr>
+            <th><label for="division">소속기관</label></th>
+            <td colspan="2" class="alignL padding_5">서울특별시 구로구</td>
+          </tr>
+          <tr>
+            <th><label for="team">부서</label></th>
+            <td colspan="2">재난자원관리과</td>
+          </tr>
+          <tr>
+            <th><label for="team">직급</label></th>
+            <td colspan="2">주무관</td>
+          </tr>
+          <tr>
+            <th><label for="number">연락처</label></th>
+            <td colspan="2" class="number">02-2110-0000</td>
+          </tr>
+          <tr>
+            <th><label for="phonenumber">휴대폰</label></th>
+            <td colspan="2" class="phonenumber">010-0000-0000</td>
+          </tr>
+          <tr>
+            <th><label for="fax">FAX</label></th>
+            <td colspan="2" class="fax">02-2110-0001</td>
+          </tr>
+          <tr>
+            <th><label for="email">이메일</label></th>
+            <td colspan="2" class="email">12345@45641</td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue" onclick="btnEdit()">수정</button>
+          <button type="button" class="btn btn_lightgray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function btninfo() {
+    $('.p_info').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 내 정보 -->
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">재난상황조회</a></li>
+            <li>재난상황 상세보기</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">재난상황 상세보기</h2>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_gray">목록</button>
+            </div>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="tbl_wrap tbl_selInfo_wrap">
+              <table class="tbl_selInfo">
+                <caption>선택한 재난정보</caption>
+                <tr>
+                  <th scope="row">재난 일련번호</th>
+                  <td>111111</td>
+                  <th scope="row">재난구분</th>
+                  <td>도시산불</td>
+                  <th scope="row">재난명</th>
+                  <td>A산 도시산불</td>
+                </tr>
+                <tr>
+                  <th scope="row">재난 발생일시</th>
+                  <td>2023-01-01 00:00:00</td>
+                  <th scope="row">사건 발생일시</th>
+                  <td colspan="3">2023-01-01 00:00:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">발생지 행정구역</th>
+                  <td>강원도 강릉시</td>
+                  <th scope="row">발생지 상세주소</th>
+                  <td colspan="3">성산명 가나다길 58성산명 가나다길 58성산명 가나다길 58성산명 가나다길 58성산명 가나다길 58</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="box">
+            <div class="tab">
+              <ul class="tabs xl_tab">
+                <li><a href="#tab01" return false;>상세보기</a></li>
+                <li><a href="#tab02" return false;>재난관리 참여기관</a></li>
+                <li><a href="#tab03">위기단계 이력</a></li>
+                <li><a href="#tab04">중대본 운영활동</a></li>
+                <li><a href="#tab05">지대본 운영활동</a></li>
+                <li><a href="#tab06">이재민 발생현황</a></li>
+              </ul>
+              <div class="m_tab">
+                <select name="" id="" class="tab_select">
+                  <option value="tab01">상세보기</option>
+                  <option value="tab02">재난관리 참여기관</option>
+                  <option value="tab03">위기단계 이력</option>
+                  <option value="tab04">중대본 운영활동</option>
+                  <option value="tab05">지대본 운영활동</option>
+                  <option value="tab06">이재민 발생현황</option>/
+                </select>
+              </div>
+            </div>
+            <div class="tab_cont">
+              <div id="tab01" class="tab_contents distlist_dtl_tab01">
+  <div class="flex_wrap f_sb">
+    <div class="loc_area">
+      <div class="map">
+        <img src="http://placehold.it/400x423" width="100%" height="100%" alt="지도영역">
+        <span class="ico_disDtl ico_event" style="left:40px; top:50px;">사건발생위치 아이콘</span>
+        <span class="ico_disDtl ico_calamity"  style="left:60px; top:80px;">재난발생위치 아이콘</span>
+        <div class="loc_reporter" style="left:180px;top:180px;">
+          <span class="ico_disDtl ico_reporter">신고자위치 아이콘</span>
+          <div class="placeInfo">
+            <dl>
+              <dt>신고일시</dt>
+              <dd>2023-01-16 10:00:15</dd>
+              <dt>발생원인</dt>
+              <dd>쓰레기조각</dd>
+              <dt>현장조치사항</dt>
+              <dd>119,112 긴급 구호 요청</dd>
+              <dt>신고자 연락처</dt>
+              <dd>010-1234-5678</dd>
+            </dl>
+            <button type="button" class="axi_only axi_del">닫기</button>
+          </div>
+        </div>
+      </div>
+      <div class="legend_disDtl">
+        <h1>범례</h1>
+        <ul>
+          <li><span class="ico_disDtl ico_event">사건발생위치 아이콘</span>사건발생위치</li>
+          <li><span class="ico_disDtl ico_reporter">신고자위치 아이콘</span>신고자위치</li>
+          <li><span class="ico_disDtl ico_calamity">재난발생위치 아이콘</span>재난발생위치</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tbl_wrap tbl_default tbl_row">
+      <table class="tbl_res2 tbl_nohover">
+        <caption>재난정보 상세</caption>
+        <tr>
+          <th scope="row">재난일련번호</th>
+          <td>1112111</td>
+          <th scope="row">재난 구분</th>
+          <td>도시산불</td>
+        </tr>
+        <tr>
+          <th scope="row">재난명</th>
+          <td>A산 도시산불</td>
+          <th scope="row">위기 단계</th>
+          <td><span class="danger_color danger_color_red">심각</span></td>
+        </tr>
+        <tr>
+          <th scope="row">재난 발생일시</th>
+          <td>2023-01-01 00:00:00</td>
+          <th scope="row">재난 종료일시</th>
+          <td>2023-01-01 00:00:00</td>
+        </tr>
+        <tr>
+          <th scope="row">발생지 행정구역</th>
+          <td>강원도 강원시</td>
+        </tr>
+        <tr>
+          <th scope="row">발생지 상세주소</th>
+          <td colspan="3">성산명 가나다길 58</td>
+        </tr>
+        <tr>            
+          <th scope="row">재난설명</th>
+          <td colspan="3">23. 01. 01(일) 00:00 경 강원도 강릉시 A산에서 도시 화재 발생</td>
+        </tr>
+        <tr>
+          <th scope="row">발생원인</th>
+          <td colspan="3">쓰레기 소각</td>
+        </tr>
+        <tr>
+          <th scope="row">현장 조치사항</th>
+          <td>119, 112 긴급구호요청</td>
+          <th scope="row">현장 조치사항</th>
+          <td>심각</td>
+        </tr>
+        <tr>
+          <th scope="row">물적피해</th>
+          <td>A산 1만4140ha 의 산림이 소실</td>
+          <th scope="row">인적피해</th>
+          <td>4635가구 7330명이 대피 중</td>
+        </tr>
+        <tr>
+          <th scope="row">비고</th>
+          <td>-</td>
+          <th scope="row">종료여부</th>
+          <td>종료</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+              <div id="tab02" class="tab_contents">
+  <div class="tbl_wrap tbl_res">
+    <table>
+      <caption>재난관리 참여기관</caption>
+      <colgroup>
+        <col style="width:54px">
+        <col style="width:133px">
+        <col style="width:171px">
+        <col style="width:283px">
+        <col style="width:247px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">기관명</th>
+          <th scope="col">상황 단계</th>
+          <th scope="col">단위 업무</th>
+          <th scope="col">비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" data-label="No">1</td>
+          <td data-label="기관명">강원도</td>
+          <td data-label="상황 단계">-</td>
+          <td data-label="단위 업무">-</td>
+          <td data-label="비고">-</td>
+        </tr>
+        <tr>
+          <td scope="row" data-label="No">2</td>
+          <td data-label="기관명">강릉시</td>
+          <td data-label="상황 단계">-</td>
+          <td data-label="단위 업무">-</td>
+          <td data-label="비고">-</td>
+        </tr>
+        <tr>
+          <td scope="row" data-label="No">3</td>
+          <td data-label="기관명">행정안전부</td>
+          <td data-label="상황 단계">-</td>
+          <td data-label="단위 업무">-</td>
+          <td data-label="비고">-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+              <div id="tab03" class="tab_contents">
+  <div class="tbl_wrap tbl_criticalstage">
+    <table class="tbl_default">
+      <caption>위기단계이력 제목</caption>
+      <colgroup>
+        <col style="width:40px">
+        <col style="width:100px">
+        <col style="width:170px">
+        <col style="width:130px">
+        <col style="width:170px">
+        <col style="width:130px">
+        <col style="width:170px">
+        <col style="width:120px">
+        <col style="width:110px">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">위기단계</th>
+          <th scope="col">단계 변경 일시</th>
+          <th scope="col">발생원인</th>
+          <th scope="col">물적피해</th>
+          <th scope="col">인적피해</th>
+          <th scope="col">현장 조치사항</th>
+          <th scope="col">피해발생가능성</th>
+          <th scope="col">종료여부</th>
+        </tr>
+      </thead>
+    </table>
+    <div class="tbl_body_wrap">
+      <table class="tbl_default" style="border-top:none;">
+        <caption>위기단계이력 내용</caption>
+        <colgroup>
+          <col style="width:40px">
+          <col style="width:100px">
+          <col style="width:170px">
+          <col style="width:130px">
+          <col style="width:170px">
+          <col style="width:130px">
+          <col style="width:170px">
+          <col style="width:120px">
+          <col style="width:110px">
+        </colgroup>
+        <tbody>
+          <tr>
+            <td scope="row" data-label="No">1</td>
+            <td data-label="위기단계">관심</td>
+            <td data-label="단계 변경 일시">2023-01-01 23:59:59</td>
+            <td data-label="발생원인">쓰레기 소각</td>
+            <td data-label="물적피해">1만4140ha 산림 소실</td>
+            <td data-label="인적피해">20가구 대피</td>
+            <td data-label="현장 조치사항">119,112 긴급 구호요청</td>
+            <td data-label="피해발생가능성">심각</td>
+            <td data-label="종료여부">종료</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+  <div class="ico_arrow horizontal"></div>
+  </div>
+  <div class="tbl_wrap tbl_res">
+    <div class="btn_wrap">
+      <button type="button" class="btn btn_deepgrayline" onclick="btnCrisisStageReport()">위기단계 승격보고서</button>
+    </div>
+    <table>
+      <caption>위기단계이력 상세</caption>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">회의 일시</th>
+          <th scope="col">참석자</th>
+          <th scope="col">회의내용</th>
+          <th scope="col">첨부파일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" data-label="No">1</td>
+          <td data-label="회의 일시">2023-02-03 17:45</td>
+          <td data-label="참석자">기획관 주제 비상 기획관실, 재난 대책 위원 등 15인</td>
+          <td data-label="회의내용">현재 위기단계 심각 격상이 필요함</td>
+          <td data-label="관리">
+            <button type="button" class="btn_circle btn_download">첨부파일</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 위기단계 승격 보고서 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_crisisstagereport">
+    <div class="pop_tit">
+      <h1>위기단계 승격 보고서</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <div class="tit_report">
+          <h3>위기단계 승격 보고서</h3>
+        </div>
+        <table class="tbl_report">
+          <caption>위기단계 승격 보고서</caption>
+          <colgroup>
+            <col style="width:140px;">
+            <col style="width:402px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>상세내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>인지 경로</th>
+              <td>현장조사단 보고를 통해 인지</td>
+            </tr>
+            <tr>
+              <th>작성기관</th>
+              <td>강원도청</td>
+            </tr>
+            <tr>
+              <th>작성자</th>
+              <td>홍길동 주무관</td>
+            </tr>
+            <tr>
+              <th>현장 상황 내용</th>
+              <td>강릉시 일대 도심지역에 빠른 속도로 산불 전파중으로 소방인력 투입되었으나 인력 부족으로 소방 활동 지연</td>
+            </tr>
+            <tr>
+              <th>조치사항</th>
+              <td>강릉시 일대 소방인력 전체 투입하여 소화중</td>
+            </tr>
+            <tr>
+              <th>향후 조치 계획</th>
+              <td>인근 소방 조직 호출을 통해 부족한 인력 확보</td>
+            </tr>
+            <tr>
+              <th>첨부파일</th>
+              <td>
+                <ul class="attach_list">
+                  <li><button type="button"><i class="ico_ext ext_hwp">hwp</i>202302031745_도시산불_위기단계_변동_보고서.hwp</button></li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue" onclick="btnCrisisCodeEdit()">수정</button>
+          <button type="button" class="btn btn_red">삭제</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function btnCrisisStageReport() {
+    $('.p_crisisstagereport').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 위기단계 승격 보고서 -->
+              <div id="tab04" class="tab_contents distlist_dtl_tab04">
+ <div class="tbl_wrap tbl_default tbl_row">
+    <table class="tbl_res2 tbl_nohover">
+      <tr>
+        <th scope="row">행정기관</th>
+        <td>행정안전부</td>
+        <th scope="row">행정구역</th>
+        <td colspan="3">강원도 강릉시</td>
+      </tr>
+      <tr>
+        <th scope="row">가동 일시</th>
+        <td>2023-01-01 00:00:00</td>
+        <th scope="row">해제 일시</th>
+        <td colspan="3">2023-01-01 00:00:00</td>
+      </tr>
+      <tr>
+        <th scope="row">본부장</th>
+        <td>-</td>
+        <th scope="row">본부차장</th>
+        <td>산림청장</td>
+      </tr>
+      <tr>
+        <th scope="row">총괄조정관</th>
+        <td>-</td>
+        <th scope="row">통제관</th>
+        <td>-</td>
+        <th scope="row">담당관</th>
+        <td>-</td>
+      </tr>
+      <tr>
+        <th scope="row">중앙 재난안전 대책본부 회의</th>
+        <td colspan="5">비상경고 실시 및 언론브리핑 준비, 현재 상황 파악 및 상황보고서, 작전 계획 작성, 자원대기소 운영 예비 인력 확보</td>
+      </tr>
+      <tr>
+        <th scope="row">상황총괄</th>
+        <td colspan="5">상황 별 비상 경고 계획 수립, 언론 정보 자료 작성 및 배부, 주민 경고 발송 실시, 비상 경고 실시 및 언론 브리핑 준비</td>
+      </tr>
+      <tr>
+        <th scope="row">현장대응</th>
+        <td colspan="5">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+      </tr>
+      <tr>
+        <th scope="row">자원 지원</th>
+        <td colspan="5">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+      </tr>
+      <tr>
+        <th scope="row">대민 지원</th>
+        <td colspan="5">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+      </tr>
+      <tr>
+        <th scope="row">첨부파일</th>
+        <td colspan="5">
+          <ul class="attach_list">
+            <li><button type="button"><i class="ico_ext ext_jpg">jpg</i>중대본조직도첨부파일.jpg</button></li>
+            <li><button type="button"><i class="ico_ext ext_hwp">hwp</i>중대본실무반첨부파일.hwp</button></li>
+            <li><button type="button"><i class="ico_ext ext_hwp">hwp</i>중대본실무반첨부파일.hwp</button></li>
+            <li><button type="button"><i class="ico_ext ext_xls">xls</i>중대본실무반별 역할첨부파일.xls</button></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+              <div id="tab05" class="tab_contents distlist_dtl_tab05">
+  <div class="flex_wrap f_sb">
+    <div class="section loc_ReliefCenter linked_r">
+      <div class="section_tit">
+        <h1 class="tit">지대본 목록</h1>
+      </div>
+      <div class="tbl_wrap tbl_default">
+        <table>
+          <caption>지대본 목록</caption>
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">행정기관</th>
+              <th scope="col">행정구역</th>
+              <th scope="col">본부장</th>
+              <th scope="col">가동일시</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>삼척시</td>
+              <td>강원도</td>
+              <td>삼척시장</td>
+              <td>2023-02-12 11:00:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="section loc_ReliefCenter_dtl">
+      <div class="section_tit">
+        <h1 class="tit">지대본 운영활동 상세</h1>
+      </div>
+      <div class="tbl_wrap tbl_default tbl_row">
+        <table class="tbl_res2 tbl_nohover">
+          <colgroup>
+            <col style="width:150px;">
+          </colgroup>
+          <caption>선택된 지대본 운영활동 상세</caption>
+          <tr>
+            <th scope="row">행정기관</th>
+            <td>행정안전부</td>
+            <th scope="row">행정구역</th>
+            <td>강원도 강릉시</td>
+          </tr>
+          <tr>
+            <th scope="row">가동 일시</th>
+            <td>2023-01-01 00:00:00</td>
+            <th scope="row">해제 일시</th>
+            <td>2023-01-01 00:00:00</td>
+          </tr>
+          <tr>
+            <th scope="row">본부장</th>
+            <td>-</td>
+            <th scope="row">본부차장</th>
+            <td>산림청장</td>
+          </tr>
+          <tr>
+            <th scope="row">통제관</th>
+            <td>-</td>
+            <th scope="row">담당관</th>
+            <td>-</td>
+          </tr>
+          <tr>
+            <th scope="row">재난상황</th>
+            <td colspan="4">비상경고 실시 및 언론브리핑 준비, 현재 상황 파악 및 상황보고서, 작전 계획 작성, 자원대기소 운영 예비 인력 확보</td>
+          </tr>
+          <tr>
+            <th scope="row">긴급 생활안전 지원</th>
+            <td colspan="4">상황 별 비상 경고 계획 수립, 언론 정보 자료 작성 및 배부, 주민 경고 발송 실시, 비상 경고 실시 및 언론 브리핑 준비</td>
+          </tr>
+          <tr>
+            <th scope="row">긴급통신 지원</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">시설 응급복구</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">에너지 기능복구</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">재난자원 지원</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">교통대책</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">의료 및 방역서비스</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">재난현장 환경정비</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">자원봉사 관리</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">사회질서 유지</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">수색 구조구급지원</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">재난수습 홍보</th>
+            <td colspan="4">진압작전계획 수립 및 배부, 재난 상황정보의 수집 분석 실시, 대응계획반 자체 상황판단 대응작전 회의 실시</td>
+          </tr>
+          <tr>
+            <th scope="row">첨부파일</th>
+            <td colspan="3">
+              <ul class="attach_list">
+                <li><button type="button"><i class="ico_ext ext_jpg">jpg</i>지대본조직도첨부파일.jpg</button></li>
+                <li><button type="button"><i class="ico_ext ext_hwp">hwp</i>지대본실무반첨부파일.hwp</button></li>
+                <li><button type="button"><i class="ico_ext ext_hwp">hwp</i>지대본실무반첨부파일.hwp</button></li>
+                <li><button type="button"><i class="ico_ext ext_xls">xls</i>지대본실무반별 역할첨부파일.xls</button></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+              <div id="tab06" class="tab_contents distlist_dtl_tab06">
+  <div class="flex_wrap f_sb">
+    <div class="section victim linked_r">
+      <div class="section_tit">
+        <h1 class="tit">이재민 발생 및 수용정보</h1>
+      </div>
+      <div>
+        <div class="tbl_wrap tbl_row tbl_default">
+          <table class="tbl_res2 tbl_nohover">
+            <caption>이재민 발생 및 수용정보 개요</caption>
+            <tr>
+              <th scope="row">행정구역</th>
+              <td>강원도 강릉시</td>
+              <th scope="row">총 발생 세대&sol;인원</th>
+              <td>25/100</td>
+            </tr>
+            <tr>
+              <th scope="row">총 수용 세대&sol;인원</th>
+              <td>25/100</td>
+              <th scope="row">총 귀가 세대&sol;인원</th>
+              <td>5/20</td>
+            </tr>
+          </table>
+        </div>
+        <div class="chart_box_01">
+          <div>
+            <canvas id="chart1_1"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="tbl_wrap tbl_default fac_victim">
+        <table>
+          <caption>수용시설별 이재민정보</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">순번</th>
+              <th scope="col" rowspan="2">수용시설 구분</th>
+              <th scope="col" rowspan="2">수용 시설명</th>
+              <th scope="col" colspan="2">발생</th>
+              <th scope="col" colspan="2">수용</th>
+              <th scope="col" colspan="2">귀가</th>
+            </tr>
+            <tr>
+              <th scope="col">세대</th>
+              <th scope="col">인원</th>
+              <th scope="col">세대</th>
+              <th scope="col">인원</th>
+              <th scope="col">세대</th>
+              <th scope="col">인원</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="section victim_dtl">
+      <div class="section_tit">
+        <h1 class="tit">이재민 발생 상세정보</h1>
+      </div>
+      <div class="tbl_wrap tbl_row tbl_default">
+        <table class="tbl_res2 tbl_nohover">
+          <caption>선택된 수용시설별 이재민 상세정보</caption>
+          <tr>
+            <th scope="row">수용 시설명</th>
+            <td>00 고등학교</td>
+            <th scope="row">수용 시설물 구분</th>
+            <td>학교</td>
+          </tr>
+          <tr>
+            <th scope="row">수용 구분</th>
+            <td>수용가능</td>
+            <th scope="row">발생일시</th>
+            <td>2023-01-01 05:00:00</td>
+          </tr>
+          <tr>
+            <th scope="row">이재민 구분</th>
+            <td>장기 이재민</td>
+            <th scope="row">발생 요인</th>
+            <td>산불</td>
+          </tr>
+          <tr>
+            <th scope="row">행정구역</th>
+            <td>강원도 강릉시</td>
+            <th scope="row">시설주소</th>
+            <td>강릉대로 587번길 68</td>
+          </tr>
+        </table>
+      </div>
+      <div class="chart_box_02 flex_wrap f_sb">
+        <div>
+          <div id="app"><canvas id="chart1_2" width="140" height="130"></canvas></div>
+          <div id="app"><canvas id="chart1_3" width="140" height="130"></canvas></div>
+        </div>
+        <div>
+          <canvas id="chart1_4" width="100" height="90"></canvas>
+          <canvas id="chart1_5" width="100" height="90"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>`
+        </div>
+      </div>
+      <div class="footer min_width"> 
+  <div class="copy_wrap">
+    <p class="copyright">
+      Cppyright &copy; 2023 행정안전부. All rights Reserved.
+    </p>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <!-- 내 정보 수정 -->
+  <div class="pop_overlay">
+  <div class="pop_wrap p_receivelist">
+    <div class="pop_tit">
+      <h1>수신 이력 조회</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body p_receipt_details">
+      <div class="pop_cont">
+        <div class="search_wrap dtable">
+          <div class="line2">
+            <dl>
+              <dt>
+                <label for="data">자료</label>
+              </dt>
+              <dd>
+                <select name="data" id="data">
+                  <option value="">기상청·동네예보</option>
+                </select>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <label for="date_range">기간</label>
+              </dt>
+              <dd>
+                <span class="period period_multi">
+                  <input id="date_timepicker_start" type="text" role="from">
+                  <img src="../img/btn_calendar.png" alt="달력 이미지">
+                  <input id="date_timepicker_end" type="text" role="to">
+                  <img src="../img/btn_calendar.png" alt="달력 이미지">
+                </span>
+                <button type="button" class="btn btn_search btn_mint">조회</button>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default">
+            <caption>수신이력조회 리스트</caption>
+            <colgroup>
+              <col style="width:225px">
+              <col style="width:183px">
+              <col style="width:235px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">재난구분</th>
+                <th scope="col">상태</th>
+                <th scope="col">발생장소</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="재난구분">도시산불</td>
+                <td data-label="재난명">
+                  <span class="danger_state danger_state_s danger_bg_green">정상</span>
+                </td>
+                <td data-label="발생장소">강원도 강릉시 성산면</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--// 내 정보 수정-->
+</body>
+
+</html>
+<script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+<script src="../plugins/chartjs/Chart.bundle.js"></script>
+<script src="../plugins/chartjs/Chart.min.js"></script>
+<script src="../plugins/chartjs/chartjs-plugin-datalabels.min.js"></script>
+<script src="../js/ui_common.js"></script>
+
+<script>
+  // chart1-1
+  var ctx1_1 = document.getElementById('chart1_1').getContext('2d');
+  new Chart(ctx1_1, {
+    type: 'line',
+    data: {
+      labels: ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05", "2023-01-06", "2023-01-07", "2023-01-08", "2023-01-09", "2023-01-10", "2023-01-11", "2023-01-12"],
+      datasets: [{
+        label: '학교',
+        fill: false,
+        borderColor: '#c7d9dd',
+        backgroundColor: '#c7d9dd',
+        borderSkipped: false,
+        data: [50, 5, 10, 7, 10, 5, 8, 10, 18, 10, 18, 5]
+      },
+      {
+        label: '관공서',
+        fill: false,
+        borderColor: '#adc9cf',
+        backgroundColor: '#adc9cf',
+        borderSkipped: false,
+        data: [8, 10, 18, 10, 18, 5, 6, 9, 7, 5, 7, 5]
+      },
+      {
+        label: '창고',
+        fill: false,
+        borderColor: '#8ab6bf',
+        backgroundColor: '#8ab6bf',
+        borderSkipped: false,
+        data: [6, 9, 7, 5, 7, 5, 8, 4, 5, 40, 8, 5]
+      },
+      {
+        label: '마을회관',
+        fill: false,
+        borderColor: '#5aa2ae ',
+        backgroundColor: '#5aa2ae ',
+        borderSkipped: true,
+        data: [8, 4, 5, 35, 8, 5, 14, 8, 0, 5, 4, 2]
+      },
+      {
+        label: '교회',
+        fill: false,
+        borderColor: '#52949f',
+        backgroundColor: '#52949f',
+        borderSkipped: false,
+        data: [0, 8, 0, 5, 4, 2, 0, 8, 15, 5, 2, 9]
+      },
+      {
+        label: '경로당',
+        fill: false,
+        borderColor: '#49858f',
+        backgroundColor: '#49858f',
+        borderSkipped: false,
+        data: [0, 8, 0, 5, 2, 9, 0, 8, 0, 5, 0, 5]
+      },
+      {
+        label: '기타',
+        fill: false,
+        borderColor: '#3e727b',
+        backgroundColor: '#3e727b',
+        borderSkipped: false,
+        data: [0, 8, 0, 5, 0, 5, 6, 9, 7, 5, 7, 5]
+      }
+      ]
+    },
+    options: {
+      plugins: {
+        datalabels: {
+          display: false
+        }
+      },
+      legend: {
+        display: true,
+        position: "bottom",
+        labels: {
+          boxWidth: 13,
+          boxHeight: 100
+        }
+      },
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          stacked: false,
+          gridLines: {
+            display: true,
+          }
+        }], xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      }
+    }
+  });
+</script>
+
+
+<script>
+  // chart1-2
+  Chart.pluginService.register({
+    beforeDraw: function (chart) {
+      if (chart.config.options.elements.center) {
+        var ctx = chart.chart.ctx;
+        var centerConfig = chart.config.options.elements.center;
+        var fontStyle = centerConfig.fontStyle || "Malgun Gothic";
+        var txt = centerConfig.text;
+        var color = centerConfig.color || '#4864a9';
+        var maxFontSize = centerConfig.maxFontSize || 15;
+        var sidePadding = centerConfig.sidePadding || 20;
+        var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+        var stringWidth = ctx.measureText(txt).width;
+        var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+        var widthRatio = elementWidth / stringWidth;
+        var newFontSize = Math.floor(30 * widthRatio);
+        var elementHeight = (chart.innerRadius * 2);
+        var fontSizeToUse = Math.min(newFontSize, elementHeight, maxFontSize);
+        var minFontSize = centerConfig.minFontSize;
+        var wrapText = false;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 1.95);
+        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.6);
+        ctx.font = fontSizeToUse + "px " + fontStyle;
+        ctx.fillStyle = color;
+        if (!wrapText) {
+          ctx.fillText(txt, centerX, centerY);
+          return;
+        }
+        //Draw text in center
+        ctx.fillText(centerX, centerY);
+      }
+    }
+  });
+
+
+  var config = {
+    type: 'doughnut',
+    data: {
+      labels: ["발생세대"],
+      datasets: [{
+        data: [45, 55],
+        backgroundColor: ["#99ccff"],
+        borderColor: ["#99ccff"],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      circumference: Math.PI + 1,
+      rotation: -Math.PI - 0.5,
+      cutoutPercentage: 64,
+      legend: {
+        display: false
+      },
+      plugins: {
+        datalabels: {
+          display: false
+        }
+      },
+      elements: {
+        center: {
+          text: '발생세대',
+        }
+      }
+    }
+  };
+
+  var ctx = document.getElementById("chart1_2").getContext("2d");
+  var myChart = new Chart(ctx, config);
+</script>
+
+
+
+
+
+<script>
+  // chart1-3
+  Chart.pluginService.register({
+    beforeDraw: function (chart) {
+      if (chart.config.options.elements.center) {
+        var ctx = chart.chart.ctx;
+        var centerConfig = chart.config.options.elements.center;
+        var fontStyle = centerConfig.fontStyle || "Malgun Gothic";
+        var txt = centerConfig.text;
+        var color = centerConfig.color || '#4864a9';
+        var maxFontSize = centerConfig.maxFontSize || 15;
+        var sidePadding = centerConfig.sidePadding || 20;
+        var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+        var stringWidth = ctx.measureText(txt).width;
+        var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+        var widthRatio = elementWidth / stringWidth;
+        var newFontSize = Math.floor(30 * widthRatio);
+        var elementHeight = (chart.innerRadius * 2);
+        var fontSizeToUse = Math.min(newFontSize, elementHeight, maxFontSize);
+        var minFontSize = centerConfig.minFontSize;
+        var wrapText = false;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 1.95);
+        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.6);
+        ctx.font = fontSizeToUse + "px " + fontStyle;
+        ctx.fillStyle = color;
+        if (!wrapText) {
+          ctx.fillText(txt, centerX, centerY);
+          return;
+        }
+        //Draw text in center
+        ctx.fillText(centerX, centerY);
+      }
+    }
+  });
+
+
+  var config = {
+    type: 'doughnut',
+    data: {
+      labels: ["발생인원"],
+      datasets: [{
+        data: [45, 55],
+        backgroundColor: ["#99ccff"],
+        borderColor: ["#99ccff"],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      circumference: Math.PI + 1,
+      rotation: -Math.PI - 0.5,
+      cutoutPercentage: 64,
+      legend: {
+        display: false
+      },
+      plugins: {
+        datalabels: {
+          display: false
+        }
+      },
+      elements: {
+        center: {
+          text: '발생인원',
+        }
+      }
+    }
+  };
+
+  var ctx = document.getElementById("chart1_3").getContext("2d");
+  var myChart = new Chart(ctx, config);
+</script>
+
+
+<script>
+  // chart1-4
+  (function () {
+    new Chart(document.getElementById('chart1_4').getContext('2d'), {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [1, 4],
+          backgroundColor: ['#609bcf', '#4864a9']
+        }],
+        labels: ['귀가세대', '수용세대']
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+          //position: 'bottom'
+        },
+        plugins: {
+          datalabels: {
+            color: ['#fff', '#fff'],
+            anchor: 'center',
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex]
+            }
+          },
+        }
+      }
+    });
+  })();
+</script>
+
+<script>
+  // chart1-5
+  (function () {
+    new Chart(document.getElementById('chart1_5').getContext('2d'), {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [4, 1],
+          backgroundColor: ['#609bcf', '#4864a9']
+        }],
+        labels: ['귀가인원', '수용인원']
+      },
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+          //position: 'bottom'
+        },
+        plugins: {
+          datalabels: {
+            color: ['#fff', '#fff'],
+            anchor: 'center',
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex]
+            }
+          },
+        }
+      }
+    });
+  })();
+</script>

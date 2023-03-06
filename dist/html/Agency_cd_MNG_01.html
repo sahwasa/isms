@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>행정안전부 지능형 상황관리 시스템</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../plugins/axicon/axicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jquery-ui/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/jqGrid/css/ui.jqgrid.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pop.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
+  </head>
+
+<body>
+  <div class="wrap">
+    <!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#lnb">주메뉴 바로가기</a>
+</div>
+<hr />
+<!--// 바로가기 메뉴 -->
+
+<!-- header -->
+<div class="header_wrap min_width">
+  <div class="header default_width flex_wrap f_sb">
+    <h1 class="logo"><a href="Main_01.html">행정안전부 지능형 상황관리 시스템</a></h1>
+    <div id="lnb" class="lnb pc_con">
+      <ul class=" nav lnb_list" role="navigation">
+        <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+        <li><a href="Call_ser_01.html">신고관리</a></li>
+        <li><a href="Dist_list_01.html">재난상황 조회</a></li>
+        <li><a href="#">통계관리</a>
+        </li>
+        <li><a href="Evir_INQ_DT_01.html">환경조회</a>
+          <ul class="sub">
+            <li><a href="Evir_INQ_DT_01.html">기관별 연락처</a></li>
+          </ul>
+        </li>
+        <li><a href="#">시스템관리</a>
+          <ul class="sub">
+            <li><a href="SYS_MGN_01.html">사용자 관리</a></li>
+            <li><a href="Cal_Code_01.html">코드 관리</a>
+              <ul class="sub2">
+                <li><a href="Cal_Code_01.html">재난코드 관리</a></li>
+                <li><a href="Agency_cd_MNG_01.html">행정기관코드 관리</a></li>
+                <li><a href="Situation_step_01.html">상황단계코드 관리</a></li>
+                <li><a href="STTY_CD_01.html">단위업무코드 관리</a></li>
+                <li><a href="Com_code_01.html">공통코드 관리</a></li>
+                <li><a href="Crisis_step_01.html">위기단계코드 관리</a></li>
+                <li><a href="Administzone_01.html">행정구역코드 관리</a></li>
+                <li><a href="Legaldong_zone_01.html">법정구역코드 관리</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="m_con">
+      <a href="#" class="m_con allMenuOpen">전체메뉴 열기</a>
+      <div id="allMenuBox" tabindex="-1" class="ins_allMenuBox">
+        <ul class="gnb m_con" role="navigation">
+          <li><a href="Data_Sts_01.html">데이터 수집 관제</a></li>
+          <li><a href="Call_ser_01.html">신고관리</a></li>
+          <li><a href="Dist_list_01.html">재난상황 조회</a></li>
+          <li><a href="#">통계관리</a>
+          </li>
+          <li><a href="#">환경조회</a>
+            <ul class="sub">
+              <li><a href="Evir_INQ_DT_01.html">업무별 연락처</a></li>
+            </ul>
+          </li>
+          <li><a href="#">시스템관리</a>
+            <ul class="sub">
+              <li><a href="SYS_MGN_01.html">사용자 관리</a></li>
+              <li><a href="#">코드 관리</a>
+                <ul class="sub2">
+                  <li><a href="Cal_Code_01.html">재난코드 관리</a></li>
+                  <li><a href="Agency_cd_MNG_01.html">행정기관코드 관리</a></li>
+                  <li><a href="Situation_step_01.html">상황단계코드 관리</a></li>
+                  <li><a href="STTY_CD_01.html">단위업무코드 관리</a></li>
+                  <li><a href="Com_code_01.html">공통코드 관리</a></li>
+                  <li><a href="Crisis_step_01.html">위기단계코드 관리</a></li>
+                  <li><a href="Administzone_01.html">행정구역코드 관리</a></li>
+                  <li><a href="Legaldong_zone_01.html">법정구역코드 관리</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="gnb_wrap">
+    <div class="gnb default_width">
+      <ul class="gnb_list">
+        <li class="divide"><b>홍길동</b>님이 시스템 사용중입니다.</li>
+        <li class="util_my"><button type="button" onclick="btninfo()">내정보</button></li>
+        <li class="util_log"><button type="button">로그아웃</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- header -->
+
+<!-- 내 정보 수정 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_info">
+    <div class="pop_tit">
+      <h1>내 정보 수정</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <p class="validity alignR">*는 필수값 입니다.</p>
+        <table class="tbl_row">
+          <caption>내 정보 수정</caption>
+          <colgroup>
+            <col style="width:150px;">
+            <col style="width:260px;">
+          </colgroup>
+          <tr>
+            <th scope="row"><label for="id" class="required">ID</label></th>
+            <td>etri01</td>
+          </tr>
+          <tr>
+            <th><label for="name" class="required">이름</label></th>
+            <td><input type="text" id="name"></td>
+          </tr>
+          <tr>
+            <th><label for="pw" class="required">비밀번호</label></th>
+            <td><input type="password" id="pw"></td>
+          </tr>
+          <tr>
+            <th><label for="pwcheck" class="required">비밀번호 확인</label></th>
+            <td>
+              <input type="password" id="pwcheck">
+              <p class="validity font_pink">비밀번호가 일치하지 않습니다.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="division" class="required">소속기관</label></th>
+            <td>
+              <span class="flex_wrap f_sb input_50">
+                <select name="division" title="division" style="width:48.5%;">
+                  <option value="시도">시도</option>
+                </select>
+                <select name="division" title="division" style="width:49%;">
+                  <option value="시군구">시군구</option>
+                </select>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="department" class="required">부서</label></th>
+            <td>
+              <input type="text" id="department">
+              <p class="validity font_pink">올바른 부서를 입력하세요.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="position">직급</label></th>
+            <td>
+              <input type="text" id="position">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="number">연락처</label></th>
+            <td>
+              <input type="text" id="number">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="phonenumber" class="required">휴대폰</label></th>
+            <td>
+              <input type="text" id="phonenumber">
+              <p class="validity font_pink">올바른 휴대폰 번호를 입력하세요.</p>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="email" class="required">이메일</label></th>
+            <td>
+              <input type="text" id="email">
+            </td>
+          </tr>
+          <tr>
+            <th><label for="fax" class="required">FAX</label></th>
+            <td>
+              <input type="text" id="fax">
+            </td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue">저장</button>
+          <button type="button" class="btn btn_red">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--// 내 정보 수정-->
+<!-- 내 정보 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_info">
+    <div class="pop_tit">
+      <h1>내정보</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row">
+          <caption>내정보</caption>
+          <colgroup>
+            <col style="width:120px;">
+            <col style="width:200px;">
+            <col style="width:80px;">
+          </colgroup>
+          <tr>
+            <th><label for="id">ID</label></th>
+            <td colspan="2">etri01</td>
+          </tr>
+          <tr>
+            <th scope="row"><label for="pw">비밀번호</label></th>
+            <td><input type="password" id="pw" value="************" disabled></td>
+            <td><button type="button" class="btn btn_gray" style="vertical-align:baseline;">변경</button></td>
+          </tr>
+          <tr>
+            <th><label for="name">이름</label></th>
+            <td colspan="2">홍길동</td>
+          </tr>
+          <tr>
+            <th><label for="division">소속기관</label></th>
+            <td colspan="2" class="alignL padding_5">서울특별시 구로구</td>
+          </tr>
+          <tr>
+            <th><label for="team">부서</label></th>
+            <td colspan="2">재난자원관리과</td>
+          </tr>
+          <tr>
+            <th><label for="team">직급</label></th>
+            <td colspan="2">주무관</td>
+          </tr>
+          <tr>
+            <th><label for="number">연락처</label></th>
+            <td colspan="2" class="number">02-2110-0000</td>
+          </tr>
+          <tr>
+            <th><label for="phonenumber">휴대폰</label></th>
+            <td colspan="2" class="phonenumber">010-0000-0000</td>
+          </tr>
+          <tr>
+            <th><label for="fax">FAX</label></th>
+            <td colspan="2" class="fax">02-2110-0001</td>
+          </tr>
+          <tr>
+            <th><label for="email">이메일</label></th>
+            <td colspan="2" class="email">12345@45641</td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignC">
+          <button type="button" class="btn btn_blue" onclick="btnEdit()">수정</button>
+          <button type="button" class="btn btn_lightgray">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function btninfo() {
+    $('.p_info').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 내 정보 -->
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">코드관리</a></li>
+            <li>행정기관 코드관리</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">행정기관 코드관리</h2>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="dtable">
+              <div class="line2">
+                <dl>
+                  <dt>
+                    <label for="administrative">행정기관</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="administrative">
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="administrative_num">기관차수</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_num" id="administrative_num">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+              </div>
+              <div class="line1">
+                <dl>
+                  <dt>
+                    <label for="administrative_type">기관유형</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_type" id="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn_search btn_mint">조회</button>
+            </div>
+          </div>
+          <div class="box tbl_wrap tbl_res">
+            <table>
+              <caption>행정기관 코드관리 리스트</caption>
+              <colgroup>
+                <col style="width:80px">
+                <col style="width:133px">
+                <col style="width:171px">
+                <col style="width:283px">
+                <col style="width:171px">
+                <col style="width:80px">
+                <col style="width:171px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">행정기관</th>
+                  <th scope="col">기관차수</th>
+                  <th scope="col">기관코드</th>
+                  <th scope="col">기관 유형</th>
+                  <th scope="col">사용여부</th>
+                  <th scope="col">하위기관</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onclick="btnAgencyDetail()">
+                  <td scope="row" data-label="No">1td>
+                  <td data-label="행정기관">서울시</td>
+                  <td data-label="기관차수">Lv.2</td>
+                  <td data-label="기관코드">-</td>
+                  <td data-label="기관 유형">-</td>
+                  <td data-label="승인여부">Y</td>
+                  <td data-label="하위기관">
+                    <button type="button" class="btn btn_tblinner btn_mint">목록갱신</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="on">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer min_width"> 
+  <div class="copy_wrap">
+    <p class="copyright">
+      Cppyright &copy; 2023 행정안전부. All rights Reserved.
+    </p>
+  </div>
+</div>
+    </div>
+  </div>
+  
+</body>
+
+</html>
+<script src="../plugins/jquery/dist/jquery.min.js"></script>
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../plugins/jquery-ui/ui/i18n/datepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.min.js"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
+<script src="../plugins/jqueryui-timepicker-addon/dist/i18n/jquery-ui-timepicker-ko.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+<script src="../plugins/chartjs/Chart.bundle.js"></script>
+<script src="../plugins/chartjs/Chart.min.js"></script>
+<script src="../plugins/chartjs/chartjs-plugin-datalabels.min.js"></script>
+<script src="../js/ui_common.js"></script>
+
+<!-- 행정기관 상세 -->
+<div class="pop_overlay">
+  <div class="pop_wrap p_agencydetail">
+    <div class="pop_tit">
+      <h1>행정기관 상세</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row tbl_transverse">
+          <caption>행정기관 상세</caption>
+          <tr>
+            <th><label for="agency_code">기관코드</label></th>
+            <td><input type="text" id="agency_code"></td>
+            <th><label for="agency_name">기관명</label></th>
+            <td><input type="text" id="agency_name"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_name_super">전체 기관명</label></th>
+            <td colspan="3"><input type="text" id="agency_name_super"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_name_super">상위기관명</label></th>
+            <td><input type="text" id="agency_name_super"></td>
+            <th><label for="agency_num">기관차수</label></th>
+            <td><input type="text" id="agency_num"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_type">기관유형</label></th>
+            
+            <td colspan="3">
+              <span class="flex_wrap f_sb" style="width:100%;">
+                <select name="agency_type" id="agency_type" style="width:33%;">
+                  <option value="자치행정조직">자치행정조직</option>
+                </select>
+                <select name="agency_type" style="width:33%;">
+                  <option value="기초자치단체">기초자치단체</option>
+                </select>
+                <select name="agency_type" style="width:33%;">
+                  <option value="자치구">자치구</option>
+                </select>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="phone_num">전화번호</label></th>
+            <td><input type="text" id="phone_num"></td>
+            <th><label for="fax_num">팩스번호</label></th>
+            <td><input type="text" id="fax_num"></td>
+          </tr>
+
+          <tr>
+            <th><label for="create_date">생성일자</label></th>
+            <td>
+              <span class="period_single">
+                <input id="date_timepicker_start" type="text" role="from">
+                <img src="../img/btn_calendar.png" alt="달력 이미지">
+              </span>
+            </td>
+            <th><label for="close_date">폐지일자</label></th>
+            <td>
+              <span class="period_single">
+                <input id="date_timepicker_end" type="text" role="to">
+                <img src="../img/btn_calendar.png" alt="달력 이미지">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="usage">사용여부</label></th>
+            <td><input type="text" id="usage"></td>
+            <th><label for="code">이전기관코드</label></th>
+            <td><input type="text" id="code"></td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_red">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function btnAgencyDetail() {
+    $('.p_agencydetail').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 행정기관 상세 -->
