@@ -187,7 +187,7 @@ label{vertical-align:middle;}
 [required]::before{margin-right:5px;}
 .validity{font-size:12px;color: #f35857;letter-spacing:-1.6px;line-height:17px;}
 input,
-select{padding:3px 5px 4px;box-sizing:border-box;border:1px solid #b7b7b7;}
+select{padding:3px 5px 4px;box-sizing:border-box;border:1px solid #b7b7b7;font-size:16px;}
 select{padding:2px 10px 3px;}
 select[multiple]{height:auto;}
 input[type="radio"],
@@ -268,15 +268,15 @@ label input{margin-top:-3px;}
 .paginate .last{_width /**/:47px;width:30px;height:30px;color:#777;background-color:#fff;margin:0 1px;font-size:10px;line-height:19px;font-weight:bold;}
 
 /* danger_step */
-.danger_state{border-radius:18px;color:#fff;}
-.danger_state::before{position:relative;display:inline-block;content:'';width:auto;background:url(../img/ico_state_danger.png)no-repeat center top;background-size:cover;}
+.danger_state{display:inline-flex;align-items:center;border-radius:18px;color:#fff;}
+.danger_state::before{display:inline-block;content:'';width:auto;background:url(../img/ico_state_danger.png)no-repeat center top;background-size:cover;}
 .danger_state.danger_bg_yellow::before,
 .danger_state.danger_bg_orange::before,
 .danger_state.danger_bg_red::before{background-position-y:100%;}
 .danger_state_l{width:74px;height:36px;padding-left:7px;line-height:36px;font-size:16px;font-weight:bold;}
-.danger_state_l::before{top:4px;width:20px;height:20px;margin-right:5px;}
+.danger_state_l::before{width:20px;height:20px;margin-right:5px;}
 .danger_state_s{width:60px;height:27px;padding: 0 6px;font-size:13px;line-height:27px;}
-.danger_state_s::before{top:3px;width:16px;height:16px;margin-right:4px;}
+.danger_state_s::before{width:16px;height:16px;margin-right:4px;}
 .danger_color{font-weight:bold;}
 .danger_color_green{color:#009e0f;}
 .danger_color_blue{color:#078cd8;}

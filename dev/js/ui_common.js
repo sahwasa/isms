@@ -144,6 +144,5 @@ $(function () {
     $("#" + select_link)
       .show()
       .focus();
-    console.log(select_link);
   });
 });

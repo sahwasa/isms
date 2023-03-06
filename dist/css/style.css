@@ -197,13 +197,12 @@ input[type='radio']:checked{background:url(../img/bg_radioChecked.png) 0 0 no-re
 .tbl_areaT{margin-bottom:10px;overflow:hidden;}
 .tbl_areaT .count::before{content:"\e936";font-family:'axicon';color:#879298;}
 .tbl_areaB{margin-top:22px;text-align:center;overflow:hidden;}
-.tbl_default{width:100%;border-collapse:separate;background-color:#fff;}
+.tbl_default{width:100%;border-collapse:separate;background-color:#fff;border:1px solid #8b95a3;border-width:1px 0;}
 .tbl_default tr{cursor:pointer;}
 tr.selected,
 .tbl_default tr:hover{background-color:#edfdfc;}
 .tbl_default th,
 .tbl_default td{padding:11px 5px 10px;color:#2a3652;}
-.tbl_default{border:1px solid #8b95a3;border-width:1px 0;}
 .tbl_default th{background-color:#efeff1;border:1px solid #c5c9d0;border-left-color:#d5dae1;border-width:0 0 1px 1px;font-size:14px;font-weight:600;}
 .tbl_default td{border:1px solid #ecf0f7;border-width:1px 0 0 1px;font-size:15px;}
 .tbl_default tbody tr:first-child td{border-top-width:0;}
@@ -216,9 +215,7 @@ tr.selected,
 .tbl_selInfo th{width:130px;text-align:center;background-color:#f0f3f6;font-weight:600;border-radius:3px;}
 .tbl_row{border:1px solid #8c96a4;border-width:1px 0;}
 .tbl_row th,
-.tbl_row td{padding:0 10px;}
-.tbl_row th,
-.tbl_row td{border:1px solid #e9ecef;text-align:left;}
+.tbl_row td{padding:0 10px;border:1px solid #e9ecef;text-align:left;word-break:keep-all;}
 .tbl_row th{background-color:#f0f3f6;font-weight:600;color:#23304e;font-size:14px;}
 .tbl_row td{text-align:left;color:#333;font-size:13px;}
 .tbl_row th:first-child{border-left-width:0;}
@@ -234,7 +231,7 @@ tr.selected,
 .tbl_row input[type=color],
 .tbl_row input[type=number]{width:100%;height:30px;font-size:14px;}
 .tbl_info label{font-weight:600;line-height:35px;font-size:15px;}
-.tbl_ipt th{padding:6px 5px;}
+.tbl_ipt th,
 .tbl_ipt td{padding:6px 5px;}
 table .th_1deps,
 .th_1deps th{background-color:#e0e6ec!important;}
@@ -311,6 +308,23 @@ table .th_2deps,
 .breadcrumb li:first-child::before{display:none;}
 .breadcrumb li a{color:#888;font-size:14px;}
 
+/* tit */
+.con_tit{display:flex;justify-content:space-between;align-items:center; height:77px;background-color:#fff;margin-bottom:10px;box-shadow:0px 2px 2px 0 rgba(0, 0, 0, 0.08);padding:0 30px;}
+.tit_h2{position:relative;padding-left:25px;font-size:20px;font-weight:bold;color:#222;}
+.tit_h2::before,
+.tit_h2::after{position:absolute;left:0;display:inline-block;content:'';width:15px;height:7px;border-radius:5px;background-color:#34d0c580;}
+.tit_h2::before{top:7px;transform:rotate(45deg);}
+.tit_h2::after{top:13px;transform:rotate(-45deg);}
+.tit_h3{display:block;padding:21px 30px;border-bottom:1px solid #e8ebee;background-color:#fff;font-size:16px;font-weight:bold;color:#00b0a4;}
+.section_tit{margin-bottom:20px;}
+.section_tit .tit{position:relative;font-size:16px;font-weight:bold;color:#222;padding-left:19px;line-height:16px;letter-spacing:-.5px;}
+.section_tit .tit::before{position:absolute;top:50%;left:0;content:"";display:inline-block;width:12px;height:12px;border:4px solid  #6ed2cb;border-radius:50%;box-sizing: border-box;margin-top:-6px;}
+
+/* box */
+.ico_arrow.horizontal{cursor:pointer;width:40px;height:40px;margin:20px auto;background: url(../img/ico_arrow.png);}
+.box{padding:30px;background-color:#fff;box-shadow:0px 2px 2px 0 rgba(0, 0, 0, 0.08);}
+
+
 /* 비반응형 공통 ---------------------------------------------------------------- */
 @media all and (min-width:1201px){
   .pc_con{display:block;}
@@ -354,7 +368,7 @@ table .th_2deps,
   .tit_h2{margin:20px 0;}
   .tit_h2::before{top:8px;}
   .tit_h2::after{top:14px;}  
-  .con_tit{margin:10px 0;}
+  .con_tit{height:60px;margin:10px 0;}
   .gnb_list{padding:0 20px;}
   /* search bar */
   .search_wrap{display:block;}
@@ -398,9 +412,9 @@ table .th_2deps,
   .cont{min-height:calc(100vh - 110px);}
   .box{padding:15px;box-shadow:none;}
   .con_tit{height:50px;padding:0 15px;}
-  .tit_h2{padding:15px 0;padding-left:22px;font-size:16px;}
-  .tit_h2::before{top:19px;}
-  .tit_h2::after{top:25px;}
+  .tit_h2{padding-left:22px;font-size:16px;}
+  .tit_h2::before{top:5px;}
+  .tit_h2::after{top:11px;}
   .content{margin-bottom:10px;}
   .footer{height:auto;margin-top:0;}
   .copy_wrap{padding:12px 0;}
@@ -449,8 +463,10 @@ table .th_2deps,
   .tbl_res table tbody>tr:first-child{border-top:none;}
   .tbl_res table tbody>tr:first-child>td:first-child{margin-top:0;}
   .tbl_res table tbody>tr:last-child>td:last-child{border-bottom:1px solid #c5c9d0;}
-  .tbl_res table tbody tr td{width:100%;min-height:31px;display:flex;border-bottom:none;font-size:14px;line-height:30px;border-top:1px solid #e2e8f1;text-align:left;}
-  .tbl_res table tbody tr td:before{display:inline-block;margin-right:12px;padding:0 0 0 15px;-webkit-box-flex:0;-ms-flex:0 0 100px;flex:0 0 100px;font-weight:700;content:attr(data-label);text-align:left;font-size:14px;background-color:#eeeff1;color:#2a3652;}
+  .tbl_res td::before,
+  .tbl_res td{font-size:12px;}
+  .tbl_res table tbody tr td{width:100%;;display:flex;align-items:center;border-bottom:none;border-top:1px solid #e2e8f1;text-align:left;}
+  .tbl_res table tbody tr td:before{display:inline-block;margin-right:7px;padding:8px 5px;-webkit-box-flex:0;-ms-flex:0 0 100px;flex:0 0 100px;font-weight:700;content:attr(data-label);text-align:left;background-color:#eeeff1;color:#2a3652;align-self:stretch;}
   .tbl_res table tbody tr td:first-child, 
   .tbl_res table tbody tr th:first-child{margin-top:15px;border-top:none;box-shadow:0px -1px 0px #ced6e4;}
   .tbl_selInfo{border-collapse:collapse;margin-top:-10px;}
@@ -460,9 +476,9 @@ table .th_2deps,
   .tbl_selInfo td{width:calc(100% - 130px);padding-left:10px;}
   .tbl_row .tbl_res2 tr{display:flex;flex-wrap:wrap;}
   .tbl_row .tbl_res2 th,
-  .tbl_row .tbl_res2 td{display:inline-block;padding:6px 13px;border:none;font-size:13px;}
-  .tbl_row .tbl_res2 th{width:140px;}
-  .tbl_row .tbl_res2 td{width:calc(100% - 140px);}
+  .tbl_row .tbl_res2 td{display:inline-block;padding:5px;border:none;font-size:12px;}
+  .tbl_row .tbl_res2 th{width:110px;}
+  .tbl_row .tbl_res2 td{width:calc(100% - 110px);} 
 }
 
 /* 모바일 & 테블릿 세로 (해상도 480px ~ 767px) ---------------------------------- */ 
@@ -481,5 +497,6 @@ table .th_2deps,
   .dtable dl{width:100%;}
   .dtable dt{width:110px;text-align:left;}
   .dtable dd{width:calc(100% - 120px);margin:0;}
-  .call_wrap .dtable dd{width:calc(100% - 155px);}
-  }
+  .tbl_default th,
+  .tbl_default td{padding:8px 5px;font-size:12px;}
+}
