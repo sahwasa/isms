@@ -13,9 +13,9 @@ function inc(){
   .pipe(bs.stream());
 }
 function imgMin(){
-  return gulp.src('dev/img/**/*.*')
+  return gulp.src('dev/images/**/*.*')
   .pipe(imgmin())
-  .pipe(gulp.dest('dist/img/'))
+  .pipe(gulp.dest('dist/images/'))
   .pipe(bs.stream());
 }
 function css(){
@@ -35,7 +35,7 @@ function watch(){
     }
   });
   gulp.watch('dev/**/*.html', inc);
-  gulp.watch('dev/img/**/*.*', imgMin);
+  gulp.watch('dev/images/**/*.*', imgMin);
   gulp.watch('dev/js/*.js', js);
   gulp.watch('dev/css/**/*.css', css);
 }

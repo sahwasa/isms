@@ -1,82 +1,86 @@
+<!-- 내 정보 수정 -->
 <div class="pop_overlay">
-  <div class="pop_wrap p_join">
+  <div class="pop_wrap p_info">
     <div class="pop_tit">
-      <h1>회원가입</h1>
+      <h1>내 정보 수정</h1>
       <button type="button" class="btn_pop_close" closePop></button>
     </div>
     <div class="pop_body">
       <div class="pop_cont">
+        <p class="validity alignR">*는 필수값 입니다.</p>
         <table class="tbl_row">
-          <caption>회원가입</caption>
+          <caption>내 정보 수정</caption>
           <colgroup>
             <col style="width:150px;">
-            <col style="width:200px;">
-            <col style="width:60px;">
+            <col style="width:260px;">
           </colgroup>
           <tr>
-            <th><label for="user_id">user_ID</label></th>
-            <td>
-              <input type="text" id="id" value="etri01">
-            </td>
-            <td><button type="button" class="btn btn_gray">검사</button></td>
+            <th scope="row"><label for="id" class="required">ID</label></th>
+            <td>etri01</td>
           </tr>
           <tr>
-            <th><label for="user_name" class="required">이름</label></th>
-            <td colspan="2"><input type="text" id="user_name"></td>
+            <th><label for="name" class="required">이름</label></th>
+            <td><input type="text" id="name"></td>
           </tr>
           <tr>
-            <th><label for="user_pw" class="required">비밀번호</label></th>
-            <td colspan="2"><input type="password" id="user_pw"></td>
+            <th><label for="fix_pw" class="required">비밀번호</label></th>
+            <td><input type="password" id="fix_pw"></td>
           </tr>
           <tr>
             <th><label for="pwcheck" class="required">비밀번호 확인</label></th>
-            <td colspan="2">
+            <td>
               <input type="password" id="pwcheck">
               <p class="validity font_pink">비밀번호가 일치하지 않습니다.</p>
             </td>
           </tr>
           <tr>
-            <th><label for="division">소속기관</label></th>
+            <th><label for="division" class="required">소속기관</label></th>
             <td>
-              <input type="text" id="division">
+              <span class="flex_wrap f_sb input_50">
+                <select name="division" title="division" style="width:48.5%;">
+                  <option value="시도">시도</option>
+                </select>
+                <select name="division" title="division" style="width:49%;">
+                  <option value="시군구">시군구</option>
+                </select>
+              </span>
             </td>
-            <td><button type="button" class="btn btn_gray">찾기</button></td>
           </tr>
           <tr>
             <th><label for="department" class="required">부서</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="department">
               <p class="validity font_pink">올바른 부서를 입력하세요.</p>
             </td>
           </tr>
           <tr>
             <th><label for="position">직급</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="position">
             </td>
           </tr>
           <tr>
             <th><label for="number">연락처</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="number">
             </td>
           </tr>
           <tr>
             <th><label for="phonenumber" class="required">휴대폰</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="phonenumber">
               <p class="validity font_pink">올바른 휴대폰 번호를 입력하세요.</p>
             </td>
           </tr>
           <tr>
             <th><label for="email" class="required">이메일</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="email">
             </td>
           </tr>
           <tr>
             <th><label for="fax" class="required">FAX</label></th>
-            <td colspan="2">
+            <td>
               <input type="text" id="fax">
             </td>
           </tr>
@@ -89,3 +93,4 @@
     </div>
   </div>
 </div>
+<!--// 내 정보 수정-->

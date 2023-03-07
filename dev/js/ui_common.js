@@ -1,45 +1,47 @@
 $(function () {
-  $.datetimepicker.setLocale("kr");
-  jQuery("#date_timepicker").datetimepicker();
-  jQuery("#date_timepicker_start").datetimepicker({
+  $.datetimepicker.setLocale("kr");  
+  $(".date_timepicker").datetimepicker();
+  $(".date_timepicker_start").datetimepicker({
     format: "Y/m/d H:i",
-    onShow: function (ct) {
+    // step:1, 분단위로 선택하고 싶을때....주석을 푸세요....
+    onShow: function (ct,$input){      
       this.setOptions({
-        maxDate: jQuery("#date_timepicker_end").val()
-          ? jQuery("#date_timepicker_end").val()
-          : false,
+        maxDate: $input.next('.date_timepicker_end').val()
+          ? $input.next('.date_timepicker_end').val()
+          : false
       });
     },
     timepicker: true,
   });
-  jQuery("#date_timepicker_end").datetimepicker({
+  $(".date_timepicker_end").datetimepicker({
     format: "Y/m/d H:i",
-    onShow: function (ct) {
+    // step:1, 분단위로 선택하고 싶을때....주석을 푸세요....
+    onShow: function (ct,$input) {
       this.setOptions({
-        minDate: jQuery("#date_timepicker_start").val()
-          ? jQuery("#date_timepicker_start").val()
-          : false,
+        minDate: $input.prev('.date_timepicker_start').val()
+          ? $input.prev('.date_timepicker_start').val()
+          : false
       });
     },
     timepicker: true,
   });
-  jQuery("#date_picker_start").datetimepicker({
+  $(".date_picker_start").datetimepicker({
     format: "Y/m/d",
-    onShow: function (ct) {
+    onShow: function (ct,$input) {
       this.setOptions({
-        maxDate: jQuery("#date_timepicker_end").val()
-          ? jQuery("#date_picker_end").val()
+        maxDate: $input.next(".date_timepicker_end").val()
+          ? $input.next(".date_picker_end").val()
           : false,
       });
     },
     timepicker: false,
   });
-  jQuery("#date_picker_end").datetimepicker({
+  $(".date_picker_end").datetimepicker({
     format: "Y/m/d",
-    onShow: function (ct) {
+    onShow: function (ct,$input) {
       this.setOptions({
-        minDate: jQuery("#date_timepicker_start").val()
-          ? jQuery("#date_picker_start").val()
+        minDate: $input.prev(".date_timepicker_start").val()
+          ? $input.prev(".date_picker_start").val()
           : false,
       });
     },
@@ -127,6 +129,7 @@ $(function () {
   $(".xl_tab li").first().addClass("on");
   $(".tab_contents").not(":first").hide();
   $(".xl_tab li").on("click", function () {
+    $(this).find('a').preventDefault();
     $(this).addClass("on").siblings().removeClass("on");
     var link = $(this).find("a").attr("href");
     var link_num = link.substr(link.length - 1);

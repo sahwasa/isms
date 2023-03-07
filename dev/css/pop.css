@@ -17,18 +17,18 @@
 .pop_tit{display:flex;justify-content:space-between;padding:9px 17px 10px;border:1px solid #2a3652;background-color:#2a3652;}
 .pop_tit h1{font-size:16px;color:#fff;letter-spacing:-1.6px;}
 .btn_pop_close{position:relative;top:3px;width:17px;height:17px;}
-.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../img/btn_pop_close.png);}
+.btn_pop_close::before{content:'';display:block;width:100%;height:100%;background:url(../images/btn_pop_close.png);}
 .pop_wrap .search.f_sb{justify-content:space-between;}
 .pop_body .search_wrap button{padding:7px 13px;}
 .pop_body .search_wrap{padding:0;}
 .pop_body .btn_search{vertical-align:sub;}
-.pop_body .dtable{margin-bottom:30px;}
+.pop_body .dtable{margin-bottom:20px;}
 .pop_body .dtable dd{text-align:left;}
 .pop_wrap .btn_wrap{padding:20px 0 0;}
 .pop_wrap .tbl_row th,
 .pop_wrap .tbl_row td{height:34px;line-height:34px;font-size:13px;}
 .pop_wrap table textarea{line-height:22px;}
-.pop_cont .tbl_default td{padding:7px 5px;}
+.pop_cont .tbl_default td{padding:3px 5px;}
 .pop_cont .tit{border-bottom:1px solid #005aab;margin-bottom:10px;padding-bottom:5px;}
 .pop_cont .tit h2{font-size:16px;font-weight:600;color:#005aab;}
 .tbl_info th,.tbl_info td{height:30px;padding-top:5px;padding-bottom:5px;background-color:transparent;border:1px solid transparent;text-align:left;font-size:13px;vertical-align:baseline;}
@@ -36,26 +36,7 @@
 .tbl_info select{width:100%;height:34px;font-size:13px;color:#333;}
 .tbl_info input:disabled,
 .tbl_info select:disabled{border-color:transparent;color:#333;}
-.tbl_row{border:1px solid #8c96a4;border-width:1px 0;}
-.tbl_row th,
-.tbl_row td{padding:0 10px;vertical-align:middle;}
-.tbl_row th,
-.tbl_row td{border:1px solid #e9ecef;text-align:left;}
-.tbl_row th{background-color:#f0f3f6;font-weight:600;color:#23304e;font-size:16px;}
-.tbl_row td{text-align:left;color:#333;}
-.tbl_row th:first-child{border-left-width:0;}
-.tbl_row td:last-child{border-right-width:0;}
-.tbl_row tr:first-child th,
-.tbl_row tr:first-child td{border-top-color:#e9ecef;}
-.tbl_row tr:last-child th,
-.tbl_row tr:last-child td{border-bottom-color:#e9ecef;}
 .tbl_row + .gis_wrap{margin-top:6px;}
-.tbl_row select,
-.tbl_row input[type=text],
-.tbl_row input[type=file],
-.tbl_row input[type=color],
-.tbl_row input[type=number],
-.tbl_row input[type=password]{width:100%;height:30px;font-size:13px;vertical-align:baseline;}
 .tbl_row input:disabled,
 .tbl_row select:disabled{padding:0;border-color:transparent;color:#333;}
 .request_wrap{font-size:14px;text-align:right;margin:-10px 0 10px;}
@@ -84,6 +65,7 @@
 .tbl_report tr>td:last-child{border-right:0;}
 .tbl_report tbody tr:last-child>th,
 .tbl_report tr:last-child>td{border-bottom:1px solid #333;}
+.p_receivelist{width:816px;}
 .p_crisisstagereport{top:0;width:598px;}
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
