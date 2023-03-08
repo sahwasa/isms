@@ -311,19 +311,19 @@
                     <div class="line1">
                       <dl>
                         <dt>
-                          <label for="group_name">신고접수번호</label>
+                          <label for="accepted_num">신고접수번호</label>
                         </dt>
-                        <dd><input type="text" id="group_name" value="1111111(수정불가)" disabled></dd>
+                        <dd><input type="text" id="accepted_num" value="1111111(수정불가)" disabled></dd>
                       </dl>
                     </div>
                     <div class="line1">
                       <dl>
                         <dt>
-                          <label for="group_name">신고접수일시</label>
+                          <label for="accepted_date">신고접수일시</label>
                         </dt>
                         <dd>
                           <span class="period_single">
-                            <input class="date_timepicker" type="text">
+                            <input class="date_timepicker" id="accepted_date" type="text">
                           </span>
                         </dd>
                       </dl>
@@ -331,11 +331,11 @@
                     <div class="line1">
                       <dl>
                         <dt>
-                          <label for="group_name">사건발생일시</label>
+                          <label for="occurrence_date">사건발생일시</label>
                         </dt>
                         <dd>
                           <span class="period_single">
-                            <input class="date_timepicker" type="text">
+                            <input class="date_timepicker" id="occurrence_date" type="text">
                           </span>
                         </dd>
                       </dl>
@@ -351,7 +351,7 @@
                               <option value="선택">선택</option>
                               <option value="강원도">강원도</option>
                             </select>
-                            <select name="zone_occurrence">
+                            <select title="발생지 행정구역">
                               <option value="선택">선택</option>
                               <option value="강릉시">강릉시</option>
                             </select>
@@ -475,7 +475,7 @@
                               <option value="선택">선택</option>
                               <option value="강원도">강원도</option>
                             </select>
-                            <select name="report_zone">
+                            <select title="신고장소 행정구역">
                               <option value="선택">선택</option>
                               <option value="강릉시">강릉시</option>
                             </select>
