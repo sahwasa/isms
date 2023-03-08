@@ -1,0 +1,152 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">시스템 관리</a></li>
+            <li>사용자 관리</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">사용자 관리</h2>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="dtable">
+              <div class="line2">
+                <dl>
+                  <dt>
+                    <label for="user_id">ID</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="user_id">
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="user_name">사용자명</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="user_name">
+                  </dd>
+                </dl>
+              </div>
+              <div class="line2">
+                <dl>
+                  <dt>
+                    <label for="user_approval">승인여부</label>
+                  </dt>
+                  <dd>
+                    <select name="user_approval" id="user_approval">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="user_organization">소속기관</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="user_organization">
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn_search btn_mint">검색</button>
+            </div>
+          </div>
+          <div class="box tbl_wrap tbl_res">
+            <table>
+              <caption>사용자관리 리스트</caption>
+              <colgroup>
+                <col style="width:133px">
+                <col style="width:171px">
+                <col style="width:283px">
+                <col style="width:80px">
+                <col style="width:80px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">사용자ID</th>
+                  <th scope="col">사용자명</th>
+                  <th scope="col">소속기관</th>
+                  <th scope="col">승인여부</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" data-label="사용자ID">
+                    <div class="t_ellipsis">
+                      <span title="etri">etri</span>
+                    </div>
+                  </td>
+                  <td data-label="사용자명">
+                    <div class="t_ellipsis">
+                      <span title="홍길동">홍길동</span>
+                    </div>
+                  </td>
+                  <td data-label="소속기관">
+                    <div class="t_ellipsis">
+                      <span title="행정안전부">행정안전부</span>
+                    </div>
+                  </td>
+                  <td data-label="승인여부">Y</td>
+                  <td data-label="관리">
+                    <button type="button" class="btn_circle btn_setup" onclick="btnAdmin()">관리</button>
+                  </td>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="on">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')
+
+<!-- 사용자 관리 -->
+@@include('../inc/pop/SYS_MGN_02_01.html')
+<script>
+  function btnAdmin() {
+    $('.p_admin').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 사용자 관리 -->
+
+<!-- 사용자 관리 -->
+@@include('../inc/pop/SYS_MGN_02_02.html')
+<script>
+  function btnConfirmed() {
+    $('.p_confirmed').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 사용자 관리 -->

@@ -1,0 +1,90 @@
+<div class="pop_overlay">
+  <div class="pop_wrap p_receivelist">
+    <div class="pop_tit">
+      <h1>수신 이력 조회</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body p_receipt_details">
+      <div class="pop_cont">
+        <div class="search_wrap dtable">
+          <div class="line2">
+            <dl>
+              <dt>
+                <label for="data">자료</label>
+              </dt>
+              <dd>
+                <select name="data" id="data">
+                  <option value="">기상청·동네예보</option>
+                </select>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <label for="date_range">기간</label>
+              </dt>
+              <dd>
+                <span class="period period_multi">
+                  <input type="text" class="from date" name="date1" role="from">
+                  <input type="text" class="to date" name="date1" role="to">
+                </span>
+                <button type="button" class="btn btn_search btn_mint">조회</button>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="tbl_wrap">
+          <table class="tbl_default">
+            <caption>수신이력조회 리스트</caption>
+            <colgroup>
+              <col style="width:225px">
+              <col style="width:183px">
+              <col style="width:235px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">재난구분</th>
+                <th scope="col">상태</th>
+                <th scope="col">발생장소</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="재난구분">
+                  <div class="t_ellipsis">
+                    <span title="도시산불">도시산불</span>
+                  </div>
+                </td>
+                <td data-label="재난명">
+                  <span class="danger_state danger_state_s danger_bg_green">정상</span>
+                </td>
+                <td data-label="발생장소">
+                  <div class="t_ellipsis">
+                    <span title="강원도 강릉시 성산면">강원도 강릉시 성산면</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paginate">
+            <a href="#" class="first" title="처음">〈〈</a>
+            <a href="#" class="pre" title="이전">〈</a>
+            <span>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#" class="on">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#">10</a>
+            </span>
+            <a href="#" class="next" title="다음">〉</a>
+            <a href="#" class="last" title="마지막">〉〉</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

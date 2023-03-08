@@ -25,11 +25,15 @@ $(function () {
     },
     timepicker: true,
   });
+  $(".date_picker").datetimepicker({
+    format: "Y/m/d",
+    timepicker: false,
+  });
   $(".date_picker_start").datetimepicker({
     format: "Y/m/d",
     onShow: function (ct,$input) {
       this.setOptions({
-        maxDate: $input.next(".date_timepicker_end").val()
+        maxDate: $input.next(".date_picker_end").val()
           ? $input.next(".date_picker_end").val()
           : false,
       });
@@ -40,7 +44,7 @@ $(function () {
     format: "Y/m/d",
     onShow: function (ct,$input) {
       this.setOptions({
-        minDate: $input.prev(".date_timepicker_start").val()
+        minDate: $input.prev(".date_picker_start").val()
           ? $input.prev(".date_picker_start").val()
           : false,
       });
@@ -129,7 +133,7 @@ $(function () {
   $(".xl_tab li").first().addClass("on");
   $(".tab_contents").not(":first").hide();
   $(".xl_tab li").on("click", function () {
-    $(this).find('a').preventDefault();
+//    $(this).find('a').preventDefault();
     $(this).addClass("on").siblings().removeClass("on");
     var link = $(this).find("a").attr("href");
     var link_num = link.substr(link.length - 1);

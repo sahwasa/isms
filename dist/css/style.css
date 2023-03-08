@@ -466,7 +466,7 @@ table .th_2deps,
   .tbl_res td::before,
   .tbl_res td{font-size:12px;}
   .tbl_res table tbody tr td{width:100%;;display:flex;align-items:center;border-bottom:none;border-top:1px solid #e2e8f1;text-align:left;}
-  .tbl_res table tbody tr td:before{display:inline-block;margin-right:7px;padding:8px 5px;-webkit-box-flex:0;-ms-flex:0 0 100px;flex:0 0 100px;font-weight:700;content:attr(data-label);text-align:left;background-color:#eeeff1;color:#2a3652;align-self:stretch;}
+  .tbl_res table tbody tr td:before{display:inline-block;min-height:16px;margin-right:7px;padding:8px 5px;-webkit-box-flex:0;-ms-flex:0 0 100px;flex:0 0 100px;font-weight:700;content:attr(data-label);text-align:left;background-color:#eeeff1;color:#2a3652;align-self:stretch;}
   .tbl_res table tbody tr td:first-child, 
   .tbl_res table tbody tr th:first-child{margin-top:15px;border-top:none;box-shadow:0px -1px 0px #ced6e4;}
   .tbl_selInfo{border-collapse:collapse;margin-top:-10px;}

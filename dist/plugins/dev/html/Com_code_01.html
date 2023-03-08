@@ -1,0 +1,175 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">코드관리</a></li>
+            <li>공통코드 관리</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit">
+            <h2 class="tit_h2">공통코드 관리</h2>
+          </div>
+          <div class="code_wrap flex_wrap f_sb">
+            <div>
+              <h3 class="tit_h3">공통 코드 그룹</h3>
+              <div class="box">
+                <div class="search_wrap flex_wrap f_sb">
+                  <div class="dtable">
+                    <div class="line1">
+                      <dl>
+                        <dt>
+                          <label for="group_name">그룹명</label>
+                        </dt>
+                        <dd><input type="text" id="group_name"></dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn_search btn_mint">조회</button>
+                  </div>
+                </div>
+                <div class="tbl_wrap">
+                  <div class="btn_wrap">
+                    <button type="button" class="btn btn_blue" onclick="btnGroupCodeSet()">입력</button>
+                    <button type="button" class="btn btn_red">삭제</button>
+                  </div>
+                  <table class="tbl_default">
+                    <caption>공통 코드 그룹 제목</caption>
+                    <colgroup>
+                      <col style="width:40px">
+                      <col style="width:50%">
+                      <col style="width:50%">
+                      <col style="width:80px">
+                      <col class="fix_scroll">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">그룹 코드</th>
+                        <th scope="col">그룹명</th>
+                        <th scope="col" class="dsc">사용여부</th>
+                        <th></th>
+                    </thead>
+                  </table>
+                  <div class="tbl_body_wrap tbl_scroll" style="height:300px;">
+                    <table class="tbl_default" style="border-top:none;">
+                      <caption>공통 코드 그룹 내용</caption>
+                      <colgroup>
+                        <col style="width:40px">
+                        <col style="width:50%">
+                        <col style="width:50%">
+                        <col style="width:80px">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>G00001</td>
+                          <td>시설구분</td>
+                          <td class="dsc">Y</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="tit_h3">공통 코드</h3>
+              <div class="box">
+                <div class="search_wrap flex_wrap f_sb">
+                  <div class="dtable">
+                    <div class="line1">
+                      <dl>
+                        <dt>
+                          <label for="code_name">코드명</label>
+                        </dt>
+                        <dd><input type="text" id="code_name"></dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="btn_wrap">
+                    <button type="button" class="btn_search btn_mint">조회</button>
+                  </div>
+                </div>
+                <div class="tbl_wrap">
+                  <div class="btn_wrap">
+                    <button type="button" class="btn btn_blue" onclick="btnCodeSet()">입력</button>
+                    <button type="button" class="btn btn_red">삭제</button>
+                  </div>
+                  <table class="tbl_default">
+                    <caption>공통 코드 그룹 제목</caption>
+                    <colgroup>
+                      <col style="width:40px">
+                      <col style="width:50%">
+                      <col style="width:50%">
+                      <col style="width:80px">
+                      <col class="fix_scroll">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">그룹 코드</th>
+                        <th scope="col">그룹명</th>
+                        <th scope="col">사용여부</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div class="tbl_body_wrap tbl_scroll" style="height:300px;">
+                    <table class="tbl_default" style="border-top:none;">
+                      <caption>공통 코드 그룹 내용</caption>
+                      <colgroup>
+                        <col style="width:40px">
+                        <col style="width:50%">
+                        <col style="width:50%">
+                        <col style="width:80px">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>G00001</td>
+                          <td>시설구분</td>
+                          <td>Y</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')
+
+<!-- 그룹코드 입력 -->
+@@include('../inc/pop/Com_code_02_01.html')
+<script>
+  function btnCodeSet() {
+    $('.p_codeset').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 그룹코드 입력 -->
+
+<!-- 공통코드 입력 -->
+@@include('../inc/pop/Com_code_02_02.html')
+<script>
+  function btnGroupCodeSet() {
+    $('.p_groupcodeset').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 공통코드 입력 -->

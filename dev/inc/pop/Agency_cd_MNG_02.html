@@ -26,16 +26,15 @@
           </tr>
           <tr>
             <th><label for="agency_type">기관유형</label></th>
-            
             <td colspan="3">
               <span class="flex_wrap f_sb" style="width:100%;">
                 <select name="agency_type" id="agency_type" style="width:33%;">
                   <option value="자치행정조직">자치행정조직</option>
                 </select>
-                <select name="agency_type" style="width:33%;">
+                <select title="agency_type" style="width:33%;">
                   <option value="기초자치단체">기초자치단체</option>
                 </select>
-                <select name="agency_type" style="width:33%;">
+                <select title="agency_type" style="width:33%;">
                   <option value="자치구">자치구</option>
                 </select>
               </span>
@@ -47,18 +46,17 @@
             <th><label for="fax_num">팩스번호</label></th>
             <td><input type="text" id="fax_num"></td>
           </tr>
-
           <tr>
             <th><label for="create_date">생성일자</label></th>
             <td>
               <span class="period_single">
-                <input id="date_timepicker_start" type="text" role="from">
+                <input id="create_date" class="date_picker" type="text">
               </span>
             </td>
             <th><label for="close_date">폐지일자</label></th>
             <td>
               <span class="period_single">
-                <input id="date_timepicker_end" type="text" role="to">
+                <input id="close_date" class="date_picker" type="text">
               </span>
             </td>
           </tr>

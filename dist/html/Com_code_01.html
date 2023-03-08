@@ -313,6 +313,7 @@
                   <table class="tbl_default">
                     <caption>공통 코드 그룹 제목</caption>
                     <colgroup>
+                      <col style="width:30px">
                       <col style="width:40px">
                       <col style="width:50%">
                       <col style="width:50%">
@@ -320,6 +321,7 @@
                     </colgroup>
                     <thead>
                       <tr>
+                        <th id="checkbox"></th>
                         <th id="no">No</th>
                         <th id="groupcode">그룹 코드</th>
                         <th id="groupname">그룹명</th>
@@ -332,6 +334,7 @@
                     <table class="tbl_default" style="border-top:none;">
                       <caption>공통 코드 그룹 내용</caption>
                       <colgroup>
+                        <col style="width:30px">
                         <col style="width:40px">
                         <col style="width:50%">
                         <col style="width:50%">
@@ -339,6 +342,9 @@
                       </colgroup>
                       <tbody>
                         <tr>
+                          <td scope="row" headers="checkbox">
+                            <input type="checkbox" title="checkbox">
+                          </td>
                           <td headers="no">1</td>
                           <td headers="groupcode">G00001</td>
                           <td headers="groupname">시설구분</td>
@@ -376,6 +382,7 @@
                   <table class="tbl_default">
                     <caption>공통 코드 제목</caption>
                     <colgroup>
+                      <col style="width:30px">
                       <col style="width:40px">
                       <col style="width:50%">
                       <col style="width:50%">
@@ -383,7 +390,8 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th id="no">No</th>
+                        <th id="checkbox2"></th>
+                        <th id="no2">No</th>
                         <th id="commoncode">그룹 코드</th>
                         <th id="commonname">그룹명</th>
                         <th id="use2">사용여부</th>
@@ -395,6 +403,7 @@
                     <table class="tbl_default" style="border-top:none;">
                       <caption>공통 코드 내용</caption>
                       <colgroup>
+                        <col style="width:30px">
                         <col style="width:40px">
                         <col style="width:50%">
                         <col style="width:50%">
@@ -402,25 +411,37 @@
                       </colgroup>
                       <tbody>
                         <tr>
-                          <td headers="no">1</td>
+                          <td scope="row" headers="checkbox2">
+                            <input type="checkbox" title="checkbox">
+                          </td>
+                          <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
                           <td headers="commonname">시설구분</td>
                           <td headers="use2">Y</td>
                         </tr>
                         <tr>
-                          <td headers="no">1</td>
+                          <td headers="checkbox2">
+                            <input type="checkbox" title="checkbox">
+                          </td>
+                          <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
                           <td headers="commonname">시설구분</td>
                           <td headers="use2">Y</td>
                         </tr>
                         <tr>
-                          <td headers="no">1</td>
+                          <td headers="checkbox2">
+                            <input type="checkbox" title="checkbox">
+                          </td>
+                          <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
                           <td headers="commonname">시설구분</td>
                           <td headers="use2">Y</td>
                         </tr>
                         <tr>
-                          <td headers="no">1</td>
+                          <td headers="checkbox2">
+                            <input type="checkbox" title="checkbox">
+                          </td>
+                          <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
                           <td headers="commonname">시설구분</td>
                           <td headers="use2">Y</td>
@@ -453,12 +474,6 @@
 <script src="../plugins/chartjs/Chart.min.js"></script>
 <script src="../plugins/chartjs/chartjs-plugin-datalabels.min.js"></script>
 <script src="../js/ui_common.js"></script>
-
-<script>
-  $("tr").click(function(){
-    $(this).addClass("selected").siblings().removeClass("selected");
-});
-</script>
 
 <!-- 그룹코드 입력 -->
     <div class="pop_overlay">

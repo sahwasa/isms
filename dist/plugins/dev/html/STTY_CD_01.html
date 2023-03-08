@@ -1,0 +1,137 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">코드관리</a></li>
+            <li>단위 업무코드 조회</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit">
+            <h2 class="tit_h2">단위 업무코드 조회</h2>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="dtable">
+              <div class="line1">
+                <dl>
+                  <dt>
+                    <label for="business_name">단위업무명</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="business_name">
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn_search btn_mint">조회</button>
+            </div>
+          </div>
+          <div class="box tbl_wrap tbl_res">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blue" onclick="btnSttyCodeAdd()">추가</button>
+            </div>
+            <table>
+              <caption>단위 업무코드 조회 리스트</caption>
+              <colgroup>
+                <col style="width:80px">
+                <col style="width:133px">
+                <col style="width:171px">
+                <col style="width:171px">
+                <col style="width:171px">
+                <col style="width:80px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">순번</th>
+                  <th scope="col">단위 업무 코드</th>
+                  <th scope="col">단위 업무명</th>
+                  <th scope="col">영문명</th>
+                  <th scope="col">약어</th>
+                  <th scope="col">사용여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onclick="btnSttyCode()">
+                  <td scope="row" data-label="순번">
+                    <div class="t_ellipsis">
+                      <span>1</span>
+                    </div>
+                  </td>
+                  <td data-label="단위 업무 코드">
+                    <div class="t_ellipsis">
+                      <span title="01">01</span>
+                    </div>
+                  </td>
+                  <td data-label="단위 업무명">
+                    <div class="t_ellipsis">
+                      <span title="-">-</span>
+                    </div>
+                  </td>
+                  <td data-label="영문명">
+                    <div class="t_ellipsis">
+                      <span title="-">-</span>
+                    </div>
+                  </td>
+                  <td data-label="약어">
+                    <div class="t_ellipsis">
+                      <span title="-">-</span>
+                    </div>
+                  </td>
+                  <td data-label="사용여부">Y</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="on">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')
+
+<!-- 단위 업무코드 추가 -->
+@@include('../inc/pop/STTY_CD_02.html')
+<script>
+  function btnSttyCodeAdd() {
+    $('.p_sttycode_add').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 단위 업무코드 추가 -->
+
+<!-- 단위 업무 코드 -->
+@@include('../inc/pop/STTY_CD_03.html')
+<script>
+  function btnSttyCode() {
+    $('.p_sttycode').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 단위 업무 코드 -->

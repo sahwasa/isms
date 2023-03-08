@@ -333,8 +333,8 @@
                   </dt>
                   <dd>
                     <span class="period period_multi">
-                      <input class="date_picker_start" type="text" role="from">
-                      <input class="date_picker_end" type="text" role="to">
+                      <input class="date_picker_start" type="text" title="시작 일자" role="from">
+                      <input class="date_picker_end" type="text" title="종료 일자" role="to">
                     </span>
                   </dd>
                 </dl>
@@ -353,6 +353,7 @@
               <caption>재난조회 리스트</caption>
               <colgroup>
                 <col style="width:54px">
+                <col style="width:54px">
                 <col style="width:133px">
                 <col style="width:171px">
                 <col style="width:283px">
@@ -362,6 +363,7 @@
               </colgroup>
               <thead>
                 <tr>
+                  <th scope="col">&nbsp;</th>
                   <th scope="col">No</th>
                   <th scope="col">재난구분</th>
                   <th scope="col">재난명</th>
@@ -373,6 +375,7 @@
               </thead>
               <tbody>
                 <tr onclick="location.href='Call_ser_03.html'">
+                  <td onclick="event.cancelBubble=true"><input type="checkbox" title="checkbox"></td>
                   <td scope="row" data-label="No">1</td>
                   <td data-label="재난구분">도시산불</td>
                   <td data-label="재난명">성산면 화재</td>
@@ -382,6 +385,7 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
+                  <td><input type="checkbox" title="checkbox"></td>
                   <td scope="row" data-label="No">2</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
@@ -391,6 +395,7 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
+                  <td><input type="checkbox" title="checkbox"></td>
                   <td scope="row" data-label="No">3</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
@@ -400,6 +405,7 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
+                  <td><input type="checkbox" title="checkbox"></td>
                   <td scope="row" data-label="No">4</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
@@ -409,6 +415,7 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
+                  <td><input type="checkbox" title="checkbox"></td>
                   <td scope="row" data-label="No">5</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>

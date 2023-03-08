@@ -1,0 +1,152 @@
+@@include('../inc/top.html')
+
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">코드관리</a></li>
+            <li>행정기관 코드관리</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">행정기관 코드관리</h2>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="dtable">
+              <div class="line2">
+                <dl>
+                  <dt>
+                    <label for="administrative">행정기관</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="administrative">
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="administrative_num">기관차수</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_num" id="administrative_num">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+              </div>
+              <div class="line1">
+                <dl>
+                  <dt>
+                    <label for="administrative_type">기관유형</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_type" id="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn_search btn_mint">조회</button>
+            </div>
+          </div>
+          <div class="box tbl_wrap tbl_res">
+            <table>
+              <caption>행정기관 코드관리 리스트</caption>
+              <colgroup>
+                <col style="width:80px">
+                <col style="width:133px">
+                <col style="width:171px">
+                <col style="width:283px">
+                <col style="width:171px">
+                <col style="width:80px">
+                <col style="width:171px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">순번</th>
+                  <th scope="col">행정기관</th>
+                  <th scope="col">기관차수</th>
+                  <th scope="col">기관코드</th>
+                  <th scope="col">기관 유형</th>
+                  <th scope="col">사용여부</th>
+                  <th scope="col">하위기관</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr onclick="btnAgencyDetail()">
+                  <td scope="row" data-label="순번">
+                    <div class="t_ellipsis">
+                      <span>1</span>
+                    </div>
+                  </td>
+                  <td data-label="행정기관">
+                    <div class="t_ellipsis">
+                      <span title="서울시">서울시</span>
+                    </div>
+                  </td>
+                  <td data-label="기관차수">
+                    <div class="t_ellipsis">
+                      <span title="Lv.2">Lv.2</span>
+                    </div>
+                  </td>
+                  <td data-label="기관코드">
+                    <div class="t_ellipsis">
+                      <span title="-">-</span>
+                    </div>
+                  </td>
+                  <td data-label="기관 유형">
+                    <div class="t_ellipsis">
+                      <span title="-">-</span>
+                    </div>
+                  </td>
+                  <td data-label="승인여부">Y</td>
+                  <td data-label="하위기관">
+                    <button type="button" class="btn btn_tblinner btn_mint">목록갱신</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paginate">
+              <a href="#" class="first" title="처음">〈〈</a>
+              <a href="#" class="pre" title="이전">〈</a>
+              <span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="on">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+              </span>
+              <a href="#" class="next" title="다음">〉</a>
+              <a href="#" class="last" title="마지막">〉〉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  <!-- @@include('../inc/loading.html')  -->
+</body>
+
+</html>
+@@include('../inc/script.html')
+
+<!-- 행정기관 상세 -->
+@@include('../inc/pop/Agency_cd_MNG_02.html')
+<script>
+  function btnAgencyDetail() {
+    $('.p_agencydetail').parent('.pop_overlay').toggle();
+  }
+</script>
+<!--// 행정기관 상세 -->
