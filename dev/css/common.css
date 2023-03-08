@@ -66,7 +66,7 @@ select{padding-right:30px !important;background:url(../images/btn_select.png) ri
 /* normal font */
 hr,
 .blind{font-size:0;line-height:0;position:absolute!important;left:0;top:0;text-indent:-9999px;visibility:hidden;overflow:hidden;}
-.f_blind{font-size:0;line-height:0;color:transparent;overflow:hidden;}
+.f_blind{font-size:0!important;line-height:0;color:transparent!important;;overflow:hidden;}
 .divideR,
 .divideL{position:relative;overflow:hidden;padding-left:15px;vertical-align:top;}
 .divideR::before,
@@ -257,7 +257,7 @@ label input{margin-top:-3px;}
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover{background:#848988 !important;}
 
 /* ico_fileName Extention */
-.ico_ext{display:inline-block;width:17px;height:17px;background:url(../images/ico_fileExt.png) -223px -82px no-repeat;margin:-4px 7px 0 0px;vertical-align:middle;}
+.ico_ext{display:inline-block;width:17px;height:17px;background:url(../images/ico_fileExt.png) -223px -82px no-repeat;margin:-4px 7px 0 0px;vertical-align:middle;font-size:0;overflow:hidden;text-indent:-9999px;}
 .ext_bmp{background-position:-3px -2px;}
 .ext_jpg{background-position:-23px -2px;}
 .ext_gif{background-position:-43px -2px;}

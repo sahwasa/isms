@@ -310,8 +310,8 @@
                     <button type="button" class="btn btn_blue" onclick="btnCodeSet()">입력</button>
                     <button type="button" class="btn btn_red">삭제</button>
                   </div>
-                  <table class="tbl_default">
-                    <caption>공통 코드 그룹 제목</caption>
+                  <table class="tbl_default tbl_header">
+                    <caption>공통 코드 그룹</caption>
                     <colgroup>
                       <col style="width:30px">
                       <col style="width:40px">
@@ -321,7 +321,7 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th id="checkbox"></th>
+                        <th id="checkbox" class="f_blind">글 선택</th>
                         <th id="no">No</th>
                         <th id="groupcode">그룹 코드</th>
                         <th id="groupname">그룹명</th>
@@ -330,9 +330,8 @@
                       </tr>
                     </thead>
                   </table>
-                  <div class="tbl_body_wrap" style="min-height:300px;">
-                    <table class="tbl_default" style="border-top:none;">
-                      <caption>공통 코드 그룹 내용</caption>
+                  <div class="tbl_body_wrap">
+                    <table class="tbl_default">
                       <colgroup>
                         <col style="width:30px">
                         <col style="width:40px">
@@ -343,7 +342,7 @@
                       <tbody>
                         <tr>
                           <td scope="row" headers="checkbox">
-                            <input type="checkbox" title="checkbox">
+                            <input type="radio" class="row_check" title="글선택" name="com1">
                           </td>
                           <td headers="no">1</td>
                           <td headers="groupcode">G00001</td>
@@ -379,8 +378,8 @@
                     <button type="button" class="btn btn_blue" onclick="btnCodeSet()">입력</button>
                     <button type="button" class="btn btn_red">삭제</button>
                   </div>
-                  <table class="tbl_default">
-                    <caption>공통 코드 제목</caption>
+                  <table class="tbl_default tbl_header">
+                    <caption>공통 코드</caption>
                     <colgroup>
                       <col style="width:30px">
                       <col style="width:40px">
@@ -390,18 +389,17 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th id="checkbox2"></th>
+                        <th id="checkbox2" class="f_blind">글선택</th>
                         <th id="no2">No</th>
                         <th id="commoncode">그룹 코드</th>
                         <th id="commonname">그룹명</th>
                         <th id="use2">사용여부</th>
-                        <th></th>
+                        <th>&nbsp;</th>
                       </tr>
                     </thead>
                   </table>
                   <div class="tbl_body_wrap" style="min-height:300px;">
-                    <table class="tbl_default" style="border-top:none;">
-                      <caption>공통 코드 내용</caption>
+                    <table class="tbl_default">
                       <colgroup>
                         <col style="width:30px">
                         <col style="width:40px">
@@ -411,8 +409,17 @@
                       </colgroup>
                       <tbody>
                         <tr>
-                          <td scope="row" headers="checkbox2">
-                            <input type="checkbox" title="checkbox">
+                          <td headers="checkbox2">
+                            <input type="radio" name="code_item" class="row_check" title="글선택">
+                          </td>
+                          <td headers="no2">1</td>
+                          <td headers="commoncode">G00001</td>
+                          <td headers="commonname">시설구분시설구분시설구분시설구분</td>
+                          <td headers="use2">Y</td>
+                        </tr>
+                        <tr>
+                          <td headers="checkbox2">
+                            <input type="radio" name="code_item" class="row_check" title="글선택">
                           </td>
                           <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
@@ -421,7 +428,7 @@
                         </tr>
                         <tr>
                           <td headers="checkbox2">
-                            <input type="checkbox" title="checkbox">
+                            <input type="radio" name="code_item" class="row_check" title="글선택">
                           </td>
                           <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>
@@ -430,16 +437,7 @@
                         </tr>
                         <tr>
                           <td headers="checkbox2">
-                            <input type="checkbox" title="checkbox">
-                          </td>
-                          <td headers="no2">1</td>
-                          <td headers="commoncode">G00001</td>
-                          <td headers="commonname">시설구분</td>
-                          <td headers="use2">Y</td>
-                        </tr>
-                        <tr>
-                          <td headers="checkbox2">
-                            <input type="checkbox" title="checkbox">
+                            <input type="radio" name="code_item" class="row_check" title="글선택">
                           </td>
                           <td headers="no2">1</td>
                           <td headers="commoncode">G00001</td>

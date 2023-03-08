@@ -79,7 +79,7 @@
               <button type="button" class="btn btn_blue"  onclick="location.href='Call_ser_02.html'">입력</button>
               <button type="button" class="btn btn_red">삭제</button>
             </div>
-            <table>
+            <table class="tbl_check">
               <caption>재난조회 리스트</caption>
               <colgroup>
                 <col style="width:54px">
@@ -93,7 +93,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">&nbsp;</th>
+                  <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택" ></th>
                   <th scope="col">No</th>
                   <th scope="col">재난구분</th>
                   <th scope="col">재난명</th>
@@ -105,8 +105,8 @@
               </thead>
               <tbody>
                 <tr onclick="location.href='Call_ser_03.html'">
-                  <td onclick="event.cancelBubble=true"><input type="checkbox" title="checkbox"></td>
-                  <td scope="row" data-label="No">1</td>
+                  <td><input type="checkbox" class="row_check" title="글선택"></td>
+                  <td data-label="No">1</td>
                   <td data-label="재난구분">도시산불</td>
                   <td data-label="재난명">성산면 화재</td>
                   <td data-label="발생장소">강원도 강릉시 성산면</td>
@@ -114,9 +114,9 @@
                   <td data-label="위기단계"><span class="danger_color danger_color_green">정상</span></td>
                   <td data-label="종료여부">진행중</td>
                 </tr>
-                <tr>
-                  <td><input type="checkbox" title="checkbox"></td>
-                  <td scope="row" data-label="No">2</td>
+                <tr onclick="location.href='Call_ser_03.html'">
+                  <td><input type="checkbox" class="row_check" title="글선택" ></td>
+                  <td data-label="No">2</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
                   <td data-label="발생장소">-</td>
@@ -125,8 +125,8 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" title="checkbox"></td>
-                  <td scope="row" data-label="No">3</td>
+                  <td><input type="checkbox" class="row_check" title="글선택"></td>
+                  <td data-label="No">3</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
                   <td data-label="발생장소">-</td>
@@ -135,8 +135,8 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" title="checkbox"></td>
-                  <td scope="row" data-label="No">4</td>
+                  <td><input type="checkbox" class="row_check" title="글선택"></td>
+                  <td data-label="No">4</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
                   <td data-label="발생장소">-</td>
@@ -145,8 +145,8 @@
                   <td data-label="종료여부">진행중</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" title="checkbox"></td>
-                  <td scope="row" data-label="No">5</td>
+                  <td><input type="checkbox" class="row_check" title="글선택"></td>
+                  <td data-label="No">5</td>
                   <td data-label="재난구분">-</td>
                   <td data-label="재난명">-</td>
                   <td data-label="발생장소">-</td>

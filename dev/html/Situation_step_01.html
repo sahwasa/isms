@@ -79,26 +79,25 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 상황 단계 코드 추가 -->
+  @@include('../inc/pop/Situation_step_02.html')
+  <script>
+    function btnSituationStepAdd() {
+      $('.p_situationstep_add').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 상황 단계 코드 추가 -->
+
+  <!-- 상황 단계 코드 -->
+  @@include('../inc/pop/Situation_step_03.html')
+  <script>
+    function btnSituationStep() {
+      $('.p_situationstep').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 상황 단계 코드 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
 
-<!-- 상황 단계 코드 추가 -->
-@@include('../inc/pop/Situation_step_02.html')
-<script>
-  function btnSituationStepAdd() {
-    $('.p_situationstep_add').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 상황 단계 코드 추가 -->
-
-<!-- 상황 단계 코드 -->
-@@include('../inc/pop/Situation_step_03.html')
-<script>
-  function btnSituationStep() {
-    $('.p_situationstep').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 상황 단계 코드 -->

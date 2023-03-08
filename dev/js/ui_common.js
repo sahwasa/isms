@@ -132,8 +132,9 @@ $(function () {
   //tab
   $(".xl_tab li").first().addClass("on");
   $(".tab_contents").not(":first").hide();
-  $(".xl_tab li").on("click", function () {
-//    $(this).find('a').preventDefault();
+  $(".xl_tab li").on("click", function (e) {
+    e.preventDefault();
+    $(this).blur();
     $(this).addClass("on").siblings().removeClass("on");
     var link = $(this).find("a").attr("href");
     var link_num = link.substr(link.length - 1);
@@ -141,7 +142,7 @@ $(function () {
       .eq(link_num - 1)
       .prop("selected", "selected");
     $(".tab_contents").hide();
-    $(link).show().focus();
+    $(link).show();
   });
   $(".tab_select").on("change", function () {
     var select_link = $(".tab_select").val();
@@ -149,7 +150,29 @@ $(function () {
     $(".xl_tab li").eq(select_num).addClass("on").siblings().removeClass("on");
     $(".tab_contents").hide();
     $("#" + select_link)
-      .show()
-      .focus();
+      .show();
+  });
+
+  //표 줄선택
+  $('.row_check').on({
+    click : function(e){e.stopPropagation()},
+    change : function(){
+      var cur = $(this).prop('checked'),
+          checkName = 'select_tr';
+      if($(this).hasClass('all_check')){
+        var childCheck = $(this).parents('table').children('tbody').find('.row_check');
+        childCheck.each(function(){
+          var elRow = $(this).parents('tr');
+          $(this).prop('checked', cur);
+          (cur) ? elRow.addClass(checkName) : elRow.removeClass(checkName);
+        })
+      }else{
+        var thisRow = $(this).parents('tr');
+
+        if($(this).prop('type') == 'radio') $(this).parents('table').find('tr').removeClass(checkName);
+
+        (cur) ? thisRow.addClass(checkName) : thisRow.removeClass(checkName);
+      }
+    }
   });
 });

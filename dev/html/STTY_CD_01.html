@@ -74,26 +74,25 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 단위 업무코드 추가 -->
+  @@include('../inc/pop/STTY_CD_02.html')
+  <script>
+    function btnSttyCodeAdd() {
+      $('.p_sttycode_add').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 단위 업무코드 추가 -->
+
+  <!-- 단위 업무 코드 -->
+  @@include('../inc/pop/STTY_CD_03.html')
+  <script>
+    function btnSttyCode() {
+      $('.p_sttycode').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 단위 업무 코드 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
 
-<!-- 단위 업무코드 추가 -->
-@@include('../inc/pop/STTY_CD_02.html')
-<script>
-  function btnSttyCodeAdd() {
-    $('.p_sttycode_add').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 단위 업무코드 추가 -->
-
-<!-- 단위 업무 코드 -->
-@@include('../inc/pop/STTY_CD_03.html')
-<script>
-  function btnSttyCode() {
-    $('.p_sttycode').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 단위 업무 코드 -->

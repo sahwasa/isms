@@ -116,17 +116,17 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 행정기관 상세 -->
+  @@include('../inc/pop/Agency_cd_MNG_02.html')
+  <script>
+    function btnAgencyDetail() {
+      $('.p_agencydetail').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 행정기관 상세 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
 
-<!-- 행정기관 상세 -->
-@@include('../inc/pop/Agency_cd_MNG_02.html')
-<script>
-  function btnAgencyDetail() {
-    $('.p_agencydetail').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 행정기관 상세 -->
+

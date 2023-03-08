@@ -60,35 +60,34 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 위기 단계 코드 추가 -->
+  @@include('../inc/pop/Crisis_step_02.html')
+  <script>
+    function btnCrisisCodeAdd() {
+      $('.p_crisisstep_add').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 위기 단계 코드 추가 -->
+
+  <!-- 위기 단계 코드 -->
+  @@include('../inc/pop/Crisis_step_03.html')
+  <script>
+    function btnCrisisCode() {
+      $('.p_crisisstep').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 위기 단계 코드 -->
+
+  <!-- 위기 단계 코드 수정 -->
+  @@include('../inc/pop/Crisis_step_04.html')
+  <script>
+    function btnCrisisCodeEdit() {
+      $('.p_crisisstep_edit').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 위기 단계 코드 수정 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
 
-<!-- 위기 단계 코드 추가 -->
-@@include('../inc/pop/Crisis_step_02.html')
-<script>
-  function btnCrisisCodeAdd() {
-    $('.p_crisisstep_add').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 위기 단계 코드 추가 -->
-
-<!-- 위기 단계 코드 -->
-@@include('../inc/pop/Crisis_step_03.html')
-<script>
-  function btnCrisisCode() {
-    $('.p_crisisstep').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 위기 단계 코드 -->
-
-<!-- 위기 단계 코드 수정 -->
-@@include('../inc/pop/Crisis_step_04.html')
-<script>
-  function btnCrisisCodeEdit() {
-    $('.p_crisisstep_edit').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 위기 단계 코드 수정 -->

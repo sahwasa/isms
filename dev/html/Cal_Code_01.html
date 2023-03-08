@@ -73,25 +73,24 @@
     </div>
   </div>
   <!-- @@include('../inc/loading.html')  -->
+  <!-- 재난코드 수정 -->
+  @@include('../inc/pop/Cal_Code_02_01.html')
+  <script>
+    function btnCodeEdit() {
+      $('.p_codeedit').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 재난코드 수정 -->
+
+  <!-- 재난코드 입력 -->
+  @@include('../inc/pop/Cal_Code_02_02.html')
+  <script>
+    function btnCodeWrite() {
+      $('.p_codewrite').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 재난코드 입력 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
-
-<!-- 재난코드 수정 -->
-@@include('../inc/pop/Cal_Code_02_01.html')
-<script>
-  function btnCodeEdit() {
-    $('.p_codeedit').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 재난코드 수정 -->
-
-<!-- 재난코드 입력 -->
-@@include('../inc/pop/Cal_Code_02_02.html')
-<script>
-  function btnCodeWrite() {
-    $('.p_codewrite').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 재난코드 입력 -->

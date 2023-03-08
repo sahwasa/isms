@@ -97,26 +97,24 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 사용자 관리 -->
+  @@include('../inc/pop/SYS_MGN_02_01.html')
+  <script>
+    function btnAdmin() {
+      $('.p_admin').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 사용자 관리 -->
+
+  <!-- 사용자 관리 -->
+  @@include('../inc/pop/SYS_MGN_02_02.html')
+  <script>
+    function btnConfirmed() {
+      $('.p_confirmed').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 사용자 관리 -->
 </body>
 
 </html>
 @@include('../inc/script.html')
-
-<!-- 사용자 관리 -->
-@@include('../inc/pop/SYS_MGN_02_01.html')
-<script>
-  function btnAdmin() {
-    $('.p_admin').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 사용자 관리 -->
-
-<!-- 사용자 관리 -->
-@@include('../inc/pop/SYS_MGN_02_02.html')
-<script>
-  function btnConfirmed() {
-    $('.p_confirmed').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 사용자 관리 -->

@@ -108,17 +108,15 @@
       @@include('../inc/footer.html')
     </div>
   </div>
-  <!-- @@include('../inc/loading.html')  -->
+  <!-- 상세보기-->
+  @@include('../inc/pop/Evir_INQ_DT_02.html')
+  <script>
+    function btnDetail() {
+      $('.p_detail').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 상세보기-->
 </body>
 
 </html>
 @@include('../inc/script.html')
-
-<!-- 상세보기-->
-@@include('../inc/pop/Evir_INQ_DT_02.html')
-<script>
-  function btnDetail() {
-    $('.p_detail').parent('.pop_overlay').toggle();
-  }
-</script>
-<!--// 상세보기-->
