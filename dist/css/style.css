@@ -143,34 +143,37 @@
 .check_wrap label::before{display:none;}
 .search .btn{padding:8px 7px;vertical-align:middle;font-size:15px;}
 .search_wrap{padding:25px 30px;margin-bottom:10px;}
-.search_wrap .period_multi{width:auto;}
-.search_wrap .period_multi img{top:6px;left:293px;}
-.search_wrap .period_multi img:first-of-type{left:115px;}
-.search_wrap .period_multi img:first-of-type{left:120px;}
+.search_wrap .period_multi{display:flex;justify-content:space-between;width:auto;}
 .search_wrap .period_multi::after{top:3px;left:50%;}
-.search_wrap .btn_wrap{align-self:flex-end;}
+.search_wrap .period_multi input{width:calc(50% - 13px);min-width:auto;}
+.search_wrap .btn_wrap{align-self:flex-end;word-break: keep-all;}
 .search_wrap .btn_wrap button{height:34px;padding:7px 20px;border-radius:3px;font-size:14px;font-weight:bold;}
-.search_wrap .btn_wrap .btn_search{position:relative;align-self:flex-end;padding-left:42px;color:#fff;}
+.search_wrap .btn_wrap .btn_search{position:relative;align-self:flex-end;padding-left:42px;color:#fff;word-break: keep-all;}
 .search_wrap .btn_wrap .btn_search::before{position:absolute;top:50%;left:15px;display:inline-block;content:'';width:19px;height:19px;background:url(../images/ico_search.png);transform:translateY(-50%);}
 .search_wrap .btn_wrap .btn_editwrap{position:relative;align-self:flex-end;padding-left:40px;color:#fff;}
 .search_wrap .btn_wrap .btn_editwrap::before{position:absolute;top:50%;left:10px;display:inline-block;content:'';width:19px;height:19px;background:url(../images/ico_editwrap.png);transform:translateY(-50%);}
 .search_wrap .btn_wrap .btn_save::before{background-position-y:0;}
 .search_wrap .btn_wrap .btn_edit::before{background-position-y:50%;}
 .search_wrap .btn_wrap .btn_cancel::before{background-position-y:100%;}
-.dtable dl,
+.dtable{width:100%;}
+.dtable dl{display:flex;}
 .dtable dt,
 .dtable dd{display:inline-block;}
-.dtable dt{font-size:14px;color:#000;font-weight:bold;line-height:1.71;}
-.dtable div{display:flex;flex-wrap:wrap;width:100%;}
-.dtable dt{min-width:95px;height:100%;vertical-align:top;text-align:right;line-height:30px;padding:0 3px 0 0;}
+.dtable dt{font-size:14px;color:#000;font-weight:bold;line-height:1.71;text-align:left;padding-left:20px;white-space:nowrap;}
+.dtable dt{min-width:95px;height:100%;vertical-align:top;line-height:30px;padding-left:10px;}
+.dtable dt:first-child{padding-left:0;}
 .dtable dt::before{display:inline-block;width:5px;height:5px;margin-right:5px;margin-bottom:1px;border-radius:6px;content:"";background-color:#c1c1c1;}
-.dtable dd{padding:2px 10px 2px 5px;}
-.dtable> div dl textarea{height:80px;padding:5px 10px;line-height:22px;}
-.dtable> div dl input,
-.dtable> div dl textarea,
-.dtable> div dl select{width:147px;}
-.dtable> div:nth-child(3) button{height:36px;vertical-align:top;}
-
+.dtable dd{min-width:214px;padding:2px 10px 2px 5px;}
+.dtable input,
+.dtable select{width:100%;}
+.dtable dl:last-child dd{padding-bottom:0;}
+.dtable .addr_wrap{width:100%;}
+.dtable .addr_wrap span{display:inline-flex;width:100%;}
+.dtable .addr_wrap select{width:auto;flex-shrink:1;flex-grow:1;margin-right:5px;min-width:199px;}
+.dtable .addr_wrap .addr3{flex-shrink:2;flex-grow:2;}
+.dtable .flex_wrap{gap:5px;}
+.dtable .flex_wrap select,
+.dtable .flex_wrap input[type="text"]{display:inline-block;flex-grow:1;}
 /* tab */
 .tab{margin-bottom:20px;}
 .m_tab{display:none;}
@@ -322,9 +325,6 @@ table .th_2deps,
 @media all and (min-width:1201px){
   .pc_con{display:block;}
   .m_con{display:none;}
-  .dtable>div>dl:first-child dt{text-align:left;}
-  .dtable>div:first-child dd{padding-top:0;}
-  .dtable>div:last-child dd{padding-bottom:0;}
   .input_address{width:383px;}
   /* responsive table */
   .tbl_res table{border-top:1px solid #8b95a3;}
@@ -350,6 +350,12 @@ table .th_2deps,
   .alignment input{width:100%;}
   .breadcrumb{margin:10px;}
   table td .btn_tblinner{height:87%;line-height:87%;margin:3px 0;}
+  .dtable dl{flex-wrap:wrap;}
+  .dtable dt{padding-left:0;}
+  .dtable dd{padding-right:0;}
+  .dtable .flex_wrap,
+  .dtable .addr_wrap span{flex-wrap:wrap;}
+  .dtable .addr_wrap select{width:100%; margin:0 0 4px 0;}
 }
 
 /* 저해상도 pc 테블릿 공통 ----------------------------------------------------------------- */
@@ -365,18 +371,13 @@ table .th_2deps,
   .gnb_list{padding:0 20px;}
   /* search bar */
   .search_wrap{display:block;}
-  .dtable> div dl input,
-  .dtable> div dl textarea,
-  .dtable> div dl select{width:180px !important;}
   .search_wrap .period_multi img{left:355px;}
   .search_wrap .period_multi img:first-of-type{left:150px;}
+  .search_wrap .dtable dd{width:calc(100% - 175px);margin:0;}
   .alignment>select{margin-right:5px;}
-  .dtable dt{width:135px;text-align:left;}
-  .dtable dd{width:calc(100% - 175px);margin:0;}
-  .dtable> div:nth-child(2)>dl:last-child dd,
-  .dtable> div:nth-child(3)>dl:last-child dd{padding:7px ​7px 0px 10px;}
-  .dtable> div>dl{width:100%;}
+  .dtable dt{width:175px;text-align:left;}
   .dtable+.btn_wrap{text-align:right;margin-top:15px;}
+
   /* tab */
   .tab{margin-bottom:10px;}
   .tabs{flex-wrap:wrap;border-bottom:none;padding-top:1px;}
@@ -440,15 +441,15 @@ table .th_2deps,
   .dtable input,
   .dtable select{width:100% !important;}
   .dtable+.btn_wrap{text-align:right;margin-top:15px;}
-  .dtable .period_multi{width:100%;}
+  .dtable .period_multi{display:inline-block;width:100%;}
   .dtable .period_multi [role="to"]{margin-left:0;}
   .dtable dd{padding:2px 0 2px 0;}
   .alignment{display:block;}
   .alignment select,
   .alignment input{display:block;width:100%;margin-bottom:4px;}
-  .alignment input{margin-bottom:0;}
   .search_wrap .btn_wrap .btn_search{width:100%;padding-left:0;padding-right:0;}
   .search_wrap .btn_wrap .btn_search::before{display:none;}
+  
   /* responsive table */
   .tbl_res table col{width:100% !important;}
   .tbl_res table thead{display:none;}
@@ -479,10 +480,9 @@ table .th_2deps,
 @media all and (min-width:480px) and (max-width:767px){
   /* search bar */
   .dtable dt{width:135px;text-align:left;}
-  .dtable dd{width:calc(100% - 145px);margin:0;}
-  .dtable> div:nth-child(2)>dl:last-child dd,
-  .dtable> div:nth-child(3)>dl:last-child dd{padding:7px ​7px 0px 10px;}
-  .dtable> div>dl{display:flex;justify-content:space-between; width:100%;}
+  .dtable .addr_wrap,
+  .dtable dd{width:calc(100% - 135px);margin:0;}
+  .addr3{width:100%;}
 }
 
 /* 모바일 세로 (해상도 ~ 479px) ------------------------------------------------- */ 
