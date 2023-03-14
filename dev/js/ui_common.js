@@ -149,8 +149,7 @@ $(function () {
     var select_num = $(this).prop("selectedIndex");
     $(".xl_tab li").eq(select_num).addClass("on").siblings().removeClass("on");
     $(".tab_contents").hide();
-    $("#" + select_link)
-      .show();
+    $("#" + select_link).show();
   });
 
   //표 줄선택
