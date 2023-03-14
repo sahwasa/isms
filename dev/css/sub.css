@@ -124,7 +124,8 @@
 .chart_box_01{width:100%;height:300px;}
 .chart_box_01>div{height:100%;padding:20px 0;}
 .chart_box_02{display:flex;justify-content:space-around;}
-.chart_box_02>div{width:180px;height:350px;display:flex;flex-direction:column;justify-content:space-around;}
+.chart_box_02>div{width:180px;display:flex;flex-direction:column;justify-content:space-around;}
+.chart_box_02>div>div{padding:10px;}
 /* system */
 .code_wrap>div{width:49.5%;}
 .code_wrap .search_wrap{padding:0;}
@@ -157,6 +158,8 @@
   .linked_r::before{left:50%;top:auto;bottom:-50px;transform:translateX(-50%) rotate(0);}
   .attach_list li{min-width:calc(50% - 28px);}
   .attach_list li:nth-child(even){padding-right:0;}
+  .chart_box_02>div{width:50%;}
+  .chart_box_02>div>div{padding:5vw;}
   /* system */
   .code_wrap{display:block;}
   .code_wrap>div{width:100%;}
@@ -203,6 +206,8 @@
   .call_wrap .dtable> div dl input,
   .call_wrap .dtable> div dl textarea,
   .call_wrap .dtable> div dl select{width:100% !important;}
+  /* list */
+  .chart_box_02>div>div{padding:2vw 10vw;}
 }
 
 /* 테블릿 모바일 공통 ----------------------------------------------------------- */
