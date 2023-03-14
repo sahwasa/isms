@@ -6,8 +6,8 @@
     </div>
     <div class="pop_body p_receipt_details">
       <div class="pop_cont">
-        <div class="search_wrap dtable">
-          <div class="line2">
+        <div class="search_wrap flex_wrap f_sb">
+          <div class="dtable">
             <dl>
               <dt>
                 <label for="data">자료</label>
@@ -17,8 +17,6 @@
                   <option value="">기상청·동네예보</option>
                 </select>
               </dd>
-            </dl>
-            <dl>
               <dt>
                 <label for="date_range">기간</label>
               </dt>
@@ -29,9 +27,11 @@
                   <input class="date_timepicker_start"  type="text" title="시작 일자" role="from">
                   <input class="date_timepicker_end" type="text" title="종료 일자" role="to">
                 </span>
-                <button type="button" class="btn btn_search btn_mint">조회</button>
               </dd>
             </dl>
+          </div>
+          <div class="btn_wrap">
+            <button type="button" class="btn btn_search btn_mint">조회</button>
           </div>
         </div>
         <div class="tbl_wrap">

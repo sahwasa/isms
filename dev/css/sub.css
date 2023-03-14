@@ -125,6 +125,7 @@
 .chart_box_01>div{height:100%;padding:20px 0;}
 .chart_box_02{display:flex;justify-content:space-around;}
 .chart_box_02>div{width:180px;height:350px;display:flex;flex-direction:column;justify-content:space-around;}
+.dtable .ipt_calamity_name{flex:auto;}
 /* system */
 .code_wrap>div{width:49.5%;}
 .code_wrap .search_wrap{padding:0;}
