@@ -130,7 +130,7 @@
 =======
 .chart_box_02>div{width:180px;display:flex;flex-direction:column;justify-content:space-around;}
 .chart_box_02>div>div{padding:10px;}
->>>>>>> 257cbc47178e28ada5c2b20bdacf5e583a1d97c5
+.ipt_dis_name{width:100%;}
 /* system */
 .code_wrap>div{width:49.5%;}
 .code_wrap .search_wrap{padding:0;}

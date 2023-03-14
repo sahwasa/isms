@@ -284,17 +284,11 @@
         </div>
         <div>
           <div class="con_tit flex_wrap f_sb">
-            <h2 class="tit_h2">행정기관 코드관리</h2>
+            <h2 class="tit_h2">행정기관 코드관리 상세</h2>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
             <div class="dtable">
               <dl>
-                <dt>
-                  <label for="administrative">행정기관</label>
-                </dt>
-                <dd>
-                  <input type="text" id="administrative">
-                </dd>
                 <dt>
                   <label for="administrative_num">기관차수</label>
                 </dt>
@@ -304,12 +298,28 @@
                   </select>
                 </dd>
                 <dt>
+                  <label for="administrative_name">기관명</label>
+                </dt>
+                <dd>
+                  <input type="text" id="administrative_name">
+                </dd>
+              </dl>
+              <dl>
+                <dt>
                   <label for="administrative_type">기관유형</label>
                 </dt>
                 <dd>
-                  <select name="administrative_type" id="administrative_type">
-                    <option value="">전체</option>
-                  </select>
+                  <span class="flex_wrap">
+                    <select name="administrative_type" id="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                    <select title="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                    <select title="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                  </span>
                 </dd>
               </dl>
             </div>
@@ -318,6 +328,9 @@
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">행정기관 정보 갱신</button>
+            </div>
             <table>
               <caption>행정기관 코드관리 리스트</caption>
               <colgroup>
@@ -328,26 +341,29 @@
                 <col style="width:171px">
                 <col style="width:80px">
                 <col style="width:171px">
+                <col style="width:171px">
               </colgroup>
               <thead>
                 <tr>
                   <th scope="col">No</th>
-                  <th scope="col">행정기관</th>
-                  <th scope="col">기관차수</th>
-                  <th scope="col">기관코드</th>
+                  <th scope="col">행정기관 코드</th>
+                  <th scope="col">행정기관명</th>
+                  <th scope="col">전체 기관명</th>
+                  <th scope="col">기관 차수</th>
                   <th scope="col">기관 유형</th>
                   <th scope="col">사용여부</th>
                   <th scope="col">하위기관</th>
                 </tr>
               </thead>
               <tbody>
-                <tr onclick="location.href='Agency_cd_MNG_01_dtl.html'">
-                  <td data-label="No">1</td>
-                  <td data-label="행정기관">서울시</td>
-                  <td data-label="기관차수">Lv.2</td>
-                  <td data-label="기관코드">-</td>
+                <tr onclick="btnAgencyDetail()">
+                  <td scope="row" data-label="No">-</td>
+                  <td data-label="행정기관 코드">-</td>
+                  <td data-label="행정기관명">-</td>
+                  <td data-label="전체 기관명">-</td>
+                  <td data-label="기관 차수">-</td>
                   <td data-label="기관 유형">-</td>
-                  <td data-label="승인여부">Y</td>
+                  <td data-label="사용여부">-</td>
                   <td data-label="하위기관">
                     <button type="button" class="btn btn_tblinner btn_mint">목록갱신</button>
                   </td>
@@ -384,6 +400,89 @@
 </div>
     </div>
   </div>
+  <!-- 행정기관 상세 -->
+  <div class="pop_overlay">
+  <div class="pop_wrap p_agencydetail">
+    <div class="pop_tit">
+      <h1>행정기관 상세</h1>
+      <button type="button" class="btn_pop_close" closePop></button>
+    </div>
+    <div class="pop_body">
+      <div class="pop_cont">
+        <table class="tbl_row tbl_transverse">
+          <caption>행정기관 상세</caption>
+          <tr>
+            <th><label for="agency_code">기관코드</label></th>
+            <td><input type="text" id="agency_code"></td>
+            <th><label for="agency_name">기관명</label></th>
+            <td><input type="text" id="agency_name"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_name_super">전체 기관명</label></th>
+            <td colspan="3"><input type="text" id="agency_name_super"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_name_super">상위기관명</label></th>
+            <td><input type="text" id="agency_name_super"></td>
+            <th><label for="agency_num">기관차수</label></th>
+            <td><input type="text" id="agency_num"></td>
+          </tr>
+          <tr>
+            <th><label for="agency_type">기관유형</label></th>
+            <td colspan="3">
+              <span class="flex_wrap f_sb" style="width:100%;">
+                <select name="agency_type" id="agency_type" style="width:33%;">
+                  <option value="자치행정조직">자치행정조직</option>
+                </select>
+                <select title="agency_type" style="width:33%;">
+                  <option value="기초자치단체">기초자치단체</option>
+                </select>
+                <select title="agency_type" style="width:33%;">
+                  <option value="자치구">자치구</option>
+                </select>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="phone_num">전화번호</label></th>
+            <td><input type="text" id="phone_num"></td>
+            <th><label for="fax_num">팩스번호</label></th>
+            <td><input type="text" id="fax_num"></td>
+          </tr>
+          <tr>
+            <th><label for="create_date">생성일자</label></th>
+            <td>
+              <span class="period_single">
+                <input id="create_date" class="date_picker" type="text">
+              </span>
+            </td>
+            <th><label for="close_date">폐지일자</label></th>
+            <td>
+              <span class="period_single">
+                <input id="close_date" class="date_picker" type="text">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th><label for="usage">사용여부</label></th>
+            <td><input type="text" id="usage"></td>
+            <th><label for="code">이전기관코드</label></th>
+            <td><input type="text" id="code"></td>
+          </tr>
+        </table>
+        <div class="btn_wrap alignR">
+          <button type="button" class="btn btn_red">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    function btnAgencyDetail() {
+      $('.p_agencydetail').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 행정기관 상세 -->
 </body>
 
 </html>

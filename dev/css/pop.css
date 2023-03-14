@@ -21,6 +21,7 @@
 .pop_body .search_wrap button{padding:7px 13px;}
 .pop_body .search_wrap,
 .pop_body .search_wrap .btn_wrap{padding:0;}
+.pop_body .dtable dt{min-width:auto;}
 .pop_wrap .btn_wrap{padding:20px 0 0;}
 .pop_wrap .tbl_row th,
 .pop_wrap .tbl_row td{height:34px;line-height:34px;font-size:13px;}
@@ -87,10 +88,8 @@
 
 /* pc pop size */
 @media all and (min-width:768px) {
-  /*
   .pop_body .dtable>div>dl dt{text-align: left;}
   .pop_body .dtable dl{align-self:center;}
   .pop_body .dtable dt{min-width:auto}
-  */
   .p_receipt_details{min-width:710px;}
 }
