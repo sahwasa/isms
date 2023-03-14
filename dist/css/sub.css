@@ -46,19 +46,16 @@
 .short_wrap a:hover>span::before{left:72%;transition:.5s;}
 .chart-container{position:relative; margin:auto; height:100%;min-height:270px; width:90%;}
 /* call */
-.call_wrap>div{min-width:49.5%;background-color:#fff;box-shadow: 0px 2px 2px 0 rgb(0 0 0 / 8%);}
-.call_wrap .dtable dt{min-width:140px;}
-.call_wrap .dtable dd>span{width:100%;}
-.call_wrap .btn_wrap{justify-content:flex-end;padding:18px;}
-.call_wrap .btn_wrap button{margin-left:5px;}
-.dtable> div dl input,
-.dtable> div dl textarea,
-.dtable> div dl select{width:180px;}
-.dtable> div.input_100 dd{width:calc(100% - 154px);}
-.dtable> div.input_100 dl,
-.dtable> div.input_100 dl input,
-.dtable> div.input_100 dl textarea,
-.dtable> div.input_100 dl select{width:100%;}
+.call_wrap>div{width:49.5%;background-color:#fff;box-shadow: 0px 2px 2px 0 rgb(0 0 0 / 8%);}
+.report_write{display:flex;flex-wrap:wrap;padding:30px;}
+.report_write dt{min-width:160px;margin-bottom:5px;font-size:14px;color: #000;font-weight: bold;line-height:34px;text-align:left;}
+.report_write dt::before{display:inline-block;width:5px;height:5px;margin-right:5px;margin-bottom:1px;border-radius:6px;content:"";background-color:#c1c1c1;}
+.report_write dd{float:left;width:calc(100% - 160px);margin-bottom:5px;}
+.report_write dd> *:not(span){width:180px;}
+.report_write dd> input:not([class]):not(:disabled){width:100%;}
+.report_write dd span > *:first-child{margin-right:5px;}
+.report_write dd span > *{width:50%;}
+.call_wrap .btn_wrap{padding:0 30px 30px;}
 /* data */
 .tit_data{position:relative;}
 .danger_legend{position:relative;z-index:0;display:flex;width:260px;justify-content:center;}
@@ -124,6 +121,17 @@
 .chart_box_01{width:100%;height:300px;}
 .chart_box_01>div{height:100%;padding:20px 0;}
 .chart_box_02{display:flex;justify-content:space-around;}
+
+
+
+/* <<<<<<< HEAD*/
+.chart_box_02>div{width:180px;height:350px;display:flex;flex-direction:column;justify-content:space-around;}
+.dtable .ipt_calamity_name{flex:auto;}
+/*=======*/
+
+
+
+
 .chart_box_02>div{width:180px;display:flex;flex-direction:column;justify-content:space-around;}
 .chart_box_02>div>div{padding:10px;}
 .ipt_dis_name{width:100%;}
@@ -143,7 +151,11 @@
 /* 반응형 공통 ----------------------------------------------------------------- */
 @media all and (max-width:1200px){
   /* call */
-  .call_wrap .dtable dd>span>select:nth-of-type(2){margin-top:3px;}
+  .report_write {padding:20px;}
+  .report_write dd span{display:block;}
+  .report_write dd span > *:first-child{margin-bottom:5px;}
+  dl.report_write dd > *,
+  .report_write dd span > *{width:100%;}
   /* data */
   .danger_legend{position:absolute;left:50%;top:87px;margin-right:20px;transform:translateX(-50%);margin-top:30px;}
   /* dist_list */
@@ -199,14 +211,6 @@
   .datalist_wrap>li:nth-child(4n){margin-right:5%;}
   .datalist_wrap>li:nth-child(3n){margin-right:0;}
   .datalist_wrap>li:nth-child(-n+3){margin-top:0;}
-  /* call */
-  .call_wrap>div:first-child{margin-right:0.5%;}
-  .call_wrap .search_wrap{padding:15px;}
-  .dtable> div.input_100 dd,
-  .call_wrap .dtable dd {width:calc(100% - 146px);}
-  .call_wrap .dtable> div dl input,
-  .call_wrap .dtable> div dl textarea,
-  .call_wrap .dtable> div dl select{width:100% !important;}
   /* list */
   .chart_box_02>div>div{padding:2vw 10vw;}
 }
@@ -252,22 +256,25 @@
   .datalist_con{padding:15px;}
   .datalist_con+button{margin-bottom:15px;}
   /* call */
-  .call_wrap{display: block;}
-  .call_wrap .search_wrap{padding:10px;}
-  .call_wrap .btn_wrap{justify-content:flex-end;padding:10px 0;}
+  .call_wrap{display:block;}
+  .call_wrap>div{width:100%;}
+  .call_wrap>div:first-child{margin-bottom:1%;}
+  .call_wrap .btn_wrap{padding:0 20px 20px;}
 }
 
 /* 모바일 & 테블릿 세로 (해상도 480px ~ 767px) ---------------------------------- */ 
 @media all and (min-width:480px) and (max-width:767px){
   /* call */
-  .call_wrap .dtable dt {min-width:155px;}
+  .report_write{padding:10px;}
   .attach_list li{width:100%;padding-right:0;}
 } 
 
 /* 모바일 세로 (해상도 ~ 479px) ------------------------------------------------- */ 
 @media all and (max-width:479px){
   /* call */
-  .call_wrap .dtable dd{width:calc(100% - 155px);}
+  .report_write dt{min-width:145px;width:145px;}
+  .report_write dd{width:calc(100% - 145px);}
+  .report_write dd span{margin-bottom:2px;}
   /* data */
   .danger_legend{margin:15px auto;}
   .datalist_wrap>li{max-width:180px;max-height:180px;border-radius:15px;}

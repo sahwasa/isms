@@ -304,32 +304,16 @@
   });
 
   // chart1-5
-  (function () {
-    new Chart(document.getElementById('chart1_5').getContext('2d'), {
-      type: 'pie',
-      data: {
-        datasets: [{
-          data: [4, 1],
-          backgroundColor: ['#609bcf', '#4864a9']
-        }],
-        labels: ['귀가인원', '수용인원']
-      },
-      options: {
-        responsive: true,
-        legend: {
-          display: false,
-          //position: 'bottom'
-        },
-        plugins: {
-          datalabels: {
-            color: ['#fff', '#fff'],
-            anchor: 'center',
-            formatter: function (value, context) {
-              return context.chart.data.labels[context.dataIndex]
-            }
-          },
-        }
-      }
-    });
-  })();
+  new Chart(ctx1_5, {
+    type: 'pie',
+    data: {
+      datasets: [{
+        data: [4, 1],
+        backgroundColor: ['#609bcf', '#4864a9']
+      }],
+      labels: ['귀가인원', '수용인원']
+    },
+    options: pieChartOption
+  });
+
 </script>

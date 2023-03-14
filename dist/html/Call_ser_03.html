@@ -292,210 +292,121 @@
           <div class="call_wrap flex_wrap f_sb">
             <div>
               <h3 class="tit_h3">신고 내용</h3>
-              <div>
-                <div class="search_wrap">
-                  <div class="dtable">
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="group_name">그룹명</label>
-                        </dt>
-                        <dd>
-                          <select name="group_name" id="group_name">
-                            <option value="선택">선택</option>
-                            <option value="도시산불" selected>도시산불</option>
-                          </select>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="accepted_num">신고접수번호</label>
-                        </dt>
-                        <dd><input type="text" id="accepted_num" value="1111111(수정불가)" disabled></dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="accepted_date">신고접수일시</label>
-                        </dt>
-                        <dd>
-                          <span class="period_single">
-                            <input class="date_timepicker" id="accepted_date" type="text" value="2023/02/09 15:30">
-                          </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="occurrence_date">사건발생일시</label>
-                        </dt>
-                        <dd>
-                          <span class="period_single">
-                            <input class="date_timepicker" id="occurrence_date" type="text" value="2023/02/09 15:30">
-                          </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="zone_occurrence">발생지 행정구역</label>
-                        </dt>
-                        <dd>
-                          <span>
-                            <select id="zone_occurrence">
-                              <option value="선택">선택</option>
-                              <option value="강원도" selected>강원도</option>
-                            </select>
-                            <select title="발생지 행정구역">
-                              <option value="선택">선택</option>
-                              <option value="강릉시" selected>강릉시</option>
-                            </select>
-                          </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="address_occurrence">발생지 상세주소</label>
-                        </dt>
-                        <dd><input type="text" id="address_occurrence" value="성산면 가나다길 58"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="place_occurrence">발생장소 상세</label>
-                        </dt>
-                        <dd><input type="text" id="place_occurrence" value="A아파트 뒷산 등상로 초입에서 화재 발생"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="cause_occurrence">발생원인</label>
-                        </dt>
-                        <dd><input type="text" id="cause_occurrence" value="등산객 실화로 추정"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="receptionist">접수자</label>
-                        </dt>
-                        <dd><input type="text" id="receptionist" value="입력시 사용자"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="human_damage">인적피해</label>
-                        </dt>
-                        <dd><input type="text" id="human_damage" value="3명 부상 목격"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="material_damage">물적피해</label>
-                        </dt>
-                        <dd><input type="text" id="material_damage" value="반경50m 화재 목격"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="group_name">현장조치사항</label>
-                        </dt>
-                        <dd><input type="text" id="group_name" value="시민 20명 가량 화재 진압을 시도하고 있음"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="note">비고</label>
-                        </dt>
-                        <dd><input type="text" id="note" value="정확한 사건발생 일시 추정 불가.(신고 일시로 대체)"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="progress_type">진행사항 구분</label>
-                        </dt>
-                        <dd><input type="text" id="progress_type" value="1111111(수정불가)" disabled></dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="disaster_num">재난일련번호</label>
-                        </dt>
-                        <dd><input type="text" id="disaster_num" value="1111111(수정불가)" disabled></dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <dl class="report_write">
+                <dt>
+                  <label for="group_name">그룹명</label>
+                </dt>
+                <dd>
+                  <select name="group_name" id="group_name">
+                    <option value="선택">선택</option>
+                    <option value="도시산불" selected>도시산불</option>
+                  </select>
+                </dd>
+                <dt>
+                  <label for="accepted_num">신고접수번호</label>
+                </dt>
+                <dd><input type="text" id="accepted_num" value="1111111(수정불가)" disabled></dd>
+                <dt>
+                  <label for="accepted_date">신고접수일시</label>
+                </dt>
+                <dd>
+                  <input class="period_single date_timepicker" id="accepted_date" type="text" value="2023/02/09 15:30">
+                </dd>
+                <dt>
+                  <label for="occurrence_date">사건발생일시</label>
+                </dt>
+                <dd>
+                  <input class="period_single date_timepicker" id="occurrence_date" type="text" value="2023/02/09 15:30">
+                </dd>
+                <dt>
+                  <label for="zone_occurrence">발생지 행정구역</label>
+                </dt>
+                <dd>
+                  <span class="flex_wrap">
+                    <select id="zone_occurrence">
+                      <option value="선택">선택</option>
+                      <option value="강원도" selected>강원도</option>
+                    </select>
+                    <select title="발생지 행정구역">
+                      <option value="선택">선택</option>
+                      <option value="강릉시" selected>강릉시</option>
+                    </select>
+                  </span>
+                </dd>
+                <dt>
+                  <label for="address_occurrence">발생지 상세주소</label>
+                </dt>
+                <dd><input type="text" id="address_occurrence" value="성산면 가나다길 58"></dd>
+                <dt>
+                  <label for="place_occurrence">발생장소 상세</label>
+                </dt>
+                <dd><input type="text" id="place_occurrence" value="A아파트 뒷산 등상로 초입에서 화재 발생"></dd>
+                <dt>
+                  <label for="cause_occurrence">발생원인</label>
+                </dt>
+                <dd><input type="text" id="cause_occurrence" value="등산객 실화로 추정"></dd>
+                <dt>
+                  <label for="receptionist">접수자</label>
+                </dt>
+                <dd><input type="text" id="receptionist" value="입력시 사용자"></dd>
+                <dt>
+                  <label for="human_damage">인적피해</label>
+                </dt>
+                <dd><input type="text" id="human_damage" value="3명 부상 목격"></dd>
+                <dt>
+                  <label for="material_damage">물적피해</label>
+                </dt>
+                <dd><input type="text" id="material_damage" value="반경50m 화재 목격"></dd>
+                <dt>
+                  <label for="group_name">현장조치사항</label>
+                </dt>
+                <dd><input type="text" id="group_name" value="시민 20명 가량 화재 진압을 시도하고 있음"></dd>
+                <dt>
+                  <label for="note">비고</label>
+                </dt>
+                <dd><input type="text" id="note" value="정확한 사건발생 일시 추정 불가.(신고 일시로 대체)"></dd>
+                <dt>
+                  <label for="progress_type">진행사항 구분</label>
+                </dt>
+                <dd><input type="text" id="progress_type" value="1111111(수정불가)" disabled></dd>
+                <dt>
+                  <label for="disaster_num">재난일련번호</label>
+                </dt>
+                <dd><input type="text" id="disaster_num" value="1111111(수정불가)" disabled></dd>
+              </dl>
             </div>
             <div>
               <h3 class="tit_h3">신고자 정보</h3>
-              <div>
-                <div class="search_wrap">
-                  <div class="dtable">
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="report_name">신고자명</label>
-                        </dt>
-                        <dd><input type="text" id="report_name"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="report_num">신고자 연락처</label>
-                        </dt>
-                        <dd><input type="text" id="report_num"></dd>
-                      </dl>
-                    </div>
-                    <div class="line1">
-                      <dl>
-                        <dt>
-                          <label for="report_zone">신고장소 행정구역</label>
-                        </dt>
-                        <dd>
-                          <span>
-                            <select id="report_zone">
-                              <option value="강원도">강원도</option>
-                            </select>
-                            <select  title="신고장소 행정구역">
-                              <option value="강릉시">강릉시</option>
-                            </select>
-                          </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="line1 input_100">
-                      <dl>
-                        <dt>
-                          <label for="report_place">신고장소 주소</label>
-                        </dt>
-                        <dd><input type="text" id="report_place"></dd>
-                      </dl>
-                    </div>
-                    <div class="btn_wrap alignR">
-                      <button type="button" class="btn_editwrap btn_save btn_mint">저장</button>
-                      <button type="button" class="btn_editwrap btn_edit btn_mint">수정</button>
-                      <button type="button" class="btn_editwrap btn_cancel btn_mint">취소</button>
-                    </div>
-                  </div>
-                </div>
+              <dl class="report_write">
+                <dt>
+                  <label for="report_name">신고자명</label>
+                </dt>
+                <dd><input type="text" id="report_name"></dd>
+                <dt>
+                  <label for="report_num">신고자 연락처</label>
+                </dt>
+                <dd><input type="text" id="report_num"></dd>
+                <dt>
+                  <label for="report_zone">신고장소 행정구역</label>
+                </dt>
+                <dd>
+                  <span class="flex_wrap">
+                    <select id="report_zone">
+                      <option value="강원도">강원도</option>
+                    </select>
+                    <select title="신고장소 행정구역">
+                      <option value="강릉시">강릉시</option>
+                    </select>
+                  </span>
+                </dd>
+                <dt>
+                  <label for="report_place">신고장소 주소</label>
+                </dt>
+                <dd><input type="text" id="report_place"></dd>
+              </dl>
+              <div class="btn_wrap alignR">
+                <button type="button" class="btn btn_editwrap edit btn_mint">수정</button>
+                <button type="button" class="btn btn_editwrap cancel btn_mint">취소</button>
               </div>
             </div>
           </div>

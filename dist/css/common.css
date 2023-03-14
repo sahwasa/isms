@@ -208,9 +208,8 @@ label input{margin-top:-3px;}
 .period_multi::after{content:"~";position:absolute;left:50%;top:3px;margin:0 0 0 -5px;}
 .divideL.period_multi::after{margin-left:0;}
 .period_multi [role="to"]{margin-left:20px;}
-.period_single input,
+.period_single,
 .period_multi input{width:147px;background:url(../images/btn_calendar.png) 97% 50% no-repeat;}
-.period_single{position:relative;width:100%;}
 .timepic input{width:170px;}
 
 .info{float:right;margin-top:5px;color:#999;font-size:12px;}
