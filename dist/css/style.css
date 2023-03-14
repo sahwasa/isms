@@ -144,10 +144,12 @@
 .search .btn{padding:8px 7px;vertical-align:middle;font-size:15px;}
 .search_wrap{padding:25px 30px;margin-bottom:10px;}
 .search_wrap .period_multi{display:flex;justify-content:space-between;width:auto;}
+.search_wrap .period_multi{display:flex;justify-content:space-between;width:auto;}
 .search_wrap .period_multi::after{top:3px;left:50%;}
 .search_wrap .period_multi input{width:calc(50% - 13px);min-width:auto;}
 .search_wrap .btn_wrap{align-self:flex-end;word-break: keep-all;}
 .search_wrap .btn_wrap button{height:34px;padding:7px 20px;border-radius:3px;font-size:14px;font-weight:bold;}
+.search_wrap .btn_wrap .btn_search{position:relative;align-self:flex-end;padding-left:42px;color:#fff;word-break: keep-all;}
 .search_wrap .btn_wrap .btn_search{position:relative;align-self:flex-end;padding-left:42px;color:#fff;word-break: keep-all;}
 .search_wrap .btn_wrap .btn_search::before{position:absolute;top:50%;left:15px;display:inline-block;content:'';width:19px;height:19px;background:url(../images/ico_search.png);transform:translateY(-50%);}
 .search_wrap .btn_wrap .btn_editwrap{position:relative;align-self:flex-end;padding-left:40px;color:#fff;}
@@ -374,9 +376,12 @@ table .th_2deps,
   .search_wrap .period_multi img{left:355px;}
   .search_wrap .period_multi img:first-of-type{left:150px;}
   .search_wrap .dtable dd{width:calc(100% - 175px);margin:0;}
+  .search_wrap .dtable dd{width:calc(100% - 175px);margin:0;}
   .alignment>select{margin-right:5px;}
   .dtable dt{width:175px;text-align:left;}
+  .dtable dt{width:175px;text-align:left;}
   .dtable+.btn_wrap{text-align:right;margin-top:15px;}
+
 
   /* tab */
   .tab{margin-bottom:10px;}
@@ -450,6 +455,7 @@ table .th_2deps,
   .search_wrap .btn_wrap .btn_search{width:100%;padding-left:0;padding-right:0;}
   .search_wrap .btn_wrap .btn_search::before{display:none;}
   
+  
   /* responsive table */
   .tbl_res table col{width:100% !important;}
   .tbl_res table thead{display:none;}
@@ -480,6 +486,9 @@ table .th_2deps,
 @media all and (min-width:480px) and (max-width:767px){
   /* search bar */
   .dtable dt{width:135px;text-align:left;}
+  .dtable .addr_wrap,
+  .dtable dd{width:calc(100% - 135px);margin:0;}
+  .addr3{width:100%;}
   .dtable .addr_wrap,
   .dtable dd{width:calc(100% - 135px);margin:0;}
   .addr3{width:100%;}

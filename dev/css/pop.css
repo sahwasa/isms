@@ -88,5 +88,8 @@
 
 /* pc pop size */
 @media all and (min-width:768px) {
+  .pop_body .dtable>div>dl dt{text-align: left;}
+  .pop_body .dtable dl{align-self:center;}
+  .pop_body .dtable dt{min-width:auto}
   .p_receipt_details{min-width:710px;}
 }

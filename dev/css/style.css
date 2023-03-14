@@ -144,6 +144,7 @@
 .search .btn{padding:8px 7px;vertical-align:middle;font-size:15px;}
 .search_wrap{padding:25px 30px;margin-bottom:10px;}
 .search_wrap .period_multi{display:flex;justify-content:space-between;width:auto;}
+.search_wrap .period_multi{display:flex;justify-content:space-between;width:auto;}
 .search_wrap .period_multi::after{top:3px;left:50%;}
 .search_wrap .period_multi input{width:calc(50% - 13px);min-width:auto;}
 .search_wrap .btn_wrap{align-self:flex-end;word-break: keep-all;}
@@ -350,12 +351,6 @@ table .th_2deps,
   .alignment input{width:100%;}
   .breadcrumb{margin:10px;}
   table td .btn_tblinner{height:87%;line-height:87%;margin:3px 0;}
-  .dtable dl{flex-wrap:wrap;}
-  .dtable dt{padding-left:0;}
-  .dtable dd{padding-right:0;}
-  .dtable .flex_wrap,
-  .dtable .addr_wrap span{flex-wrap:wrap;}
-  .dtable .addr_wrap select{width:100%; margin:0 0 4px 0;}
 }
 
 /* 저해상도 pc 테블릿 공통 ----------------------------------------------------------------- */
