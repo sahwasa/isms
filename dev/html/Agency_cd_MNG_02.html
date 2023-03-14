@@ -14,40 +14,57 @@
         </div>
         <div>
           <div class="con_tit flex_wrap f_sb">
-            <h2 class="tit_h2">행정기관 코드관리</h2>
+            <h2 class="tit_h2">행정기관 코드관리 상세</h2>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
             <div class="dtable">
-              <dl>
-                <dt>
-                  <label for="administrative">행정기관</label>
-                </dt>
-                <dd>
-                  <input type="text" id="administrative">
-                </dd>
-                <dt>
-                  <label for="administrative_num">기관차수</label>
-                </dt>
-                <dd>
-                  <select name="administrative_num" id="administrative_num">
-                    <option value="">전체</option>
-                  </select>
-                </dd>
-                <dt>
-                  <label for="administrative_type">기관유형</label>
-                </dt>
-                <dd>
-                  <select name="administrative_type" id="administrative_type">
-                    <option value="">전체</option>
-                  </select>
-                </dd>
-              </dl>
+              <div class="line2">
+                <dl>
+                  <dt>
+                    <label for="administrative_num">기관차수</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_num" id="administrative_num">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <label for="administrative_type">기관유형</label>
+                  </dt>
+                  <dd>
+                    <select name="administrative_type" id="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                    <select title="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                    <select title="administrative_type">
+                      <option value="">전체</option>
+                    </select>
+                  </dd>
+                </dl>
+              </div>
+              <div class="line1">
+                <dl>
+                  <dt>
+                    <label for="administrative_name">기관명</label>
+                  </dt>
+                  <dd>
+                    <input type="text" id="administrative_name">
+                  </dd>
+                </dl>
+              </div>
             </div>
             <div class="btn_wrap">
               <button type="button" class="btn_search btn_mint">조회</button>
             </div>
           </div>
           <div class="box tbl_wrap tbl_res">
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blueline">행정기관 정보 갱신</button>
+            </div>
             <table>
               <caption>행정기관 코드관리 리스트</caption>
               <colgroup>
@@ -58,26 +75,29 @@
                 <col style="width:171px">
                 <col style="width:80px">
                 <col style="width:171px">
+                <col style="width:171px">
               </colgroup>
               <thead>
                 <tr>
                   <th scope="col">No</th>
-                  <th scope="col">행정기관</th>
-                  <th scope="col">기관차수</th>
-                  <th scope="col">기관코드</th>
+                  <th scope="col">행정기관 코드</th>
+                  <th scope="col">행정기관명</th>
+                  <th scope="col">전체 기관명</th>
+                  <th scope="col">기관 차수</th>
                   <th scope="col">기관 유형</th>
                   <th scope="col">사용여부</th>
                   <th scope="col">하위기관</th>
                 </tr>
               </thead>
               <tbody>
-                <tr onclick="location.href='Agency_cd_MNG_02.html'">
-                  <td scope="row" data-label="No">1td>
-                  <td data-label="행정기관">서울시</td>
-                  <td data-label="기관차수">Lv.2</td>
-                  <td data-label="기관코드">-</td>
+                <tr onclick="btnAgencyDetail()">
+                  <td scope="row" data-label="No">-</td>
+                  <td data-label="행정기관 코드">-</td>
+                  <td data-label="행정기관명">-</td>
+                  <td data-label="전체 기관명">-</td>
+                  <td data-label="기관 차수">-</td>
                   <td data-label="기관 유형">-</td>
-                  <td data-label="승인여부">Y</td>
+                  <td data-label="사용여부">-</td>
                   <td data-label="하위기관">
                     <button type="button" class="btn btn_tblinner btn_mint">목록갱신</button>
                   </td>
@@ -108,6 +128,14 @@
       @@include('../inc/footer.html')
     </div>
   </div>
+  <!-- 행정기관 상세 -->
+  @@include('../inc/pop/Agency_cd_MNG_02.html')
+  <script>
+    function btnAgencyDetail() {
+      $('.p_agencydetail').parent('.pop_overlay').toggle();
+    }
+  </script>
+  <!--// 행정기관 상세 -->
 </body>
 
 </html>

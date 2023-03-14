@@ -68,11 +68,11 @@
               </div>
             </div>
             <div class="tab_cont">
-              @@include('Dist_list_01_dtl_tab01.html')
+              <!-- @@include('Dist_list_01_dtl_tab01.html')
               @@include('Dist_list_01_dtl_tab02.html')
               @@include('Dist_list_01_dtl_tab03.html')
               @@include('Dist_list_01_dtl_tab04.html')
-              @@include('Dist_list_01_dtl_tab05.html')
+              @@include('Dist_list_01_dtl_tab05.html') -->
               @@include('Dist_list_01_dtl_tab06.html')
             </div>
           </div>`
@@ -87,21 +87,49 @@
 @@include('../inc/script.html')
 
 <script>
-
-function executeOnLoad(func) {
-  if (document.readyState === "complete") {
-    func();
-  } else {
-    window.addEventListener("load", func);
-  }
-}
-executeOnLoad(function(){
   var ctx1_1 = document.getElementById('chart1_1').getContext('2d');
   var ctx1_2 = document.getElementById("chart1_2").getContext("2d");
   var ctx1_3 = document.getElementById("chart1_3").getContext("2d");
   var ctx1_4 = document.getElementById('chart1_4').getContext('2d');
   var ctx1_5 = document.getElementById('chart1_5').getContext('2d');
 
+  var gaugeChartOption = {
+    responsive: true,
+    aspectRatio: 1,
+    circumference: Math.PI + 1,
+    rotation: -Math.PI - 0.5,
+    cutoutPercentage: 64,
+    legend: {
+      display: false
+    },
+    plugins: {
+      datalabels: {
+        display: false
+      }
+    },
+    elements: {
+      center: {
+        text: 'center text',
+      }
+    }
+  }
+  var pieChartOption = {
+    responsive: true,
+    aspectRatio: 1,
+    legend: {
+      display: false,
+      //position: 'bottom'
+    },
+    plugins: {
+      datalabels: {
+        color: ['#fff', '#fff'],
+        anchor: 'center',
+        formatter: function (value, context) {
+          return context.chart.data.labels[context.dataIndex]
+        }
+      },
+    }
+  }
   Chart.pluginService.register({
     beforeDraw: function (chart) {
       if (chart.config.options.elements.center) {
@@ -123,8 +151,8 @@ executeOnLoad(function(){
         var wrapText = false;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 1.95);
-        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.6);
+        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.8);
         ctx.font = fontSizeToUse + "px " + fontStyle;
         ctx.fillStyle = color;
         if (!wrapText) {
@@ -231,6 +259,7 @@ executeOnLoad(function(){
   });
 
   // chart1-2
+  gaugeChartOption.elements.center.text = "발생세대";
   new Chart(ctx1_2, {
     type: 'doughnut',
     data: {
@@ -242,28 +271,11 @@ executeOnLoad(function(){
         borderWidth: 3
       }]
     },
-    options: {
-      maintainAspectRatio: false,
-      circumference: Math.PI + 1,
-      rotation: -Math.PI - 0.5,
-      cutoutPercentage: 64,
-      legend: {
-        display: false
-      },
-      plugins: {
-        datalabels: {
-          display: false
-        }
-      },
-      elements: {
-        center: {
-          text: '발생세대',
-        }
-      }
-    }
+    options: gaugeChartOption
   })
 
   // chart1-3
+  gaugeChartOption.elements.center.text = "발생인원";
   new Chart(ctx1_3, {
     type: 'doughnut',
     data: {
@@ -275,25 +287,7 @@ executeOnLoad(function(){
         borderWidth: 3
       }]
     },
-    options: {
-      maintainAspectRatio: false,
-      circumference: Math.PI + 1,
-      rotation: -Math.PI - 0.5,
-      cutoutPercentage: 64,
-      legend: {
-        display: false
-      },
-      plugins: {
-        datalabels: {
-          display: false
-        }
-      },
-      elements: {
-        center: {
-          text: '발생인원',
-        }
-      }
-    }
+    options: gaugeChartOption
   });
 
   // chart1-4
@@ -306,51 +300,36 @@ executeOnLoad(function(){
       }],
       labels: ['귀가세대', '수용세대']
     },
-    options: {
-      responsive: true,
-      legend: {
-        display: false,
-        //position: 'bottom'
-      },
-      plugins: {
-        datalabels: {
-          color: ['#fff', '#fff'],
-          anchor: 'center',
-          formatter: function (value, context) {
-            return context.chart.data.labels[context.dataIndex]
-          }
-        },
-      }
-    }
+    options: pieChartOption
   });
 
   // chart1-5
-  new Chart(ctx1_5, {
-    type: 'pie',
-    data: {
-      datasets: [{
-        data: [4, 1],
-        backgroundColor: ['#609bcf', '#4864a9']
-      }],
-      labels: ['귀가인원', '수용인원']
-    },
-    options: {
-      responsive: true,
-      legend: {
-        display: false,
-        //position: 'bottom'
+  (function () {
+    new Chart(document.getElementById('chart1_5').getContext('2d'), {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [4, 1],
+          backgroundColor: ['#609bcf', '#4864a9']
+        }],
+        labels: ['귀가인원', '수용인원']
       },
-      plugins: {
-        datalabels: {
-          color: ['#fff', '#fff'],
-          anchor: 'center',
-          formatter: function (value, context) {
-            return context.chart.data.labels[context.dataIndex]
-          }
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+          //position: 'bottom'
         },
+        plugins: {
+          datalabels: {
+            color: ['#fff', '#fff'],
+            anchor: 'center',
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex]
+            }
+          },
+        }
       }
-    }
-  });
-});
-
+    });
+  })();
 </script>
