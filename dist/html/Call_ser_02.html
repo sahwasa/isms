@@ -294,10 +294,10 @@
               <h3 class="tit_h3">신고 내용</h3>
               <dl class="report_write">
                 <dt>
-                  <label for="group_name">그룹명</label>
+                  <label for="calamity_type">재난구분</label>
                 </dt>
                 <dd>
-                  <select name="group_name" id="group_name">
+                  <select name="calamity_type" id="calamity_type">
                     <option value="선택" selected>선택</option>
                     <option value="도시산불">도시산불</option>
                   </select>
@@ -358,21 +358,13 @@
                 </dt>
                 <dd><input type="text" id="material_damage"></dd>
                 <dt>
-                  <label for="group_name">현장조치사항</label>
+                  <label for="direct_action">현장조치사항</label>
                 </dt>
-                <dd><input type="text" id="group_name"></dd>
+                <dd><input type="text" id="direct_action"></dd>
                 <dt>
                   <label for="note">비고</label>
                 </dt>
                 <dd><input type="text" id="note" ></dd>
-                <dt>
-                  <label for="progress_type">진행사항 구분</label>
-                </dt>
-                <dd><input type="text" id="progress_type" value="1111111(수정불가)" disabled></dd>
-                <dt>
-                  <label for="disaster_num">재난일련번호</label>
-                </dt>
-                <dd><input type="text" id="disaster_num" value="1111111(수정불가)" disabled></dd>
               </dl>
             </div>
             <div>
@@ -406,6 +398,7 @@
               </dl>
               <div class="btn_wrap alignR">
                 <button type="button" class="btn btn_editwrap save btn_mint">저장</button>
+                <button type="button" class="btn btn_editwrap cancel btn_mint">취소</button>
               </div>
             </div>
           </div>

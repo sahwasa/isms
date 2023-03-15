@@ -121,19 +121,10 @@
 .chart_box_01{width:100%;height:300px;}
 .chart_box_01>div{height:100%;padding:20px 0;}
 .chart_box_02{display:flex;justify-content:space-around;}
-
-
-
-/* <<<<<<< HEAD*/
-.chart_box_02>div{width:180px;height:350px;display:flex;flex-direction:column;justify-content:space-around;}
-.dtable .ipt_calamity_name{flex:auto;}
-/*=======*/
-
-
-
-
+.chart_box_02>div{width:180px;display:flex;flex-direction:column;justify-content:space-around;}
 .chart_box_02>div{width:180px;display:flex;flex-direction:column;justify-content:space-around;}
 .chart_box_02>div>div{padding:10px;}
+.dtable .ipt_calamity_name{flex:auto;}
 .ipt_dis_name{width:100%;}
 /* system */
 .code_wrap>div{width:49.5%;}
