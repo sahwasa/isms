@@ -32,7 +32,13 @@
                   <input type="text" id="user_name">
                 </dd>
               </dl>
-              <dl>
+              <dl>                
+                <dt>
+                  <label for="user_organization">소속기관</label>
+                </dt>
+                <dd>
+                  <input type="text" id="user_organization">
+                </dd>
                 <dt>
                   <label for="user_approval">승인여부</label>
                 </dt>
@@ -40,12 +46,6 @@
                   <select name="user_approval" id="user_approval">
                     <option value="">전체</option>
                   </select>
-                </dd>
-                <dt>
-                  <label for="user_organization">소속기관</label>
-                </dt>
-                <dd>
-                  <input type="text" id="user_organization">
                 </dd>
               </dl>
             </div>
@@ -89,6 +89,8 @@
       @@include('../inc/footer.html')
     </div>
   </div>
+@@include('../inc/script.html')
+
   <!-- 사용자 관리 -->
   @@include('../inc/pop/SYS_MGN_02_01.html')
   <script>
@@ -109,4 +111,3 @@
 </body>
 
 </html>
-@@include('../inc/script.html')

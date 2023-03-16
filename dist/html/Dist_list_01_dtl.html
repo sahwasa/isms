@@ -976,7 +976,7 @@
           <div><canvas id="chart1_2"></canvas></div>
           <div><canvas id="chart1_3"></canvas></div>
         </div>
-        <div>
+        <div class="piChart_wrap">
           <div><canvas id="chart1_4"></canvas></div>
           <div><canvas id="chart1_5"></canvas></div>
         </div>
@@ -997,244 +997,246 @@
 </div>
     </div>
   </div>
-</body>
-
-</html>
-<script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
 <script src="../plugins/jqueryui-timepicker-addon/dist/jquery.datetimepicker.full.min.js"></script>
 <script src="../plugins/chartjs/Chart.bundle.js"></script>
 <script src="../plugins/chartjs/Chart.min.js"></script>
 <script src="../plugins/chartjs/chartjs-plugin-datalabels.min.js"></script>
 <script src="../js/ui_common.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        // DOM이 완전히 로드된 후에 실행되는 스크립트 코드를 입력합니다.
+        var ctx1_1 = document.getElementById('chart1_1').getContext('2d');
+      var ctx1_2 = document.getElementById("chart1_2").getContext("2d");
+      var ctx1_3 = document.getElementById("chart1_3").getContext("2d");
+      var ctx1_4 = document.getElementById('chart1_4').getContext('2d');
+      var ctx1_5 = document.getElementById('chart1_5').getContext('2d');
 
-<script>
-  var ctx1_1 = document.getElementById('chart1_1').getContext('2d');
-  var ctx1_2 = document.getElementById("chart1_2").getContext("2d");
-  var ctx1_3 = document.getElementById("chart1_3").getContext("2d");
-  var ctx1_4 = document.getElementById('chart1_4').getContext('2d');
-  var ctx1_5 = document.getElementById('chart1_5').getContext('2d');
-
-  var gaugeChartOption = {
-    responsive: true,
-    aspectRatio: 1,
-    circumference: Math.PI + 1,
-    rotation: -Math.PI - 0.5,
-    cutoutPercentage: 64,
-    legend: {
-      display: false
-    },
-    plugins: {
-      datalabels: {
-        display: false
-      }
-    },
-    elements: {
-      center: {
-        text: 'center text',
-      }
-    }
-  }
-  var pieChartOption = {
-    responsive: true,
-    aspectRatio: 1,
-    legend: {
-      display: false,
-      //position: 'bottom'
-    },
-    plugins: {
-      datalabels: {
-        color: ['#fff', '#fff'],
-        anchor: 'center',
-        formatter: function (value, context) {
-          return context.chart.data.labels[context.dataIndex]
-        }
-      },
-    }
-  }
-  Chart.pluginService.register({
-    beforeDraw: function (chart) {
-      if (chart.config.options.elements.center) {
-        var ctx = chart.chart.ctx;
-        var centerConfig = chart.config.options.elements.center;
-        var fontStyle = centerConfig.fontStyle || "Malgun Gothic";
-        var txt = centerConfig.text;
-        var color = centerConfig.color || '#4864a9';
-        var maxFontSize = centerConfig.maxFontSize || 15;
-        var sidePadding = centerConfig.sidePadding || 20;
-        var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
-        var stringWidth = ctx.measureText(txt).width;
-        var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
-        var widthRatio = elementWidth / stringWidth;
-        var newFontSize = Math.floor(30 * widthRatio);
-        var elementHeight = (chart.innerRadius * 2);
-        var fontSizeToUse = Math.min(newFontSize, elementHeight, maxFontSize);
-        var minFontSize = centerConfig.minFontSize;
-        var wrapText = false;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
-        var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.8);
-        ctx.font = fontSizeToUse + "px " + fontStyle;
-        ctx.fillStyle = color;
-        if (!wrapText) {
-          ctx.fillText(txt, centerX, centerY);
-          return;
-        }
-        //Draw text in center
-        ctx.fillText(centerX, centerY);
-      }
-    }
-  });
-
-  // chart1-1
-  new Chart(ctx1_1, {
-    type: 'line',
-    data: {
-      labels: ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05", "2023-01-06", "2023-01-07", "2023-01-08", "2023-01-09", "2023-01-10", "2023-01-11", "2023-01-12"],
-      datasets: [{
-        label: '학교',
-        fill: false,
-        borderColor: '#c7d9dd',
-        backgroundColor: '#c7d9dd',
-        borderSkipped: false,
-        data: [50, 5, 10, 7, 10, 5, 8, 10, 18, 10, 18, 5]
-      },
-      {
-        label: '관공서',
-        fill: false,
-        borderColor: '#adc9cf',
-        backgroundColor: '#adc9cf',
-        borderSkipped: false,
-        data: [8, 10, 18, 10, 18, 5, 6, 9, 7, 5, 7, 5]
-      },
-      {
-        label: '창고',
-        fill: false,
-        borderColor: '#8ab6bf',
-        backgroundColor: '#8ab6bf',
-        borderSkipped: false,
-        data: [6, 9, 7, 5, 7, 5, 8, 4, 5, 40, 8, 5]
-      },
-      {
-        label: '마을회관',
-        fill: false,
-        borderColor: '#5aa2ae ',
-        backgroundColor: '#5aa2ae ',
-        borderSkipped: true,
-        data: [8, 4, 5, 35, 8, 5, 14, 8, 0, 5, 4, 2]
-      },
-      {
-        label: '교회',
-        fill: false,
-        borderColor: '#52949f',
-        backgroundColor: '#52949f',
-        borderSkipped: false,
-        data: [0, 8, 0, 5, 4, 2, 0, 8, 15, 5, 2, 9]
-      },
-      {
-        label: '경로당',
-        fill: false,
-        borderColor: '#49858f',
-        backgroundColor: '#49858f',
-        borderSkipped: false,
-        data: [0, 8, 0, 5, 2, 9, 0, 8, 0, 5, 0, 5]
-      },
-      {
-        label: '기타',
-        fill: false,
-        borderColor: '#3e727b',
-        backgroundColor: '#3e727b',
-        borderSkipped: false,
-        data: [0, 8, 0, 5, 0, 5, 6, 9, 7, 5, 7, 5]
-      }
-      ]
-    },
-    options: {
-      plugins: {
-        datalabels: {
+      var gaugeChartOption = {
+        responsive: true,
+        aspectRatio: 1,
+        circumference: Math.PI + 1,
+        rotation: -Math.PI - 0.5,
+        cutoutPercentage: 64,
+        legend: {
           display: false
-        }
-      },
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          boxWidth: 13,
-          boxHeight: 100
-        }
-      },
-      maintainAspectRatio: false,
-      scales: {
-        yAxes: [{
-          stacked: false,
-          gridLines: {
-            display: true,
-          }
-        }], xAxes: [{
-          gridLines: {
+        },
+        plugins: {
+          datalabels: {
             display: false
           }
-        }]
+        },
+        elements: {
+          center: {
+            text: 'center text',
+          }
+        }
       }
-    }
-  });
+      var pieChartOption = {
+        responsive: true,
+        aspectRatio: 1,
+        legend: {
+          display: false,
+          //position: 'bottom'
+        },
+        plugins: {
+          datalabels: {
+            color: ['#fff', '#fff'],
+            anchor: 'center',
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex]
+            }
+          },
+        }
+      }
+      Chart.pluginService.register({
+        beforeDraw: function (chart) {
+          if (chart.config.options.elements.center) {
+            var ctx = chart.chart.ctx;
+            var centerConfig = chart.config.options.elements.center;
+            var fontStyle = centerConfig.fontStyle || "Malgun Gothic";
+            var txt = centerConfig.text;
+            var color = centerConfig.color || '#4864a9';
+            var maxFontSize = centerConfig.maxFontSize || 15;
+            var sidePadding = centerConfig.sidePadding || 20;
+            var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+            var stringWidth = ctx.measureText(txt).width;
+            var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+            var widthRatio = elementWidth / stringWidth;
+            var newFontSize = Math.floor(30 * widthRatio);
+            var elementHeight = (chart.innerRadius * 2);
+            var fontSizeToUse = Math.min(newFontSize, elementHeight, maxFontSize);
+            var minFontSize = centerConfig.minFontSize;
+            var wrapText = false;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+            var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 1.8);
+            ctx.font = fontSizeToUse + "px " + fontStyle;
+            ctx.fillStyle = color;
+            if (!wrapText) {
+              ctx.fillText(txt, centerX, centerY);
+              return;
+            }
+            //Draw text in center
+            ctx.fillText(centerX, centerY);
+          }
+        }
+      });
 
-  // chart1-2
-  gaugeChartOption.elements.center.text = "발생세대";
-  new Chart(ctx1_2, {
-    type: 'doughnut',
-    data: {
-      labels: ["발생세대"],
-      datasets: [{
-        data: [45, 55],
-        backgroundColor: ["#99ccff"],
-        borderColor: ["#99ccff"],
-        borderWidth: 3
-      }]
-    },
-    options: gaugeChartOption
-  })
+      // chart1-1
+      new Chart(ctx1_1, {
+        type: 'line',
+        data: {
+          labels: ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05", "2023-01-06", "2023-01-07", "2023-01-08", "2023-01-09", "2023-01-10", "2023-01-11", "2023-01-12"],
+          datasets: [{
+            label: '학교',
+            fill: false,
+            borderColor: '#c7d9dd',
+            backgroundColor: '#c7d9dd',
+            borderSkipped: false,
+            data: [50, 5, 10, 7, 10, 5, 8, 10, 18, 10, 18, 5]
+          },
+          {
+            label: '관공서',
+            fill: false,
+            borderColor: '#adc9cf',
+            backgroundColor: '#adc9cf',
+            borderSkipped: false,
+            data: [8, 10, 18, 10, 18, 5, 6, 9, 7, 5, 7, 5]
+          },
+          {
+            label: '창고',
+            fill: false,
+            borderColor: '#8ab6bf',
+            backgroundColor: '#8ab6bf',
+            borderSkipped: false,
+            data: [6, 9, 7, 5, 7, 5, 8, 4, 5, 40, 8, 5]
+          },
+          {
+            label: '마을회관',
+            fill: false,
+            borderColor: '#5aa2ae ',
+            backgroundColor: '#5aa2ae ',
+            borderSkipped: true,
+            data: [8, 4, 5, 35, 8, 5, 14, 8, 0, 5, 4, 2]
+          },
+          {
+            label: '교회',
+            fill: false,
+            borderColor: '#52949f',
+            backgroundColor: '#52949f',
+            borderSkipped: false,
+            data: [0, 8, 0, 5, 4, 2, 0, 8, 15, 5, 2, 9]
+          },
+          {
+            label: '경로당',
+            fill: false,
+            borderColor: '#49858f',
+            backgroundColor: '#49858f',
+            borderSkipped: false,
+            data: [0, 8, 0, 5, 2, 9, 0, 8, 0, 5, 0, 5]
+          },
+          {
+            label: '기타',
+            fill: false,
+            borderColor: '#3e727b',
+            backgroundColor: '#3e727b',
+            borderSkipped: false,
+            data: [0, 8, 0, 5, 0, 5, 6, 9, 7, 5, 7, 5]
+          }
+          ]
+        },
+        options: {
+          plugins: {
+            datalabels: {
+              display: false
+            }
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+              boxWidth: 13,
+              boxHeight: 100
+            }
+          },
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [{
+              stacked: false,
+              gridLines: {
+                display: true,
+              }
+            }], xAxes: [{
+              gridLines: {
+                display: false
+              }
+            }]
+          }
+        }
+      });
 
-  // chart1-3
-  gaugeChartOption.elements.center.text = "발생인원";
-  new Chart(ctx1_3, {
-    type: 'doughnut',
-    data: {
-      labels: ["발생인원"],
-      datasets: [{
-        data: [45, 55],
-        backgroundColor: ["#99ccff"],
-        borderColor: ["#99ccff"],
-        borderWidth: 3
-      }]
-    },
-    options: gaugeChartOption
-  });
+      // chart1-2
+      gaugeChartOption.elements.center.text = "발생세대";
+      new Chart(ctx1_2, {
+        type: 'doughnut',
+        data: {
+          labels: ["발생세대"],
+          datasets: [{
+            data: [45, 55],
+            backgroundColor: ["#99ccff"],
+            borderColor: ["#99ccff"],
+            borderWidth: 3
+          }]
+        },
+        options: gaugeChartOption
+      })
 
-  // chart1-4
-  new Chart(ctx1_4, {
-    type: 'pie',
-    data: {
-      datasets: [{
-        data: [1, 4],
-        backgroundColor: ['#609bcf', '#4864a9']
-      }],
-      labels: ['귀가세대', '수용세대']
-    },
-    options: pieChartOption
-  });
+      // chart1-3
+      gaugeChartOption.elements.center.text = "발생인원";
+      new Chart(ctx1_3, {
+        type: 'doughnut',
+        data: {
+          labels: ["발생인원"],
+          datasets: [{
+            data: [45, 55],
+            backgroundColor: ["#99ccff"],
+            borderColor: ["#99ccff"],
+            borderWidth: 3
+          }]
+        },
+        options: gaugeChartOption
+      });
 
-  // chart1-5
-  new Chart(ctx1_5, {
-    type: 'pie',
-    data: {
-      datasets: [{
-        data: [4, 1],
-        backgroundColor: ['#609bcf', '#4864a9']
-      }],
-      labels: ['귀가인원', '수용인원']
-    },
-    options: pieChartOption
-  });
+      // chart1-4
+      new Chart(ctx1_4, {
+        type: 'pie',
+        data: {
+          datasets: [{
+            data: [1, 4],
+            backgroundColor: ['#609bcf', '#4864a9']
+          }],
+          labels: ['귀가세대', '수용세대']
+        },
+        options: pieChartOption
+      });
 
-</script>
+      // chart1-5
+      new Chart(ctx1_5, {
+        type: 'pie',
+        data: {
+          datasets: [{
+            data: [4, 1],
+            backgroundColor: ['#609bcf', '#4864a9']
+          }],
+          labels: ['귀가인원', '수용인원']
+        },
+        options: pieChartOption
+      });
+    });
+  </script>
+</body>
+
+</html>
+  
