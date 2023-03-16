@@ -52,7 +52,8 @@
 .report_write dt::before{display:inline-block;width:5px;height:5px;margin-right:5px;margin-bottom:1px;border-radius:6px;content:"";background-color:#c1c1c1;}
 .report_write dd{float:left;width:calc(100% - 160px);margin-bottom:5px;}
 .report_write dd> *:not(span){width:180px;}
-.report_write dd> input:not([class]):not(:disabled){width:100%;}
+.report_write dd> input:not([class]):not(:disabled),
+.report_write dd textarea{width:100%;}
 .report_write dd span > *:first-child{margin-right:5px;}
 .report_write dd span > *{width:50%;}
 .call_wrap .btn_wrap{padding:0 30px 30px;}
@@ -126,6 +127,7 @@
 .chart_box_02>div>div{padding:10px;}
 .dtable .ipt_calamity_name{flex:auto;}
 .ipt_dis_name{width:100%;}
+.piChart_wrap{padding:12px;}
 /* system */
 .code_wrap>div{width:49.5%;}
 .code_wrap .search_wrap{padding:0;}
