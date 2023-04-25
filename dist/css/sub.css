@@ -57,6 +57,7 @@
 .report_write dd span > *:first-child{margin-right:5px;}
 .report_write dd span > *{width:50%;}
 .call_wrap .btn_wrap{padding:0 30px 30px;}
+.report_write .mgT{margin-top:5px;}
 /* data */
 .tit_data{position:relative;}
 .danger_legend{position:relative;z-index:0;display:flex;width:260px;justify-content:center;}
