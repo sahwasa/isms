@@ -89,3 +89,7 @@
 @media all and (min-width:768px) {
   .p_receipt_details{min-width:710px;}
 }
+
+
+/* 230426 : 기관검색 팝업 */
+.pop_wrap .tbl_row th, .pop_wrap .tbl_row td{line-height:initial;}

@@ -506,3 +506,6 @@ table .th_2deps,
   .tbl_default th,
   .tbl_default td{padding:8px 5px;font-size:12px;}
 }
+
+/* 230426 : 기관검색 팝업 */
+.tbl_row th, .tbl_row td{padding:4px 10px;}
