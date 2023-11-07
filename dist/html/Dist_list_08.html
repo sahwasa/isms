@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="../css/sub.css" />
     <link rel="stylesheet" type="text/css" href="../css/pop.css" />
   </head>
-
 <body>
   <div class="wrap">
     <!-- 바로가기 메뉴 -->
@@ -278,47 +277,49 @@
         <div class="breadcrumb">
           <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">환경조회</a></li>
-            <li>기관별 연락처</li>
+            <li>통계조회</li>
           </ul>
         </div>
         <div>
           <div class="con_tit flex_wrap f_sb">
-            <h2 class="tit_h2">기관별 연락처</h2>
+            <h2 class="tit_h2">통계조회</h2>
           </div>
           <div class="box search_wrap flex_wrap f_sb">
             <div class="dtable">
-              <dl>
+              <dl>                
                 <dt>
-                  <label for="user_approval">재난구분</label>
+                  <label for="user_name">집계구분</label>
                 </dt>
                 <dd>
-                  <select name="user_approval" id="user_approval">
-                    <option value="">전체</option>
-                  </select>
-                </dd>
-                <dt>
-                  <label for="user_name">담당자명</label>
-                </dt>
-                <dd>
-                  <input type="text" id="user_name">
+                  <div class="flex_wrap">
+                    <select name="user_approval" id="user_approval">
+                      <option value="">재난별</option>
+                      <option value="">지역별</option>
+                    </select>
+                    <select name="user_approval" id="user_approval">
+                      <option value="">전체</option>
+                    </select>
+                  </div>
                 </dd>
               </dl>
               <dl>
                 <dt>
-                  <label for="user_approval">업무 구분</label>
+                  <label for="user_id">집계연도</label>
                 </dt>
                 <dd>
                   <select name="user_approval" id="user_approval">
-                    <option value="">전체</option>
-                  </select>
-                </dd>
+                    <option value="">연도</option>
+                  </select>                
+                </dd>       
                 <dt>
-                  <label for="institution">담당기관</label>
+                  <label for="user_organization">기간</label>
                 </dt>
                 <dd>
-                  <input type="text" id="institution">
-                </dd>
+                  <span class="period period_multi">
+                    <input class="date_picker_start" type="text" title="시작 일자" role="from">
+                    <input class="date_picker_end" type="text" title="종료 일자" role="to">
+                  </span>
+                </dd>             
               </dl>
             </div>
             <div class="btn_wrap">
@@ -328,43 +329,87 @@
           <div class="box tbl_wrap tbl_res">
             <table>
               <caption>사용자관리 리스트</caption>
-              <colgroup>
-                <col style="width:80px">
-                <col style="width:130px">
-                <col style="width:130px">
-                <col style="width:130px">
-                <col style="width:130px">
-                <col style="width:130px">
-                <col style="width:130px">
-                <col style="width:80px">
-              </colgroup>
               <thead>
                 <tr>
-                  <th scope="col">No</th>
                   <th scope="col">재난구분</th>
-                  <th scope="col">업무구분</th>
-                  <th scope="col">소속기관</th>
-                  <th scope="col">담당자명</th>
-                  <th scope="col">연락처</th>
-                  <th scope="col">FAX</th>
-                  <th scope="col">상세보기</th>
+                  <th scope="col">2018</th>
+                  <th scope="col">2019</th>
+                  <th scope="col">2020</th>
+                  <th scope="col">2021</th>
+                  <th scope="col">2022</th>
+                  <th scope="col">2023</th>
+                  <th scope="col">합계</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row" data-label="No">1</td>
-                  <td data-label="재난구분">감염병</td>
-                  <td data-label="업무구분">감영병 업무총괄</td>
-                  <td data-label="소속기관">질병관리청</td>
-                  <td data-label="담당자명">홍길동/정책국장</td>
-                  <td data-label="연락처">1234-5678</td>
-                  <td data-label="FAX">1234-5678</td>
-                  <td data-label="상세보기">
-                    <button type="button" class="btn_circle btn_detail" onclick="btnDetail()">상세보기</button>
-                  </td>
+                  <td scope="row" data-label="재난구분">도시산불</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">도시침수</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">유해화학</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">감염병</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">다중화재</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
               </tbody>
+              <tfoot>
+                <tr>
+                  <td scope="row" data-label="연도">합계</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>               
+              </tfoot>
             </table>
           </div>
+        </div>
+        <div class="box chart_area">
+          <canvas id="barchart" height="150" aria-label="재난 발생 통계" role="img"></canvas>
         </div>
       </div>
       <div class="footer min_width"> 
@@ -382,69 +427,7 @@
 <script src="../plugins/chartjs/Chart.min.js"></script>
 <script src="../plugins/chartjs/chartjs-plugin-datalabels.min.js"></script>
 <script src="../js/ui_common.js"></script>
-  <!-- 상세보기-->
-  <div class="pop_overlay">
-  <div class="pop_wrap p_detail">
-    <div class="pop_tit">
-      <h1>상세보기</h1>
-      <button type="button" class="btn_pop_close" closePop></button>
-    </div>
-    <div class="pop_body">
-      <div class="pop_cont">
-        <table class="tbl_row">
-          <caption>상세보기</caption>
-          <colgroup>
-            <col style="width:150px;">
-            <col style="width:200px;">
-            <col style="width:60px;">
-          </colgroup>
-          <tr>
-            <th><label for="assigned_task">담당업무</label></th>
-            <td colspan="2">감염병 기획팀 업무총괄</td>
-          </tr>
-          <tr>
-            <th><label for="name">담당자명</label></th>
-            <td colspan="2">홍길동</td>
-          </tr>
-          <tr>
-            <th><label for="division">소속</label></th>
-            <td colspan="2">금천구 보건소 감염병 기획팀</td>
-          </tr>
-          <tr>
-            <th><label for="team">직위</label></th>
-            <td colspan="2">기획팀장</td>
-          </tr>
-          <tr>
-            <th><label for="number">연락처</label></th>
-            <td colspan="2">02-1234-5678</td>
-          </tr>
-          <tr>
-            <th><label for="phonenumber">휴대전화</label></th>
-            <td colspan="2">010-1234-5678</td>
-          </tr>
-          <tr>
-            <th><label for="email">e-mail</label></th>
-            <td colspan="2">1234@45678.go.kr</td>
-          </tr>
-          <tr>
-            <th><label for="fax">FAX</label></th>
-            <td colspan="2">02-2110-0001</td>
-          </tr>
-        </table>
-        <div class="btn_wrap alignC">
-          <button type="button" class="btn btn_gray">닫기</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <script>
-    function btnDetail() {
-      $('.p_detail').parent('.pop_overlay').toggle();
-    }
-  </script>
-  <!--// 상세보기-->
-
+  <script src="../js/bar_chart.js"></script>
 </body>
 
 </html>

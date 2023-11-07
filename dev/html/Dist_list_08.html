@@ -1,0 +1,152 @@
+@@include('../inc/top.html')
+<body>
+  <div class="wrap">
+    @@include('../inc/header.html')
+    <div class="cont min_width">
+      <div id="content" class="content default_width">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li>통계조회</li>
+          </ul>
+        </div>
+        <div>
+          <div class="con_tit flex_wrap f_sb">
+            <h2 class="tit_h2">통계조회</h2>
+          </div>
+          <div class="box search_wrap flex_wrap f_sb">
+            <div class="dtable">
+              <dl>                
+                <dt>
+                  <label for="user_name">집계구분</label>
+                </dt>
+                <dd>
+                  <div class="flex_wrap">
+                    <select name="user_approval" id="user_approval">
+                      <option value="">재난별</option>
+                      <option value="">지역별</option>
+                    </select>
+                    <select name="user_approval" id="user_approval">
+                      <option value="">전체</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="user_id">집계연도</label>
+                </dt>
+                <dd>
+                  <select name="user_approval" id="user_approval">
+                    <option value="">연도</option>
+                  </select>                
+                </dd>       
+                <dt>
+                  <label for="user_organization">기간</label>
+                </dt>
+                <dd>
+                  <span class="period period_multi">
+                    <input class="date_picker_start" type="text" title="시작 일자" role="from">
+                    <input class="date_picker_end" type="text" title="종료 일자" role="to">
+                  </span>
+                </dd>             
+              </dl>
+            </div>
+            <div class="btn_wrap">
+              <button type="button" class="btn_search btn_mint">검색</button>
+            </div>
+          </div>
+          <div class="box tbl_wrap tbl_res">
+            <table>
+              <caption>사용자관리 리스트</caption>
+              <thead>
+                <tr>
+                  <th scope="col">재난구분</th>
+                  <th scope="col">2018</th>
+                  <th scope="col">2019</th>
+                  <th scope="col">2020</th>
+                  <th scope="col">2021</th>
+                  <th scope="col">2022</th>
+                  <th scope="col">2023</th>
+                  <th scope="col">합계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" data-label="재난구분">도시산불</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">도시침수</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">유해화학</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">감염병</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+                <tr>
+                  <td scope="row" data-label="재난구분">다중화재</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td scope="row" data-label="연도">합계</td>
+                  <td data-label="2018">-</td>
+                  <td data-label="2019">-</td>
+                  <td data-label="2020">-</td>
+                  <td data-label="2021">-</td>
+                  <td data-label="2022">-</td>
+                  <td data-label="2023">-</td>
+                  <td data-label="합계">-</td>
+                </tr>               
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="box chart_area">
+          <canvas id="barchart" height="150" aria-label="재난 발생 통계" role="img"></canvas>
+        </div>
+      </div>
+      @@include('../inc/footer.html')
+    </div>
+  </div>
+  @@include('../inc/script.html')
+  <script src="../js/bar_chart.js"></script>
+</body>
+
+</html>
